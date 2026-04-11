@@ -1,0 +1,158 @@
+[
+  {
+    "sku_id": "WE-TBL-04",
+    "dimensions": {
+      "length_in": 72,
+      "width_in": 36,
+      "height_in": 30
+    },
+    "weight_lb": 95.0,
+    "components": [
+      "Top",
+      "Legs",
+      "Hinges",
+      "Apron"
+    ]
+  },
+  {
+    "sku_id": "WE-TABLE-88",
+    "dimensions": {
+      "length_in": 68,
+      "width_in": 38,
+      "height_in": 30
+    },
+    "weight_lb": 78.0,
+    "components": [
+      "Top",
+      "Legs",
+      "Stretcher"
+    ]
+  },
+  {
+    "sku_id": "WE-SOFA-22",
+    "dimensions": {
+      "length_in": 84,
+      "width_in": 36,
+      "height_in": 34
+    },
+    "weight_lb": 120.0,
+    "components": [
+      "Frame",
+      "Cushions",
+      "Legs"
+    ]
+  },
+  {
+    "sku_id": "WE-CHAIR-05",
+    "dimensions": {
+      "length_in": 32,
+      "width_in": 34,
+      "height_in": 32
+    },
+    "weight_lb": 28.0,
+    "components": [
+      "Seat",
+      "Back",
+      "Legs"
+    ]
+  },
+  {
+    "sku_id": "WE-DESK-11",
+    "dimensions": {
+      "length_in": 48,
+      "width_in": 24,
+      "height_in": 30
+    },
+    "weight_lb": 55.0,
+    "components": [
+      "Top",
+      "Drawers",
+      "Legs",
+      "Hinges"
+    ]
+  },
+  {
+    "sku_id": "WE-BED-33",
+    "dimensions": {
+      "length_in": 84,
+      "width_in": 80,
+      "height_in": 45
+    },
+    "weight_lb": 185.0,
+    "components": [
+      "Headboard",
+      "Frame",
+      "Slats",
+      "Hardware"
+    ]
+  },
+  {
+    "sku_id": "WE-LAMP-07",
+    "dimensions": {
+      "length_in": 18,
+      "width_in": 18,
+      "height_in": 78
+    },
+    "weight_lb": 22.0,
+    "components": [
+      "Base",
+      "Arc",
+      "Shade",
+      "Hardware"
+    ]
+  },
+  {
+    "sku_id": "WE-SHELF-14",
+    "dimensions": {
+      "length_in": 48,
+      "width_in": 12,
+      "height_in": 72
+    },
+    "weight_lb": 35.0,
+    "components": [
+      "Shelves",
+      "Brackets",
+      "Hardware"
+    ]
+  },
+  {
+    "sku_id": "WE-RUG-99",
+    "dimensions": {
+      "length_in": 96,
+      "width_in": 60,
+      "height_in": 0.5
+    },
+    "weight_lb": 40.0,
+    "components": [
+      "Rug body"
+    ]
+  },
+  {
+    "sku_id": "WE-MIRROR-3",
+    "dimensions": {
+      "length_in": 28,
+      "width_in": 1,
+      "height_in": 42
+    },
+    "weight_lb": 18.0,
+    "components": [
+      "Glass",
+      "Frame",
+      "Hanging hardware"
+    ]
+  },
+  {
+    "sku_id": "WE-BENCH-21",
+    "dimensions": {
+      "length_in": 48,
+      "width_in": 18,
+      "height_in": 20
+    },
+    "weight_lb": 42.0,
+    "components": [
+      "Seat",
+      "Hinges",
+      "Storage box"
+    ]
+  }
+]

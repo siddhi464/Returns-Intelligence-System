@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Returns Intelligence · WSI Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<style>
+/* ── Reset & Variables ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:     #0B1F3A;
+  --navy-mid: #132d52;
+  --navy-lt:  #1e3f6e;
+  --gold:     #C9A84C;
+  --gold-lt:  #e8c97a;
+  --gold-dk:  #9a7b33;
+  --cream:    #f5f0e8;
+  --cream-dk: #ede6d6;
+  --red:      #c0392b;
+  --red-lt:   #e74c3c;
+  --green:    #27ae60;
+  --amber:    #e67e22;
+  --text:     #1a1a2e;
+  --muted:    #6b7280;
+  --border:   rgba(201,168,76,0.2);
+  --card-bg:  #ffffff;
+  --sidebar-w: 240px;
+  --header-h: 64px;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+html, body { height: 100%; background: var(--cream); color: var(--text); font-family: var(--font-body); }
+
+/* ── Layout ─────────────────────────────────────────────────────── */
+.layout { display: grid; grid-template-columns: var(--sidebar-w) 1fr; grid-template-rows: var(--header-h) 1fr; min-height: 100vh; }
+
+/* ── Header ─────────────────────────────────────────────────────── */
+.header {
+  grid-column: 1 / -1;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  border-bottom: 2px solid var(--gold);
+  position: sticky; top: 0; z-index: 100;
+}
+.header-brand { display: flex; align-items: center; gap: 14px; }
+.header-logo { width: 36px; height: 36px; }
+.header-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--gold); letter-spacing: 0.04em; }
+.header-sub { font-size: 0.7rem; color: rgba(255,255,255,0.5); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 2px; }
+.header-right { display: flex; align-items: center; gap: 20px; }
+.live-badge {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(39,174,96,0.15); border: 1px solid rgba(39,174,96,0.4);
+  border-radius: 20px; padding: 4px 14px;
+  font-size: 0.72rem; color: #4ade80; font-family: var(--font-mono); letter-spacing: 0.05em;
+}
+.live-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
+.last-updated { font-size: 0.7rem; color: rgba(255,255,255,0.4); font-family: var(--font-mono); }
+
+/* ── Sidebar ─────────────────────────────────────────────────────── */
+.sidebar {
+  background: var(--navy);
+  padding: 24px 0;
+  border-right: 1px solid rgba(201,168,76,0.15);
+  display: flex; flex-direction: column; gap: 4px;
+  position: sticky; top: var(--header-h); height: calc(100vh - var(--header-h)); overflow-y: auto;
+}
+.sidebar-section { padding: 0 16px 8px; font-size: 0.62rem; color: var(--gold-dk); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 16px; }
+.nav-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 11px 20px; cursor: pointer;
+  font-size: 0.82rem; font-weight: 500; color: rgba(255,255,255,0.6);
+  border-left: 3px solid transparent; transition: all 0.2s;
+  text-decoration: none;
+}
+.nav-item:hover { color: #fff; background: rgba(201,168,76,0.08); }
+.nav-item.active { color: var(--gold); border-left-color: var(--gold); background: rgba(201,168,76,0.1); }
+.nav-icon { font-size: 1rem; width: 20px; text-align: center; }
+.sidebar-footer { margin-top: auto; padding: 16px 20px; border-top: 1px solid rgba(201,168,76,0.1); }
+.sidebar-footer p { font-size: 0.68rem; color: rgba(255,255,255,0.25); line-height: 1.6; }
+
+/* ── Main Content ────────────────────────────────────────────────── */
+.main { padding: 32px; overflow-y: auto; display: flex; flex-direction: column; gap: 28px; }
+
+/* ── Page Sections ───────────────────────────────────────────────── */
+.page { display: none; flex-direction: column; gap: 28px; }
+.page.active { display: flex; }
+
+/* ── Page Title ──────────────────────────────────────────────────── */
+.page-title { display: flex; justify-content: space-between; align-items: flex-end; }
+.page-title h1 { font-family: var(--font-display); font-size: 2rem; font-weight: 600; color: var(--navy); }
+.page-title p { color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
+.page-actions { display: flex; gap: 10px; }
+
+/* ── KPI Grid ────────────────────────────────────────────────────── */
+.kpi-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.kpi-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  position: relative; overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.kpi-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(11,31,58,0.1); }
+.kpi-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold); }
+.kpi-card.danger::before { background: var(--red); }
+.kpi-card.success::before { background: var(--green); }
+.kpi-card.warning::before { background: var(--amber); }
+.kpi-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 10px; }
+.kpi-value { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--navy); line-height: 1; }
+.kpi-sub { font-size: 0.72rem; color: var(--muted); margin-top: 6px; }
+.kpi-icon { position: absolute; top: 16px; right: 18px; font-size: 1.4rem; opacity: 0.15; }
+
+/* ── Grid Layouts ────────────────────────────────────────────────── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+.grid-2-1 { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+.grid-1-2 { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; }
+
+/* ── Cards ───────────────────────────────────────────────────────── */
+.card {
+  background: var(--card-bg); border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.card-header {
+  padding: 18px 22px 14px;
+  border-bottom: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.card-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--navy); }
+.card-badge {
+  font-size: 0.68rem; font-family: var(--font-mono);
+  background: var(--cream); color: var(--navy-mid);
+  border: 1px solid var(--border); border-radius: 6px;
+  padding: 3px 10px; letter-spacing: 0.05em;
+}
+.card-body { padding: 20px 22px; }
+.chart-wrap { position: relative; padding: 16px 8px; }
+
+/* ── SKU Table ───────────────────────────────────────────────────── */
+.sku-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.sku-table thead { background: var(--cream); }
+.sku-table th { padding: 10px 14px; text-align: left; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; border-bottom: 1px solid var(--border); }
+.sku-table td { padding: 11px 14px; border-bottom: 1px solid rgba(0,0,0,0.05); vertical-align: middle; }
+.sku-table tr:last-child td { border-bottom: none; }
+.sku-table tr:hover td { background: var(--cream); cursor: pointer; }
+.risk-badge {
+  display: inline-block; border-radius: 6px;
+  padding: 2px 10px; font-size: 0.72rem; font-weight: 600; font-family: var(--font-mono);
+}
+.risk-high   { background: rgba(192,57,43,0.12); color: var(--red); }
+.risk-medium { background: rgba(230,126,34,0.12); color: var(--amber); }
+.risk-low    { background: rgba(39,174,96,0.12);  color: var(--green); }
+.sku-name { font-weight: 600; color: var(--navy); }
+.sku-id   { font-size: 0.7rem; color: var(--muted); font-family: var(--font-mono); }
+
+/* ── Alerts ──────────────────────────────────────────────────────── */
+.alert-list { display: flex; flex-direction: column; gap: 10px; }
+.alert-item {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 14px 16px; border-radius: 10px;
+  border-left: 4px solid transparent;
+}
+/* AI Auditor Styling */
+.risk-purple { background: rgba(139, 92, 246, 0.12); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.3); }
+.audit-alert-box { background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 10px; padding: 16px; margin-bottom: 20px; }
+.audit-header { display: flex; align-items: center; gap: 8px; color: #8b5cf6; font-weight: 700; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 8px; }
+.comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+.comparison-item { display: flex; flex-direction: column; gap: 4px; }
+.comparison-label { font-size: 0.65rem; color: var(--muted); text-transform: uppercase; }
+.comparison-img { width: 100%; height: 100px; background: #eee; border-radius: 6px; border: 1px solid var(--border); object-fit: cover; }
+.alert-high   { background: rgba(192,57,43,0.06); border-color: var(--red); }
+.alert-medium { background: rgba(230,126,34,0.06); border-color: var(--amber); }
+.alert-low    { background: rgba(201,168,76,0.08); border-color: var(--gold); }
+.alert-icon { font-size: 1.1rem; margin-top: 1px; }
+.alert-body { flex: 1; }
+.alert-title { font-weight: 600; font-size: 0.85rem; color: var(--navy); }
+.alert-detail { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+.alert-suggestion { font-size: 0.75rem; color: var(--navy-mid); margin-top: 5px; font-style: italic; }
+.alert-severity {
+  font-size: 0.65rem; font-family: var(--font-mono); font-weight: 700;
+  letter-spacing: 0.1em; padding: 2px 8px; border-radius: 4px;
+  white-space: nowrap; align-self: flex-start;
+}
+.sev-HIGH   { background: var(--red);   color: #fff; }
+.sev-MEDIUM { background: var(--amber); color: #fff; }
+.sev-LOW    { background: var(--gold);  color: var(--navy); }
+
+/* ── Progress Bars ───────────────────────────────────────────────── */
+.progress-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.progress-label { font-size: 0.78rem; color: var(--text); min-width: 140px; }
+.progress-bar-wrap { flex: 1; height: 8px; background: var(--cream-dk); border-radius: 4px; overflow: hidden; }
+.progress-bar { height: 100%; border-radius: 4px; transition: width 0.8s cubic-bezier(.4,0,.2,1); }
+.progress-value { font-size: 0.75rem; font-family: var(--font-mono); color: var(--muted); min-width: 40px; text-align: right; }
+.bar-gold  { background: var(--gold); }
+.bar-red   { background: var(--red-lt); }
+.bar-green { background: var(--green); }
+.bar-blue  { background: #3b82f6; }
+
+/* ── Buttons ─────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 9px 18px; border-radius: 8px;
+  font-size: 0.82rem; font-weight: 500; cursor: pointer;
+  border: none; transition: all 0.2s; font-family: var(--font-body);
+}
+.btn-primary { background: var(--navy); color: var(--gold); }
+.btn-primary:hover { background: var(--navy-lt); }
+.btn-ghost { background: transparent; color: var(--navy); border: 1px solid var(--border); }
+.btn-ghost:hover { background: var(--cream-dk); }
+.btn-danger { background: var(--red); color: #fff; }
+.btn-sm { padding: 5px 12px; font-size: 0.75rem; }
+
+/* ── Filters Bar ─────────────────────────────────────────────────── */
+.filters-bar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.filter-select {
+  padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border);
+  font-family: var(--font-body); font-size: 0.82rem; background: var(--card-bg);
+  color: var(--text); cursor: pointer;
+}
+.filter-select:focus { outline: none; border-color: var(--gold); }
+.search-input {
+  padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border);
+  font-family: var(--font-body); font-size: 0.82rem; background: var(--card-bg);
+  color: var(--text); min-width: 220px;
+}
+.search-input:focus { outline: none; border-color: var(--gold); }
+
+/* ── Ingest Panel ────────────────────────────────────────────────── */
+.ingest-form { display: flex; flex-direction: column; gap: 14px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-label { font-size: 0.75rem; font-weight: 500; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; }
+.form-control {
+  padding: 9px 13px; border-radius: 8px; border: 1px solid var(--border);
+  font-family: var(--font-body); font-size: 0.83rem; background: var(--cream);
+  color: var(--text); transition: border-color 0.2s;
+}
+.form-control:focus { outline: none; border-color: var(--gold); background: #fff; }
+textarea.form-control { resize: vertical; min-height: 80px; }
+.ingest-status {
+  padding: 10px 14px; border-radius: 8px; font-size: 0.82rem; display: none;
+}
+.ingest-ok  { background: rgba(39,174,96,0.1); color: var(--green); border: 1px solid rgba(39,174,96,0.3); }
+.ingest-err { background: rgba(192,57,43,0.1); color: var(--red); border: 1px solid rgba(192,57,43,0.3); }
+
+/* ── Region Map Placeholder ──────────────────────────────────────── */
+.region-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+.region-card {
+  background: var(--cream); border: 1px solid var(--border);
+  border-radius: 10px; padding: 16px; position: relative; overflow: hidden;
+}
+.region-card.hotspot { border-color: var(--red); background: rgba(192,57,43,0.04); }
+.region-card.hotspot::after {
+  content: 'HOT'; position: absolute; top: 8px; right: 8px;
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em;
+  color: var(--red); font-family: var(--font-mono);
+}
+.region-name { font-weight: 600; font-size: 0.9rem; color: var(--navy); }
+.region-count { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--navy); margin: 4px 0; }
+.region-pct { font-size: 0.72rem; color: var(--muted); }
+
+/* ── SKU Detail Drawer ───────────────────────────────────────────── */
+.drawer-overlay {
+  position: fixed; inset: 0; background: rgba(11,31,58,0.5);
+  z-index: 200; display: none; backdrop-filter: blur(2px);
+}
+.drawer-overlay.open { display: block; }
+.drawer {
+  position: fixed; right: 0; top: 0; bottom: 0; width: 480px;
+  background: #fff; z-index: 201; overflow-y: auto;
+  box-shadow: -8px 0 40px rgba(11,31,58,0.2);
+  transform: translateX(100%); transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+  display: flex; flex-direction: column;
+}
+.drawer.open { transform: translateX(0); }
+.drawer-header {
+  padding: 24px 24px 16px; border-bottom: 1px solid var(--border);
+  background: var(--navy); position: sticky; top: 0;
+}
+.drawer-title { font-family: var(--font-display); font-size: 1.4rem; color: var(--gold); }
+.drawer-close { background: none; border: none; color: rgba(255,255,255,0.5); cursor: pointer; font-size: 1.2rem; float: right; margin-top: -4px; }
+.drawer-body { padding: 22px; flex: 1; display: flex; flex-direction: column; gap: 20px; }
+.detail-stat { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.detail-stat:last-child { border-bottom: none; }
+.detail-stat-label { font-size: 0.78rem; color: var(--muted); }
+.detail-stat-value { font-weight: 600; font-size: 0.9rem; color: var(--navy); font-family: var(--font-mono); }
+
+/* ── Cluster Pills ───────────────────────────────────────────────── */
+.cluster-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.cluster-pill {
+  padding: 4px 12px; border-radius: 16px;
+  font-size: 0.75rem; font-family: var(--font-mono);
+  background: var(--cream-dk); color: var(--navy-mid);
+  border: 1px solid var(--border);
+}
+
+/* ── Loading State ───────────────────────────────────────────────── */
+.loading {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 300px; gap: 16px;
+}
+.spinner {
+  width: 36px; height: 36px; border: 3px solid var(--border);
+  border-top-color: var(--gold); border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading p { color: var(--muted); font-size: 0.85rem; }
+
+/* ── Empty State ─────────────────────────────────────────────────── */
+.empty { text-align: center; padding: 40px; color: var(--muted); }
+.empty-icon { font-size: 2.5rem; margin-bottom: 12px; }
+
+/* ── Scenario Sliders ────────────────────────────────────────────── */
+.scenario-controls { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+.scenario-control { display: flex; flex-direction: column; gap: 6px; }
+.scenario-control label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.scenario-control input[type=range] { width: 160px; accent-color: var(--gold); }
+.scenario-val { font-family: var(--font-mono); font-size: 0.8rem; color: var(--navy); }
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .kpi-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 960px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+  .grid-2, .grid-2-1, .grid-1-2 { grid-template-columns: 1fr; }
+}
+
+/* ── Utility ─────────────────────────────────────────────────────── */
+.text-gold { color: var(--gold); }
+.text-red  { color: var(--red); }
+.text-green { color: var(--green); }
+.text-muted { color: var(--muted); }
+.font-mono { font-family: var(--font-mono); }
+.mt-8 { margin-top: 8px; }
+.divider { height: 1px; background: var(--border); margin: 4px 0; }
+
+/* ── Lucide icons ────────────────────────────────────────────────── */
+.lucide { width: 16px; height: 16px; stroke-width: 2; }
+.nav-icon .lucide { width: 18px; height: 18px; }
+.kpi-icon .lucide { width: 22px; height: 22px; }
+
+/* ── Routing map ─────────────────────────────────────────────────── */
+#routingMap { height: 520px; width: 100%; border-radius: 12px; }
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+<!-- Header -->
+<header class="header">
+  <div class="header-brand">
+    <svg class="header-logo" viewBox="0 0 36 36" fill="none">
+      <rect width="36" height="36" rx="8" fill="#C9A84C" opacity="0.15"/>
+      <path d="M8 26L18 10L28 26H8Z" stroke="#C9A84C" stroke-width="2" fill="none"/>
+      <circle cx="18" cy="19" r="3" fill="#C9A84C"/>
+    </svg>
+    <div>
+      <div class="header-title">WSI Sentinel</div>
+      <div class="header-sub">Returns Intelligence Platform</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="live-badge"><span class="live-dot"></span> LIVE</div>
+    <div class="last-updated" id="lastUpdated">Connecting...</div>
+  </div>
+</header>
+
+<!-- Sidebar -->
+<nav class="sidebar">
+  <div class="sidebar-section">Intelligence</div>
+  <a class="nav-item active" data-page="overview" onclick="showPage('overview')">
+    <span class="nav-icon"><i data-lucide="layout-dashboard"></i></span> Overview
+  </a>
+  <a class="nav-item" data-page="sku" onclick="showPage('sku')">
+    <span class="nav-icon"><i data-lucide="tag"></i></span> SKU Analysis
+  </a>
+  <a class="nav-item" data-page="alerts" onclick="showPage('alerts')">
+    <span class="nav-icon"><i data-lucide="bell"></i></span> Alerts
+    <span id="alertCount" style="margin-left:auto;font-size:0.7rem;background:var(--red);color:#fff;border-radius:10px;padding:1px 7px;"></span>
+  </a>
+  <div class="sidebar-section">Analytics</div>
+  <a class="nav-item" data-page="loss" onclick="showPage('loss')">
+    <span class="nav-icon"><i data-lucide="dollar-sign"></i></span> Loss Modelling
+  </a>
+  <a class="nav-item" data-page="regions" onclick="showPage('regions')">
+    <span class="nav-icon"><i data-lucide="map"></i></span> Region Insights
+  </a>
+  <a class="nav-item" data-page="clusters" onclick="showPage('clusters')">
+    <span class="nav-icon"><i data-lucide="brain"></i></span> NLP Clusters
+  </a>
+  <div class="sidebar-section">SCM</div>
+  <a class="nav-item" data-page="disposition" onclick="showPage('disposition')">
+    <span class="nav-icon"><i data-lucide="clipboard-list"></i></span> Disposition &amp; NRV
+  </a>
+  <a class="nav-item" data-page="routing" onclick="showPage('routing')">
+    <span class="nav-icon"><i data-lucide="globe-2"></i></span> Routing Map
+  </a>
+  <div class="sidebar-section">Operations</div>
+  <a class="nav-item" data-page="ingest" onclick="showPage('ingest')">
+    <span class="nav-icon"><i data-lucide="upload"></i></span> Ingest Return
+  </a>
+  <div class="sidebar-footer">
+    <p>West Elm / Williams-Sonoma<br>Returns Intelligence v1.0<br>Internal Use Only</p>
+  </div>
+</nav>
+
+<!-- Main -->
+<main class="main">
+
+<!-- ── PAGE: OVERVIEW ──────────────────────────────────────────────── -->
+<section class="page active" id="page-overview">
+  <div class="page-title">
+    <div>
+      <h1>Overview Dashboard</h1>
+      <p>Real-time return intelligence across all SKUs</p>
+    </div>
+    <div class="page-actions">
+      <button class="btn btn-ghost btn-sm" onclick="loadDashboard()"><i data-lucide="refresh-cw"></i> Refresh</button>
+    </div>
+  </div>
+
+  <div id="kpiGrid" class="kpi-grid">
+    <div class="loading"><div class="spinner"></div><p>Loading...</p></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Returns by Issue Type</span>
+        <span class="card-badge">NLP TAGGED</span>
+      </div>
+      <div class="chart-wrap"><canvas id="issueChart" height="220"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Return Rate by SKU</span>
+        <span class="card-badge">ALL PRODUCTS</span>
+      </div>
+      <div class="chart-wrap"><canvas id="returnRateChart" height="220"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Returns by Category</span>
+      </div>
+      <div class="chart-wrap"><canvas id="categoryChart" height="200"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Active Alerts (Top 5)</span>
+        <span class="card-badge" id="alertBadge">—</span>
+      </div>
+      <div class="card-body" id="topAlerts"><div class="loading"><div class="spinner"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PAGE: SKU ───────────────────────────────────────────────────── -->
+<section class="page" id="page-sku">
+  <div class="page-title">
+    <div>
+      <h1>SKU-Level Analysis</h1>
+      <p>Drill into individual product return patterns</p>
+    </div>
+  </div>
+  <div class="filters-bar">
+    <input class="search-input" type="text" id="skuSearch" placeholder="Search SKU or name..." oninput="filterSkuTable()" />
+    <select class="filter-select" id="riskFilter" onchange="filterSkuTable()">
+      <option value="">All Risk Levels</option>
+      <option value="high">High Risk</option>
+      <option value="medium">Medium Risk</option>
+      <option value="low">Low Risk</option>
+    </select>
+    <select class="filter-select" id="categoryFilter" onchange="filterSkuTable()">
+      <option value="">All Categories</option>
+    </select>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">SKU Return Intelligence</span>
+      <span class="card-badge" id="skuCount">— SKUs</span>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="sku-table" id="skuTable">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Risk Score</th>
+            <th>Return Rate</th>
+            <th>Returns</th>
+            <th>Total Loss</th>
+            <th>Avg Rating</th>
+            <th>Sentiment</th>
+          </tr>
+        </thead>
+        <tbody id="skuTableBody">
+          <tr><td colspan="8"><div class="loading"><div class="spinner"></div></div></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── PAGE: DISPOSITION & NRV ───────────────────────────────────── -->
+<section class="page" id="page-disposition">
+  <div class="page-title">
+    <div>
+      <h1>Disposition &amp; NRV</h1>
+      <p>NRV engine and deterministic disposition recommendations per SKU</p>
+    </div>
+    <div class="page-actions" style="display:flex;gap:10px;align-items:center;">
+      <button class="btn btn-ghost btn-sm" onclick="toggleStress()"><i data-lucide="zap"></i> Stress Test</button>
+      <button class="btn btn-primary btn-sm" onclick="loadDisposition()"><i data-lucide="refresh-cw"></i> Sync</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Profit Recovery (Intelligence Sync)</span>
+      <span class="card-badge" id="stressBadge">STRESS: OFF</span>
+    </div>
+    <div class="card-body" id="profitTicker" style="display:flex;gap:24px;flex-wrap:wrap;"></div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Golden Records (NRV + Routing)</span>
+      <span class="card-badge" id="goldCount">—</span>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="sku-table" id="goldTable" style="table-layout:fixed;">
+        <thead>
+          <tr>
+            <th>SKU</th>
+            <th>Product</th>
+            <th>NRV</th>
+            <th>NRV % MSRP</th>
+            <th>Recommended Action</th>
+            <th>Condition Grade</th>
+            <th>Sentiment</th>
+            <th>Hub</th>
+            <th>Capacity</th>
+            <th>Cluster Savings</th>
+          </tr>
+        </thead>
+        <tbody id="goldTableBody">
+          <tr><td colspan="10"><div class="loading"><div class="spinner"></div><p>Loading...</p></div></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── PAGE: ROUTING MAP ─────────────────────────────────────────── -->
+<section class="page" id="page-routing">
+  <div class="page-title">
+    <div>
+      <h1>Routing Map</h1>
+      <p>World map view of routed flows from origin to selected hub</p>
+    </div>
+    <div class="page-actions" style="display:flex;gap:10px;align-items:center;">
+      <button class="btn btn-ghost btn-sm" onclick="toggleStress()"><i data-lucide="zap"></i> Stress Test</button>
+      <button class="btn btn-primary btn-sm" onclick="loadNetworkMap()"><i data-lucide="refresh-cw"></i> Refresh</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Global Routing Overlay</span>
+      <span class="card-badge" id="mapBadge">—</span>
+    </div>
+    <div class="card-body">
+      <div id="routingMap"></div>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;font-size:0.78rem;color:var(--muted);">
+        <div><strong style="color:var(--navy);">Routing logic:</strong> eligible hubs &lt; 90% capacity, congestion penalty 75–90% (+15% processing).</div>
+        <div><strong style="color:var(--navy);">Stress test:</strong> forces hubs to 99% capacity to demonstrate rerouting.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PAGE: ALERTS ───────────────────────────────────────────────── -->
+<section class="page" id="page-alerts">
+  <div class="page-title">
+    <div>
+      <h1>Smart Alerts</h1>
+      <p>Data-driven alerts requiring merchandiser action</p>
+    </div>
+  </div>
+  <div class="filters-bar">
+    <select class="filter-select" id="alertSeverityFilter" onchange="filterAlerts()">
+      <option value="">All Severities</option>
+      <option value="HIGH">High</option>
+      <option value="MEDIUM">Medium</option>
+      <option value="LOW">Low</option>
+    </select>
+    <select class="filter-select" id="alertIssueFilter" onchange="filterAlerts()">
+      <option value="">All Issues</option>
+      <option value="Colour Mismatch">Colour Mismatch</option>
+      <option value="Size Confusion">Size Confusion</option>
+      <option value="High Return Rate">High Return Rate</option>
+      <option value="High Return Loss">High Return Loss</option>
+    </select>
+  </div>
+  <div id="alertsList" class="alert-list">
+    <div class="loading"><div class="spinner"></div><p>Loading alerts...</p></div>
+  </div>
+</section>
+
+<!-- ── PAGE: LOSS ─────────────────────────────────────────────────── -->
+<section class="page" id="page-loss">
+  <div class="page-title">
+    <div>
+      <h1>Loss Modelling</h1>
+      <p>Actual vs predicted financial impact of returns</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Scenario Parameters</span>
+      <span class="card-badge">ADJUSTABLE</span>
+    </div>
+    <div class="card-body">
+      <div class="scenario-controls">
+        <div class="scenario-control">
+          <label>Cost per Return ($)</label>
+          <input type="range" min="50" max="400" value="150" id="costSlider" oninput="updateScenarioLabel()" onchange="loadLossScenario()" />
+          <span class="scenario-val" id="costVal">$150</span>
+        </div>
+        <div class="scenario-control">
+          <label>Order Volume Multiplier</label>
+          <input type="range" min="1" max="50" value="10" id="volSlider" oninput="updateScenarioLabel()" onchange="loadLossScenario()" />
+          <span class="scenario-val" id="volVal">×10</span>
+        </div>
+        <div class="scenario-control">
+          <label>Scenario Rate Delta (%)</label>
+          <input type="range" min="-20" max="20" value="0" id="deltaSlider" oninput="updateScenarioLabel()" onchange="loadLossScenario()" />
+          <span class="scenario-val" id="deltaVal">+0%</span>
+        </div>
+        <button class="btn btn-primary" onclick="loadLossScenario()">Run Scenario</button>
+      </div>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-header"><span class="card-title">Actual vs Predicted Loss by SKU</span></div>
+      <div class="chart-wrap"><canvas id="lossChart" height="260"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="card-title">Loss Breakdown</span></div>
+      <div class="card-body" id="lossTable"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PAGE: REGIONS ──────────────────────────────────────────────── -->
+<section class="page" id="page-regions">
+  <div class="page-title">
+    <div>
+      <h1>Region Insights</h1>
+      <p>Geographic return patterns and hotspots</p>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-header"><span class="card-title">Returns by Region</span></div>
+      <div class="chart-wrap"><canvas id="regionChart" height="220"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="card-title">Return Hotspots</span><span class="card-badge">HIGH VOLUME</span></div>
+      <div class="card-body" id="hotspotList"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header"><span class="card-title">Top Return Cities</span></div>
+    <div class="card-body" id="cityBreakdown"></div>
+  </div>
+  <div class="card">
+    <div class="card-header"><span class="card-title">Region Root Cause Mapping</span></div>
+    <div class="card-body" id="regionRootCause"></div>
+  </div>
+</section>
+
+<!-- ── PAGE: CLUSTERS ─────────────────────────────────────────────── -->
+<section class="page" id="page-clusters">
+  <div class="page-title">
+    <div>
+      <h1>NLP Cluster Analysis</h1>
+      <p>Machine-learned return reason clusters from free-text signals</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Issue Type Distribution (NLP Tagged)</span>
+      <span class="card-badge">VADER + TF-IDF K-MEANS</span>
+    </div>
+    <div class="chart-wrap"><canvas id="clusterPieChart" height="240"></canvas></div>
+  </div>
+  <div id="clusterList" class="grid-2"></div>
+</section>
+
+<!-- ── PAGE: INGEST ───────────────────────────────────────────────── -->
+<section class="page" id="page-ingest">
+  <div class="page-title">
+    <div>
+      <h1>Ingest New Return</h1>
+      <p>Add a real-time return — dashboard will update automatically</p>
+    </div>
+  </div>
+  <div class="grid-2-1">
+    <div class="card">
+      <div class="card-header"><span class="card-title">Return Record</span></div>
+      <div class="card-body">
+        <div class="ingest-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">SKU ID *</label>
+              <select class="form-control" id="ingestSku">
+                <option value="">Select SKU...</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Return Reason</label>
+              <select class="form-control" id="ingestReason">
+                <option value="does_not_match_description">Does Not Match Description</option>
+                <option value="wrong_size">Wrong Size</option>
+                <option value="defective_or_damaged">Defective or Damaged</option>
+                <option value="no_longer_needed">No Longer Needed</option>
+                <option value="ordered_by_mistake">Ordered by Mistake</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Return Note (Free Text)</label>
+            <textarea class="form-control" id="ingestNote" placeholder="Customer's explanation in their own words..."></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Cost of Return ($)</label>
+              <input type="number" class="form-control" id="ingestCost" value="150" min="0" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Region</label>
+              <select class="form-control" id="ingestRegion">
+                <option value="West">West</option>
+                <option value="East">East</option>
+                <option value="North">North</option>
+                <option value="South">South</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">City</label>
+              <input type="text" class="form-control" id="ingestCity" placeholder="e.g. Los Angeles" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">State</label>
+              <input type="text" class="form-control" id="ingestState" placeholder="e.g. CA" maxlength="2" />
+            </div>
+          </div>
+          <div id="ingestStatus" class="ingest-status"></div>
+          <button class="btn btn-primary" onclick="submitReturn()"><i data-lucide="upload"></i> Submit Return</button>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <div class="card">
+        <div class="card-header"><span class="card-title">Real-Time Info</span></div>
+        <div class="card-body">
+          <p style="font-size:0.82rem;color:var(--muted);line-height:1.7;">
+            Submitting a return will append it to <code style="font-family:var(--font-mono);font-size:0.75rem;background:var(--cream);padding:1px 6px;border-radius:4px;">returns.csv</code>
+            and bust the pipeline cache. The next dashboard refresh will re-train the ML models and
+            include the new signal in all charts, alerts, and loss predictions.
+          </p>
+          <div class="divider" style="margin:14px 0;"></div>
+          <p style="font-size:0.78rem;color:var(--muted);">
+            <strong>Cancelled-event detection:</strong> Notes mentioning "cancelled", "moved house",
+            or "renovation" are automatically tagged as personal reason returns and excluded from
+            product-quality scoring.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">Recent Ingestions</span></div>
+        <div class="card-body" id="recentIngestions">
+          <p class="text-muted" style="font-size:0.82rem;">No ingestions this session yet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<!-- SKU Detail Drawer -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="skuDrawer">
+  <div class="drawer-header">
+    <div class="drawer-title" id="drawerTitle">SKU Detail</div>
+    <button class="drawer-close" onclick="closeDrawer()"><i data-lucide="x"></i></button>
+    <div id="drawerSubtitle" style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:4px;"></div>
+  </div>
+  <div class="drawer-body" id="drawerBody">
+    <div class="loading"><div class="spinner"></div></div>
+  </div>
+</div>
+
+<script>
+// ── State & Charts ─────────────────────────────────────────────────────────
+let dashData = null;
+let charts = {};
+let allSkuRows = [];
+let allAlerts = [];
+let ingestionLog = [];
+const SKUS = ["WE-TABLE-88","WE-SOFA-22","WE-CHAIR-05","WE-DESK-11",
+              "WE-BED-33","WE-LAMP-07","WE-SHELF-14","WE-RUG-99","WE-MIRROR-3","WE-BENCH-21"];
+
+// ── Navigation ─────────────────────────────────────────────────────────────
+function showPage(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  document.querySelector(`[data-page="${page}"]`).classList.add('active');
+
+  if (page === 'loss') loadLossScenario();
+  if (page === 'regions') renderRegions();
+  if (page === 'clusters') renderClusters();
+  if (page === 'disposition') loadDisposition();
+  if (page === 'routing') loadNetworkMap();
+  if (window.lucide) window.lucide.createIcons();
+}
+
+// ── Load Dashboard ─────────────────────────────────────────────────────────
+async function loadDashboard(params = {}) {
+  const qs = new URLSearchParams(params).toString();
+  try {
+    const res = await fetch(`/api/dashboard${qs ? '?' + qs : ''}`);
+    dashData = await res.json();
+    document.getElementById('lastUpdated').textContent = 'Updated ' + new Date().toLocaleTimeString();
+    renderKPIs();
+    renderIssueChart();
+    renderReturnRateChart();
+    renderCategoryChart();
+    renderTopAlerts();
+    renderSkuTable();
+    populateFilters();
+    populateSkuSelect();
+    updateAlertCount();
+  } catch(e) {
+    console.error('Dashboard load error:', e);
+  }
+}
+
+// ── KPIs ───────────────────────────────────────────────────────────────────
+function renderKPIs() {
+  const k = dashData.kpis;
+  const grid = document.getElementById('kpiGrid');
+  grid.innerHTML = `
+    <div class="kpi-card danger">
+      <div class="kpi-label">Total Returns</div>
+      <div class="kpi-value">${k.total_returns.toLocaleString()}</div>
+      <div class="kpi-sub">Across all SKUs this period</div>
+      <div class="kpi-icon"><i data-lucide="package"></i></div>
+    </div>
+    <div class="kpi-card danger">
+      <div class="kpi-label">Total Return Loss</div>
+      <div class="kpi-value">$${(k.total_loss/1000).toFixed(1)}k</div>
+      <div class="kpi-sub">Shipping + reprocessing costs</div>
+      <div class="kpi-icon"><i data-lucide="banknote"></i></div>
+    </div>
+    <div class="kpi-card warning">
+      <div class="kpi-label">Avg Return Rate</div>
+      <div class="kpi-value">${k.avg_return_rate_pct}%</div>
+      <div class="kpi-sub">Across all product SKUs</div>
+      <div class="kpi-icon"><i data-lucide="line-chart"></i></div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Top Loss SKU</div>
+      <div class="kpi-value" style="font-size:1.3rem;">${k.top_sku_by_loss}</div>
+      <div class="kpi-sub">Highest predicted loss</div>
+      <div class="kpi-icon"><i data-lucide="tag"></i></div>
+    </div>
+    <div class="kpi-card danger">
+      <div class="kpi-label">Critical Alerts</div>
+      <div class="kpi-value">${k.active_alerts}</div>
+      <div class="kpi-sub">Requiring immediate action</div>
+      <div class="kpi-icon"><i data-lucide="bell-ring"></i></div>
+    </div>
+  `;
+  if (window.lucide) window.lucide.createIcons();
+}
+
+// ── Charts ─────────────────────────────────────────────────────────────────
+const COLORS = {
+  gold: '#C9A84C', navy: '#0B1F3A', red: '#c0392b', amber: '#e67e22',
+  green: '#27ae60', blue: '#3b82f6', purple: '#8b5cf6', pink: '#ec4899',
+};
+const PALETTE = ['#C9A84C','#c0392b','#3b82f6','#27ae60','#e67e22','#8b5cf6','#ec4899','#14b8a6','#f97316','#6366f1'];
+
+function destroyChart(id) {
+  if (charts[id]) { charts[id].destroy(); delete charts[id]; }
+}
+
+function renderIssueChart() {
+  destroyChart('issue');
+  const it = dashData.issue_totals;
+  const ctx = document.getElementById('issueChart').getContext('2d');
+  charts['issue'] = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Colour Mismatch','Size Confusion','Quality Issue','Personal Reason'],
+      datasets: [{ data: [it.color_mismatch, it.size_confusion, it.quality_issue, it.personal_reason],
+        backgroundColor: [COLORS.gold, COLORS.blue, COLORS.red, COLORS.green],
+        borderWidth: 2, borderColor: '#fff' }]
+    },
+    options: { responsive: true, plugins: { legend: { position: 'bottom', labels: { font: { family: 'DM Sans', size: 11 } } } } }
+  });
+}
+
+function renderReturnRateChart() {
+  destroyChart('returnRate');
+  const skus = dashData.sku_breakdown;
+  const ctx = document.getElementById('returnRateChart').getContext('2d');
+  charts['returnRate'] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: skus.map(s => s.sku_id),
+      datasets: [{
+        label: 'Return Rate %',
+        data: skus.map(s => (s.return_rate * 100).toFixed(1)),
+        backgroundColor: skus.map(s => s.return_rate > 0.3 ? 'rgba(192,57,43,0.7)' : s.return_rate > 0.2 ? 'rgba(230,126,34,0.7)' : 'rgba(39,174,96,0.7)'),
+        borderRadius: 4,
+      }]
+    },
+    options: {
+      responsive: true, indexAxis: 'y',
+      plugins: { legend: { display: false } },
+      scales: { x: { title: { display: true, text: 'Return Rate (%)' } } }
+    }
+  });
+}
+
+function renderCategoryChart() {
+  destroyChart('category');
+  const cat = dashData.category_breakdown;
+  const ctx = document.getElementById('categoryChart').getContext('2d');
+  charts['category'] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: cat.map(c => c.category),
+      datasets: [
+        { label: 'Returns', data: cat.map(c => c.returns), backgroundColor: 'rgba(11,31,58,0.8)', borderRadius: 4, yAxisID: 'y' },
+        { label: 'Total Loss ($)', data: cat.map(c => c.total_cost?.toFixed(0) || 0), backgroundColor: 'rgba(201,168,76,0.7)', borderRadius: 4, yAxisID: 'y1' },
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { labels: { font: { family: 'DM Sans', size: 11 } } } },
+      scales: {
+        y: { type: 'linear', position: 'left', title: { display: true, text: 'Returns' } },
+        y1: { type: 'linear', position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: 'Loss ($)' } },
+      }
+    }
+  });
+}
+
+// ── Top Alerts on Overview ─────────────────────────────────────────────────
+function renderTopAlerts() {
+  allAlerts = dashData.alerts || [];
+  const container = document.getElementById('topAlerts');
+  const top5 = allAlerts.slice(0, 5);
+  document.getElementById('alertBadge').textContent = allAlerts.length + ' total';
+  if (!top5.length) { container.innerHTML = '<div class="empty"><div class="empty-icon"><i data-lucide="check-circle-2"></i></div><p>No active alerts</p></div>'; if (window.lucide) window.lucide.createIcons(); return; }
+  container.innerHTML = '<div class="alert-list">' + top5.map(alertHTML).join('') + '</div>';
+  if (window.lucide) window.lucide.createIcons();
+}
+
+function alertHTML(a) {
+  const icons = { HIGH: 'alert-octagon', MEDIUM: 'alert-triangle', LOW: 'info' };
+  const cls = { HIGH: 'alert-high', MEDIUM: 'alert-medium', LOW: 'alert-low' };
+  return `<div class="alert-item ${cls[a.severity] || 'alert-low'}">
+    <span class="alert-icon"><i data-lucide="${icons[a.severity]||'info'}"></i></span>
+    <div class="alert-body">
+      <div class="alert-title">${a.sku_id} · ${a.issue}</div>
+      <div class="alert-detail">${a.detail}</div>
+      <div class="alert-suggestion">${a.suggestion}</div>
+    </div>
+    <span class="alert-severity sev-${a.severity}">${a.severity}</span>
+  </div>`;
+}
+
+// ── SKU Table ──────────────────────────────────────────────────────────────
+function renderSkuTable() {
+  allSkuRows = dashData.sku_breakdown || [];
+  document.getElementById('skuCount').textContent = allSkuRows.length + ' SKUs';
+  renderFilteredSkuTable(allSkuRows);
+}
+
+function renderFilteredSkuTable(rows) {
+  const tbody = document.getElementById('skuTableBody');
+  if (!rows.length) { tbody.innerHTML = '<tr><td colspan="8"><div class="empty"><div class="empty-icon"><i data-lucide="search"></i></div><p>No matching SKUs</p></div></td></tr>'; if (window.lucide) window.lucide.createIcons(); return; }
+  tbody.innerHTML = rows.map(r => {
+    const risk = r.return_risk_score || 0;
+    const riskClass = risk >= 65 ? 'risk-high' : risk >= 40 ? 'risk-medium' : 'risk-low';
+    const riskLabel = risk >= 65 ? 'HIGH' : risk >= 40 ? 'MEDIUM' : 'LOW';
+    const loss = dashData.loss_predictions?.find(l => l.sku_id === r.sku_id);
+    const totalLoss = loss ? loss.actual_loss : (r.total_cost || 0);
+    const sentiment = (r.avg_sentiment || 0);
+    return `<tr onclick="openDrawer('${r.sku_id}')">
+      <td>
+        <div class="sku-name">${r.name || r.sku_id}</div>
+        <div class="sku-id">${r.sku_id}</div>
+      </td>
+      <td>${r.category || '—'}</td>
+      <td><span class="risk-badge ${riskClass}">${riskLabel} ${risk.toFixed(0)}%</span></td>
+      <td>${((r.return_rate||0)*100).toFixed(1)}%</td>
+      <td>${r.returns_count || 0}</td>
+      <td>$${(totalLoss||0).toLocaleString(undefined,{maximumFractionDigits:0})}</td>
+      <td>${(r.avg_rating||0).toFixed(1)}</td>
+      <td>${(sentiment).toFixed(2)}</td>
+    </tr>`;
+  }).join('');
+  if (window.lucide) window.lucide.createIcons();
+}
+
+function filterSkuTable() {
+  const search = document.getElementById('skuSearch').value.toLowerCase();
+  const risk = document.getElementById('riskFilter').value;
+  const cat = document.getElementById('categoryFilter').value;
+  const filtered = allSkuRows.filter(r => {
+    const matchSearch = !search || r.sku_id.toLowerCase().includes(search) || (r.name||'').toLowerCase().includes(search);
+    const score = r.return_risk_score || 0;
+    const matchRisk = !risk ||
+      (risk === 'high' && score >= 65) ||
+      (risk === 'medium' && score >= 40 && score < 65) ||
+      (risk === 'low' && score < 40);
+    const matchCat = !cat || (r.category||'') === cat;
+    return matchSearch && matchRisk && matchCat;
+  });
+  document.getElementById('skuCount').textContent = filtered.length + ' SKUs';
+  renderFilteredSkuTable(filtered);
+}
+
+function populateFilters() {
+  const cats = [...new Set((dashData.sku_breakdown||[]).map(r => r.category).filter(Boolean))];
+  const sel = document.getElementById('categoryFilter');
+  sel.innerHTML = '<option value="">All Categories</option>' + cats.map(c => `<option value="${c}">${c}</option>`).join('');
+}
+
+// ── Alerts Page ────────────────────────────────────────────────────────────
+function filterAlerts() {
+  const sev = document.getElementById('alertSeverityFilter').value;
+  const issue = document.getElementById('alertIssueFilter').value;
+  const filtered = allAlerts.filter(a =>
+    (!sev || a.severity === sev) && (!issue || a.issue.includes(issue))
+  );
+  const container = document.getElementById('alertsList');
+  if (!filtered.length) { container.innerHTML = '<div class="empty"><div class="empty-icon"><i data-lucide="check-circle-2"></i></div><p>No alerts match filters</p></div>'; if (window.lucide) window.lucide.createIcons(); return; }
+  container.innerHTML = filtered.map(alertHTML).join('');
+  if (window.lucide) window.lucide.createIcons();
+}
+
+function updateAlertCount() {
+  const high = allAlerts.filter(a => a.severity === 'HIGH').length;
+  const el = document.getElementById('alertCount');
+  el.textContent = high > 0 ? high : '';
+}
+
+// ── Loss Page ──────────────────────────────────────────────────────────────
+function updateScenarioLabel() {
+  const cost = document.getElementById('costSlider').value;
+  const vol = document.getElementById('volSlider').value;
+  const delta = document.getElementById('deltaSlider').value;
+  document.getElementById('costVal').textContent = '$' + cost;
+  document.getElementById('volVal').textContent = '×' + vol;
+  document.getElementById('deltaVal').textContent = (delta >= 0 ? '+' : '') + delta + '%';
+}
+
+async function loadLossScenario() {
+  if (!dashData) return;
+  const cost = document.getElementById('costSlider').value;
+  const vol = document.getElementById('volSlider').value;
+  const delta = parseInt(document.getElementById('deltaSlider').value) / 100;
+  const qs = `cost_per_return=${cost}&order_volume_multiplier=${vol}&scenario_rate_delta=${delta}`;
+  try {
+    const res = await fetch('/api/dashboard?' + qs);
+    const d = await res.json();
+    renderLossChart(d.loss_predictions);
+    renderLossTable(d.loss_predictions);
+  } catch(e) { console.error(e); }
+}
+
+function renderLossChart(preds) {
+  destroyChart('loss');
+  const ctx = document.getElementById('lossChart').getContext('2d');
+  charts['loss'] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: preds.map(p => p.sku_id),
+      datasets: [
+        { label: 'Actual Loss ($)', data: preds.map(p => p.actual_loss?.toFixed(0)||0), backgroundColor: 'rgba(11,31,58,0.75)', borderRadius: 4 },
+        { label: 'Predicted Loss ($)', data: preds.map(p => p.predicted_loss?.toFixed(0)||0), backgroundColor: 'rgba(201,168,76,0.75)', borderRadius: 4 },
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { labels: { font: { family: 'DM Sans', size: 11 } } } },
+      scales: { x: { ticks: { maxRotation: 45 } } }
+    }
+  });
+}
+
+function renderLossTable(preds) {
+  const el = document.getElementById('lossTable');
+  el.innerHTML = preds.map(p => {
+    const delta = p.loss_delta_pct || 0;
+    const arrow = delta > 5 ? '↑' : delta < -5 ? '↓' : '→';
+    const col = delta > 5 ? 'var(--red)' : delta < -5 ? 'var(--green)' : 'var(--muted)';
+    return `<div class="progress-row" style="margin-bottom:10px;">
+      <span class="progress-label">${p.sku_id}<br><span class="text-muted" style="font-size:0.7rem;">${p.name||''}</span></span>
+      <div style="flex:1;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
+          <span style="font-size:0.7rem;color:var(--muted);">Actual: $${(p.actual_loss||0).toLocaleString(undefined,{maximumFractionDigits:0})}</span>
+          <span style="font-size:0.7rem;font-family:var(--font-mono);color:${col};">${arrow} ${delta}%</span>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar bar-gold" style="width:${Math.min(100,(p.actual_loss||0)/1000*10)}%"></div>
+        </div>
+      </div>
+      <span style="font-family:var(--font-mono);font-size:0.78rem;min-width:80px;text-align:right;">$${(p.predicted_loss||0).toLocaleString(undefined,{maximumFractionDigits:0})}</span>
+    </div>`;
+  }).join('');
+}
+
+// ── Regions Page ───────────────────────────────────────────────────────────
+function renderRegions() {
+  if (!dashData) return;
+  const ri = dashData.region_insights;
+
+  // Region chart
+  destroyChart('region');
+  const byRegion = ri.by_region || [];
+  const ctx = document.getElementById('regionChart').getContext('2d');
+  charts['region'] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: byRegion.map(r => r.region),
+      datasets: [{ label: 'Returns', data: byRegion.map(r => r.total_returns), backgroundColor: PALETTE, borderRadius: 4 }]
+    },
+    options: { responsive: true, plugins: { legend: { display: false } } }
+  });
+
+  // Hotspots
+  const hotspots = ri.hotspots || [];
+  const el = document.getElementById('hotspotList');
+  if (!hotspots.length) { el.innerHTML = '<div class="empty"><div class="empty-icon"><i data-lucide="check-circle-2"></i></div><p>No hotspots detected</p></div>'; if (window.lucide) window.lucide.createIcons(); }
+  else el.innerHTML = hotspots.map(h => `
+    <div class="alert-item alert-high" style="margin-bottom:8px;">
+      <span class="alert-icon"><i data-lucide="flame"></i></span>
+      <div class="alert-body">
+        <div class="alert-title">${h.region}</div>
+        <div class="alert-detail">${h.return_share_pct?.toFixed(1)}% of all returns · ${h.total_returns} returns</div>
+        <div class="alert-suggestion">STATUS: ${h.status}</div>
+      </div>
+    </div>`).join('');
+  if (window.lucide) window.lucide.createIcons();
+
+  // Cities
+  const cities = (ri.by_city || []).slice(0, 8);
+  const maxRet = Math.max(...cities.map(c => c.total_returns), 1);
+  document.getElementById('cityBreakdown').innerHTML = cities.map(c => `
+    <div class="progress-row">
+      <span class="progress-label">${c.city}</span>
+      <div class="progress-bar-wrap"><div class="progress-bar bar-gold" style="width:${(c.total_returns/maxRet*100).toFixed(0)}%"></div></div>
+      <span class="progress-value">${c.total_returns}</span>
+    </div>`).join('');
+
+  // Root causes by region
+  const rootCauses = ri.root_causes || [];
+  document.getElementById('regionRootCause').innerHTML = rootCauses.map(rc => `
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);">
+      <div>
+        <div style="font-weight:600;font-size:0.85rem;">${rc.region}</div>
+        <div style="font-size:0.75rem;color:var(--muted);">Top issue: ${rc.top_issue}</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-family:var(--font-mono);font-size:0.85rem;font-weight:600;">${rc.percentage}%</div>
+        <div style="font-size:0.72rem;color:${rc.sentiment_score < 0 ? 'var(--red)' : 'var(--green)'};">
+          Sentiment ${rc.sentiment_score >= 0 ? '+' : ''}${rc.sentiment_score}
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+// ── Clusters Page ──────────────────────────────────────────────────────────
+function renderClusters() {
+  if (!dashData) return;
+
+  // Pie chart of NLP issue types
+  destroyChart('clusterPie');
+  const it = dashData.issue_totals;
+  const ctx = document.getElementById('clusterPieChart').getContext('2d');
+  charts['clusterPie'] = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['Colour Mismatch','Size Confusion','Quality Issue','Personal Reason'],
+      datasets: [{ data: [it.color_mismatch, it.size_confusion, it.quality_issue, it.personal_reason],
+        backgroundColor: [COLORS.gold, COLORS.blue, COLORS.red, COLORS.green],
+        borderWidth: 2, borderColor: '#fff' }]
+    },
+    options: { responsive: true, plugins: { legend: { position: 'right', labels: { font: { family: 'DM Sans', size: 12 } } } } }
+  });
+
+  // Cluster keyword cards
+  const labels = dashData.clusters?.labels || {};
+  const keywords = dashData.clusters?.keywords || {};
+  const list = document.getElementById('clusterList');
+  list.innerHTML = Object.entries(labels).map(([id, label], i) => {
+    const kws = keywords[id] || [];
+    return `<div class="card">
+      <div class="card-header">
+        <span class="card-title" style="font-size:0.95rem;">Cluster ${id}</span>
+        <span class="card-badge">K-MEANS</span>
+      </div>
+      <div class="card-body">
+        <div style="font-size:0.82rem;color:var(--muted);margin-bottom:10px;">Label: <strong>${label}</strong></div>
+        <div class="cluster-pills">${kws.map(k => `<span class="cluster-pill">${k}</span>`).join('')}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── SKU Drawer ─────────────────────────────────────────────────────────────
+async function openDrawer(skuId) {
+  document.getElementById('drawerOverlay').classList.add('open');
+  document.getElementById('skuDrawer').classList.add('open');
+  document.getElementById('drawerTitle').textContent = skuId;
+  document.getElementById('drawerBody').innerHTML = '<div class="loading"><div class="spinner"></div></div>';
+
+  try {
+    const res = await fetch(`/api/sku/${skuId}`);
+    const d = await res.json();
+    
+    // Cross-reference with disposition data for visual audit
+    const dispRecord = dispositionData?.records?.find(r => r.sku_id === skuId);
+    const audit = dispRecord?.visual_audit;
+
+    let auditHtml = '';
+    if (audit && audit.drift_detected) {
+      auditHtml = `
+        <div class="audit-alert-box">
+          <div class="audit-header"><i data-lucide="eye"></i> AI Visual Truth Audit</div>
+          <div style="font-size: 0.85rem; font-weight: 600; color: var(--navy);">${audit.issue}</div>
+          <div style="font-size: 0.75rem; color: var(--muted); margin-top: 4px;">${dispRecord.financial_justification}</div>
+          
+          <div class="comparison-grid">
+            <div class="comparison-item">
+              <span class="comparison-label">Catalog</span>
+              <img class="comparison-img" src="/static/audit_images/${skuId}_catalog.jpg" onerror="this.src='data/audit_images/WE-TBL-04_catalog.jpg'">
+            </div>
+            <div class="comparison-item">
+              <span class="comparison-label">Customer</span>
+              <img class="comparison-img" src="/static/audit_images/${skuId}_user.jpg" onerror="this.src='data/audit_images/WE-TBL-04_user.jpg'">
+            </div>
+          </div>
+          <div style="font-size: 0.7rem; color: #8b5cf6; margin-top: 10px; font-weight: 700;">
+            DRIFT SCORE: ${(audit.drift_score * 100).toFixed(0)}%
+          </div>
+        </div>
+      `;
+    }
+
+    const reasons = Object.entries(d.reason_breakdown || {}).map(([k,v]) =>
+      `<div class="detail-stat"><span class="detail-stat-label">${k.replace(/_/g,' ')}</span><span class="detail-stat-value">${v}</span></div>`).join('');
+
+    document.getElementById('drawerBody').innerHTML = `
+      ${auditHtml}
+      <div>
+        <div class="detail-stat"><span class="detail-stat-label">Finish</span><span class="detail-stat-value">${d.product_info?.finish||'—'}</span></div>
+        <div class="detail-stat"><span class="detail-stat-label">Price</span><span class="detail-stat-value">$${d.product_info?.price||0}</span></div>
+        <div class="detail-stat"><span class="detail-stat-label">Total Returns</span><span class="detail-stat-value">${d.total_returns}</span></div>
+      </div>
+      <div class="mt-8">
+        <div style="font-size:0.75rem;font-weight:600;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Return Reasons</div>
+        ${reasons || '<p class="text-muted">No data</p>'}
+      </div>
+    `;
+    
+    if (window.lucide) window.lucide.createIcons();
+  } catch(e) {
+    document.getElementById('drawerBody').innerHTML = `<div class="empty"><p>Error: ${e.message}</p></div>`;
+  }
+}
+function closeDrawer() {
+  document.getElementById('drawerOverlay').classList.remove('open');
+  document.getElementById('skuDrawer').classList.remove('open');
+}
+
+// ── Alerts Page ────────────────────────────────────────────────────────────
+function renderAlertsPage() {
+  filterAlerts(); // reuse filter
+}
+
+// ── Ingest ─────────────────────────────────────────────────────────────────
+function populateSkuSelect() {
+  const skus = dashData?.sku_breakdown?.map(s => ({ id: s.sku_id, name: s.name||s.sku_id })) || [];
+  const sel = document.getElementById('ingestSku');
+  sel.innerHTML = '<option value="">Select SKU...</option>' + skus.map(s => `<option value="${s.id}">${s.id} · ${s.name}</option>`).join('');
+}
+
+async function submitReturn() {
+  const sku = document.getElementById('ingestSku').value;
+  const statusEl = document.getElementById('ingestStatus');
+  if (!sku) {
+    statusEl.textContent = 'Please select a SKU';
+    statusEl.className = 'ingest-status ingest-err';
+    statusEl.style.display = 'block';
+    return;
+  }
+  const body = {
+    sku_id: sku,
+    return_reason: document.getElementById('ingestReason').value,
+    return_note: document.getElementById('ingestNote').value,
+    cost_of_return: parseFloat(document.getElementById('ingestCost').value) || 150,
+    region: document.getElementById('ingestRegion').value,
+    city: document.getElementById('ingestCity').value,
+    state: document.getElementById('ingestState').value,
+  };
+  try {
+    const res = await fetch('/api/ingest_return', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(body) });
+    const d = await res.json();
+    statusEl.textContent = `Ingested: ${d.return_id} — Dashboard will refresh automatically.`;
+    statusEl.className = 'ingest-status ingest-ok';
+    statusEl.style.display = 'block';
+    ingestionLog.unshift({ id: d.return_id, sku, note: body.return_note, time: new Date().toLocaleTimeString() });
+    renderIngestionLog();
+    setTimeout(() => loadDashboard(), 2000);
+  } catch(e) {
+    statusEl.textContent = `Error: ${e.message}`;
+    statusEl.className = 'ingest-status ingest-err';
+    statusEl.style.display = 'block';
+  }
+}
+
+function renderIngestionLog() {
+  const el = document.getElementById('recentIngestions');
+  if (!ingestionLog.length) { el.innerHTML = '<p class="text-muted" style="font-size:0.82rem;">No ingestions this session yet.</p>'; return; }
+  el.innerHTML = ingestionLog.slice(0, 5).map(i =>
+    `<div style="padding:8px 0;border-bottom:1px solid var(--border);font-size:0.78rem;">
+      <div style="font-weight:600;font-family:var(--font-mono);">${i.id} · ${i.sku}</div>
+      <div style="color:var(--muted);margin-top:2px;">${i.note||'—'}</div>
+      <div style="font-size:0.7rem;color:var(--gold);">${i.time}</div>
+    </div>`).join('');
+}
+
+// ── NRV + Routing pages state ───────────────────────────────────────────────
+let stressWms = false;
+let dispositionData = null;
+let routingMap = null;
+let routingLayers = [];
+
+function toggleStress() {
+  stressWms = !stressWms;
+  const badge = document.getElementById('stressBadge');
+  if (badge) badge.textContent = 'STRESS: ' + (stressWms ? 'ON' : 'OFF');
+  const mapBadge = document.getElementById('mapBadge');
+  if (mapBadge) mapBadge.textContent = 'STRESS: ' + (stressWms ? 'ON' : 'OFF');
+  loadDisposition();
+  loadNetworkMap();
+}
+
+function money(n) {
+  return (n || 0).toLocaleString(undefined, { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+}
+
+async function loadDisposition() {
+  const badge = document.getElementById('stressBadge');
+  if (badge) badge.textContent = 'STRESS: ' + (stressWms ? 'ON' : 'OFF');
+  try {
+    const res = await fetch(`/api/disposition_insights?stress_wms=${stressWms ? 1 : 0}&use_llm=0`);
+    dispositionData = await res.json();
+    renderProfitTicker();
+    renderGoldenTable();
+  } catch (e) {
+    const body = document.getElementById('goldTableBody');
+    if (body) body.innerHTML = `<tr><td colspan="10"><div class="empty"><p>Failed to load disposition insights</p></div></td></tr>`;
+  }
+  if (window.lucide) window.lucide.createIcons();
+}
+
+function renderProfitTicker() {
+  const el = document.getElementById('profitTicker');
+  if (!el || !dispositionData) return;
+  const pr = dispositionData.profit_recovery || { total_recovered_value: 0, total_lost_value: 0 };
+  el.innerHTML = `
+    <div style="display:flex;align-items:center;gap:10px;">
+      <i data-lucide="trending-up"></i>
+      <div>
+        <div style="font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">Total recovered</div>
+        <div style="font-family:var(--font-mono);font-size:1.1rem;color:var(--green);font-weight:700;">${money(pr.total_recovered_value)}</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <i data-lucide="trending-down"></i>
+      <div>
+        <div style="font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">Total lost</div>
+        <div style="font-family:var(--font-mono);font-size:1.1rem;color:var(--red);font-weight:700;">${money(pr.total_lost_value)}</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <i data-lucide="calculator"></i>
+      <div style="font-size:0.78rem;color:var(--muted);max-width:520px;line-height:1.6;">
+        NRV = tier resale (New 90%, Open-Box 65%, Liquidation 20%) minus shipping, inspection, refurbish, storage.
+      </div>
+    </div>
+  `;
+}
+function renderGoldenTable() {
+  const body = document.getElementById('goldTableBody');
+  const count = document.getElementById('goldCount');
+  if (!body || !dispositionData) return;
+  const rows = dispositionData.records || [];
+  if (count) count.textContent = rows.length + ' SKUs';
+  
+  body.innerHTML = rows.map(r => {
+    const savings = (r.routing?.savings_via_clustering || 0);
+    const action = String(r.recommended_action || '');
+    
+    // NEW: Logic for Purple Retention Badge
+    let badgeCls = 'risk-medium';
+    if (action === 'RETENTION_OFFER') badgeCls = 'risk-purple';
+    else if (action.includes('RETURNLESS')) badgeCls = 'risk-high';
+    else if (action.includes('RESTOCK')) badgeCls = 'risk-low';
+
+    return `<tr>
+      <td class="sku-id">${r.sku_id}</td>
+      <td class="sku-name" title="${r.name}">${r.name}</td>
+      <td class="font-mono">$${(r.nrv_value||0).toFixed(0)}</td>
+      <td class="font-mono">${(r.nrv_pct_msrp||0).toFixed(1)}%</td>
+      <td><span class="risk-badge ${badgeCls}">${r.recommended_action}</span></td>
+      <td>${r.condition_grade}</td>
+      <td class="font-mono">${(r.sentiment_score||0).toFixed(2)}</td>
+      <td>${r.routing?.target_hub || '—'}</td>
+      <td class="font-mono">${r.routing?.capacity_status || '—'}</td>
+      <td class="font-mono">${savings > 0 ? '$' + savings.toFixed(0) : '—'}</td>
+    </tr>`;
+  }).join('');
+}
+function initRoutingMap() {
+  if (routingMap) return;
+  routingMap = L.map('routingMap', { worldCopyJump: true }).setView([20, 0], 2);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(routingMap);
+}
+
+function clearRoutingLayers() {
+  if (!routingMap) return;
+  routingLayers.forEach(l => routingMap.removeLayer(l));
+  routingLayers = [];
+}
+
+async function loadNetworkMap() {
+  initRoutingMap();
+  clearRoutingLayers();
+  const mapBadge = document.getElementById('mapBadge');
+  if (mapBadge) mapBadge.textContent = 'STRESS: ' + (stressWms ? 'ON' : 'OFF');
+
+  try {
+    const res = await fetch(`/api/network_map?stress_wms=${stressWms ? 1 : 0}`);
+    const data = await res.json();
+    const nodes = data.nodes || [];
+    const edges = data.edges || [];
+
+    const bounds = [];
+
+    nodes.forEach(n => {
+      const color = n.capacity_pct >= 90 ? '#c0392b' : n.capacity_pct >= 75 ? '#e67e22' : '#27ae60';
+      const m = L.circleMarker([n.lat, n.lon], {
+        radius: 8,
+        color,
+        weight: 2,
+        fillColor: '#ffffff',
+        fillOpacity: 0.9,
+      }).bindPopup(`<strong>${n.label}</strong><br/>Capacity: ${n.capacity_pct}%`);
+      m.addTo(routingMap);
+      routingLayers.push(m);
+      bounds.push([n.lat, n.lon]);
+    });
+
+    edges.forEach(e => {
+      const a = e.action || '';
+      const col = a.includes('RETURNLESS') ? '#c0392b' : a.includes('RESTOCK') ? '#27ae60' : '#e67e22';
+      if (!e.from || !e.to) return;
+      const line = L.polyline([[e.from.lat, e.from.lon], [e.to.lat, e.to.lon]], { color: col, weight: 2, opacity: 0.75 });
+      line.bindTooltip(`${e.sku_id} → ${e.hub}`, { sticky: true });
+      line.addTo(routingMap);
+      routingLayers.push(line);
+      bounds.push([e.from.lat, e.from.lon]);
+      bounds.push([e.to.lat, e.to.lon]);
+    });
+
+    if (bounds.length) routingMap.fitBounds(bounds, { padding: [24, 24] });
+  } catch (e) {
+    if (mapBadge) mapBadge.textContent = 'Failed to load map data';
+  }
+}
+
+// ── Auto-refresh every 60s ─────────────────────────────────────────────────
+function startAutoRefresh() {
+  setInterval(() => {
+    loadDashboard();
+    const page = document.querySelector('.page.active')?.id?.replace('page-','');
+    if (page === 'regions') renderRegions();
+    if (page === 'clusters') renderClusters();
+  }, 60000);
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', () => {
+  loadDashboard().then(() => {
+    document.getElementById('alertsList').innerHTML = allAlerts.map(alertHTML).join('');
+    if (window.lucide) window.lucide.createIcons();
+  });
+  startAutoRefresh();
+  updateScenarioLabel();
+  if (window.lucide) window.lucide.createIcons();
+});
+</script>
+</body>
+</html>
+

@@ -1,0 +1,12 @@
+sku_id,name,category,finish,price,region
+WE-TBL-04,Mid-Century Dining Table,Tables,Warm Walnut,899.0,West
+WE-TABLE-88,Classic Dining Table,Tables,Warm Walnut,640.0,West
+WE-SOFA-22,Mid-Century Sofa,Seating,Slate Blue,1200.0,East
+WE-CHAIR-05,Luxe Velvet Armchair,Seating,Antique Brass,420.0,South
+WE-DESK-11,Modernist Writing Desk,Storage,Natural Oak,580.0,North
+WE-BED-33,Solid Wood King Bed,Bedroom,Dark Walnut,1800.0,West
+WE-LAMP-07,Arc Floor Lamp,Lighting,Brushed Gold,260.0,East
+WE-SHELF-14,Floating Shelf Unit,Storage,White Oak,340.0,South
+WE-RUG-99,Hand-Loomed Wool Rug,Rugs,Terracotta,490.0,North
+WE-MIRROR-3,Arched Brass Mirror,Decor,Antique Brass,320.0,West
+WE-BENCH-21,Entryway Storage Bench,Seating,Cognac Leather,510.0,East

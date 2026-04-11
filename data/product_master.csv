@@ -1,0 +1,12 @@
+sku_id,product_name,brand,category,sub_category,price,currency,materials,finish,color,style,dimensions_length,dimensions_width,dimensions_height,weight,components,assembly_required,supplier_id,manufacturing_location,warranty_period,launch_date,discontinued_flag,region
+WE-TBL-04,Mid-Century Dining Table,West Elm,Tables,Dining,899.0,USD,"Solid oak, steel hardware",Warm Walnut,Brown,Mid-Century,72,36,30.0,95.0,"Top,Legs,Hinges,Apron",True,SUP-4402,Vietnam,24,2024-03-01,False,West
+WE-TABLE-88,Classic Dining Table,West Elm,Tables,Dining,640.0,USD,Oak veneer,Warm Walnut,Brown,Traditional,68,38,30.0,78.0,"Top,Legs,Stretcher",True,SUP-2201,USA,12,2023-01-15,False,West
+WE-SOFA-22,Mid-Century Sofa,West Elm,Seating,Sofa,1200.0,USD,"Polyester blend, hardwood frame",Slate Blue,Blue,Mid-Century,84,36,34.0,120.0,"Frame,Cushions,Legs",False,SUP-1100,Mexico,24,2022-09-01,False,East
+WE-CHAIR-05,Luxe Velvet Armchair,West Elm,Seating,Chair,420.0,USD,"Velvet, brass legs",Antique Brass,Brass,Modern,32,34,32.0,28.0,"Seat,Back,Legs",True,SUP-3303,China,12,2023-06-01,False,South
+WE-DESK-11,Modernist Writing Desk,West Elm,Storage,Desk,580.0,USD,"Oak, metal drawer slides",Natural Oak,Natural,Modern,48,24,30.0,55.0,"Top,Drawers,Legs,Hinges",True,SUP-2201,Vietnam,12,2023-02-10,False,North
+WE-BED-33,Solid Wood King Bed,West Elm,Bedroom,Bed,1800.0,USD,Solid walnut,Dark Walnut,Brown,Platform,84,80,45.0,185.0,"Headboard,Frame,Slats,Hardware",True,SUP-5500,Canada,36,2022-11-01,False,West
+WE-LAMP-07,Arc Floor Lamp,West Elm,Lighting,Floor,260.0,USD,"Metal, marble base",Brushed Gold,Gold,Modern,18,18,78.0,22.0,"Base,Arc,Shade,Hardware",True,SUP-6601,China,12,2024-01-20,False,East
+WE-SHELF-14,Floating Shelf Unit,West Elm,Storage,Shelf,340.0,USD,Engineered wood,White Oak,White,Minimal,48,12,72.0,35.0,"Shelves,Brackets,Hardware",True,SUP-2201,USA,12,2023-08-01,False,South
+WE-RUG-99,Hand-Loomed Wool Rug,West Elm,Rugs,Area,490.0,USD,Wool,Terracotta,Orange,Bohemian,96,60,0.5,40.0,Rug body,False,SUP-7700,India,12,2023-04-01,False,North
+WE-MIRROR-3,Arched Brass Mirror,West Elm,Decor,Mirror,320.0,USD,"Glass, brass frame",Antique Brass,Brass,Modern,28,1,42.0,18.0,"Glass,Frame,Hanging hardware",False,SUP-8801,China,12,2023-10-01,False,West
+WE-BENCH-21,Entryway Storage Bench,West Elm,Seating,Bench,510.0,USD,"Leather, pine frame",Cognac Leather,Brown,Transitional,48,18,20.0,42.0,"Seat,Hinges,Storage box",True,SUP-2201,Vietnam,12,2023-05-01,False,East

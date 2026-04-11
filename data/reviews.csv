@@ -1,0 +1,451 @@
+review_id,sku_id,rating,review_text,images_attached,review_date
+REV0001,WE-TABLE-88,3,Great quality!,False,2025-10-31
+REV0002,WE-LAMP-07,3,Great quality!,False,2025-11-27
+REV0003,WE-TBL-04,2,wobble on one leg,True,2026-03-02
+REV0004,WE-TBL-04,4,Fast delivery and beautiful product.,False,2025-11-09
+REV0005,WE-MIRROR-3,3,Exactly as described.,False,2026-03-04
+REV0006,WE-SOFA-22,3,Exactly as described.,True,2025-12-10
+REV0007,WE-MIRROR-3,4,Exactly as described.,True,2025-12-29
+REV0008,WE-RUG-99,2,love the rug but colour is very orange,True,2025-12-08
+REV0009,WE-RUG-99,4,Love this piece.,False,2025-11-04
+REV0010,WE-RUG-99,4,Love this piece.,True,2026-03-23
+REV0011,WE-DESK-11,4,Great quality!,True,2025-10-21
+REV0012,WE-LAMP-07,3,Fast delivery and beautiful product.,False,2026-01-11
+REV0013,WE-CHAIR-05,3,Great quality!,False,2026-02-26
+REV0014,WE-BED-33,4,Fast delivery and beautiful product.,False,2026-03-04
+REV0015,WE-SHELF-14,5,Love this piece.,False,2026-01-05
+REV0016,WE-SOFA-22,4,Great quality!,True,2026-03-28
+REV0017,WE-CHAIR-05,5,Exactly as described.,True,2026-01-13
+REV0018,WE-TABLE-88,2,looks grey not warm brown as shown,True,2026-01-16
+REV0019,WE-CHAIR-05,3,Exactly as described.,False,2025-12-08
+REV0020,WE-MIRROR-3,3,Love this piece.,False,2025-10-14
+REV0021,WE-BENCH-21,5,Great quality!,False,2026-02-26
+REV0022,WE-TBL-04,3,Exactly as described.,True,2025-10-14
+REV0023,WE-MIRROR-3,4,Great quality!,True,2026-01-01
+REV0024,WE-BENCH-21,5,Exactly as described.,False,2025-10-24
+REV0025,WE-BED-33,4,Fast delivery and beautiful product.,True,2026-01-03
+REV0026,WE-RUG-99,3,Great quality!,False,2025-12-07
+REV0027,WE-MIRROR-3,3,Fast delivery and beautiful product.,False,2026-04-05
+REV0028,WE-TBL-04,3,Love this piece.,False,2026-01-22
+REV0029,WE-BED-33,2,bed is stunning but very large,False,2025-11-01
+REV0030,WE-DESK-11,4,Love this piece.,False,2026-01-30
+REV0031,WE-TBL-04,2,Great quality!,False,2026-01-29
+REV0032,WE-CHAIR-05,2,finish looks different than photo,False,2026-03-06
+REV0033,WE-TABLE-88,2,colour is not what I expected,False,2026-02-08
+REV0034,WE-MIRROR-3,3,Love this piece.,False,2026-01-21
+REV0035,WE-MIRROR-3,3,Love this piece.,False,2026-03-06
+REV0036,WE-MIRROR-3,5,Love this piece.,True,2026-01-21
+REV0037,WE-RUG-99,4,Love this piece.,False,2025-11-17
+REV0038,WE-SOFA-22,3,Exactly as described.,True,2025-11-19
+REV0039,WE-RUG-99,4,Exactly as described.,True,2026-04-03
+REV0040,WE-BED-33,3,Fast delivery and beautiful product.,False,2026-01-23
+REV0041,WE-SHELF-14,3,Exactly as described.,True,2026-02-21
+REV0042,WE-TABLE-88,1,colour is not what I expected,False,2025-11-04
+REV0043,WE-DESK-11,3,Love this piece.,True,2025-10-17
+REV0044,WE-TBL-04,2,wobble on one leg,False,2026-03-07
+REV0045,WE-RUG-99,4,Exactly as described.,True,2026-01-01
+REV0046,WE-SHELF-14,3,Fast delivery and beautiful product.,True,2026-02-28
+REV0047,WE-CHAIR-05,3,Great quality!,False,2025-12-26
+REV0048,WE-CHAIR-05,4,Love this piece.,True,2026-03-25
+REV0049,WE-SOFA-22,5,Fast delivery and beautiful product.,False,2026-01-17
+REV0050,WE-SHELF-14,2,Fast delivery and beautiful product.,False,2026-03-31
+REV0051,WE-MIRROR-3,4,Exactly as described.,False,2025-11-05
+REV0052,WE-MIRROR-3,3,Great quality!,False,2026-03-14
+REV0053,WE-SHELF-14,2,Love this piece.,False,2025-11-24
+REV0054,WE-LAMP-07,4,Great quality!,False,2026-01-01
+REV0055,WE-RUG-99,3,Love this piece.,False,2025-12-19
+REV0056,WE-LAMP-07,2,Exactly as described.,False,2026-02-27
+REV0057,WE-LAMP-07,3,Love this piece.,False,2025-10-27
+REV0058,WE-SHELF-14,5,Great quality!,False,2025-12-03
+REV0059,WE-TABLE-88,3,Love this piece.,False,2025-12-26
+REV0060,WE-BED-33,4,Fast delivery and beautiful product.,True,2026-02-24
+REV0061,WE-SHELF-14,2,slightly yellow tint not pure white,True,2026-02-05
+REV0062,WE-BED-33,3,Love this piece.,False,2026-03-10
+REV0063,WE-TABLE-88,3,Exactly as described.,True,2025-11-27
+REV0064,WE-LAMP-07,4,Love this piece.,False,2025-11-21
+REV0065,WE-LAMP-07,4,Exactly as described.,False,2025-10-24
+REV0066,WE-SOFA-22,3,Love this piece.,True,2026-02-24
+REV0067,WE-TBL-04,2,Fast delivery and beautiful product.,False,2025-11-01
+REV0068,WE-SOFA-22,3,Great quality!,True,2026-02-18
+REV0069,WE-TBL-04,2,beautiful but leg cracked,False,2026-04-09
+REV0070,WE-MIRROR-3,3,Fast delivery and beautiful product.,True,2026-02-14
+REV0071,WE-MIRROR-3,3,Fast delivery and beautiful product.,True,2025-11-08
+REV0072,WE-MIRROR-3,3,Great quality!,True,2025-11-21
+REV0073,WE-DESK-11,3,Love this piece.,True,2026-02-22
+REV0074,WE-SOFA-22,2,love the sofa but wrong size for me,True,2026-03-04
+REV0075,WE-TBL-04,2,leg joint failed first week,True,2026-03-14
+REV0076,WE-LAMP-07,3,Love this piece.,True,2025-10-20
+REV0077,WE-DESK-11,3,Love this piece.,False,2025-11-13
+REV0078,WE-BED-33,3,Great quality!,True,2026-01-24
+REV0079,WE-BED-33,3,Great quality!,False,2025-11-21
+REV0080,WE-TABLE-88,3,Exactly as described.,False,2026-03-07
+REV0081,WE-TABLE-88,2,colour is not what I expected,False,2026-02-16
+REV0082,WE-MIRROR-3,3,Great quality!,True,2025-11-15
+REV0083,WE-BENCH-21,3,Exactly as described.,False,2025-11-06
+REV0084,WE-BED-33,3,Exactly as described.,False,2025-11-14
+REV0085,WE-MIRROR-3,3,Fast delivery and beautiful product.,False,2025-10-31
+REV0086,WE-SHELF-14,4,Fast delivery and beautiful product.,True,2025-11-05
+REV0087,WE-CHAIR-05,2,finish looks different than photo,False,2025-11-01
+REV0088,WE-TABLE-88,1,Love this piece.,False,2025-12-25
+REV0089,WE-LAMP-07,5,Love this piece.,True,2025-10-29
+REV0090,WE-CHAIR-05,3,Exactly as described.,False,2026-03-24
+REV0091,WE-DESK-11,3,Great quality!,True,2025-10-17
+REV0092,WE-BED-33,4,Exactly as described.,False,2025-11-16
+REV0093,WE-MIRROR-3,5,Love this piece.,False,2026-01-14
+REV0094,WE-BENCH-21,3,Fast delivery and beautiful product.,False,2026-04-01
+REV0095,WE-BENCH-21,4,Fast delivery and beautiful product.,False,2026-01-15
+REV0096,WE-SHELF-14,4,Fast delivery and beautiful product.,False,2026-03-27
+REV0097,WE-RUG-99,3,Exactly as described.,False,2025-11-24
+REV0098,WE-TBL-04,4,Love this piece.,False,2025-10-17
+REV0099,WE-BED-33,4,Exactly as described.,True,2026-03-03
+REV0100,WE-DESK-11,2,Exactly as described.,False,2025-11-01
+REV0101,WE-RUG-99,4,Fast delivery and beautiful product.,True,2025-11-09
+REV0102,WE-TABLE-88,2,Exactly as described.,False,2026-01-20
+REV0103,WE-TBL-04,3,Love this piece.,False,2025-12-16
+REV0104,WE-DESK-11,4,Love this piece.,False,2026-01-23
+REV0105,WE-SOFA-22,4,Love this piece.,True,2025-12-18
+REV0106,WE-RUG-99,4,Great quality!,False,2025-12-03
+REV0107,WE-SOFA-22,4,Exactly as described.,False,2026-03-05
+REV0108,WE-TABLE-88,4,Love this piece.,True,2026-04-01
+REV0109,WE-SHELF-14,2,slightly yellow tint not pure white,True,2025-10-17
+REV0110,WE-MIRROR-3,5,Great quality!,False,2025-12-12
+REV0111,WE-TBL-04,4,Exactly as described.,True,2025-11-14
+REV0112,WE-DESK-11,4,Love this piece.,False,2026-02-18
+REV0113,WE-CHAIR-05,3,Fast delivery and beautiful product.,False,2026-03-11
+REV0114,WE-DESK-11,5,Love this piece.,True,2026-01-30
+REV0115,WE-TABLE-88,4,Great quality!,True,2025-11-23
+REV0116,WE-BED-33,4,Exactly as described.,False,2026-03-05
+REV0117,WE-DESK-11,3,Exactly as described.,False,2026-01-14
+REV0118,WE-RUG-99,3,Fast delivery and beautiful product.,True,2026-03-08
+REV0119,WE-TBL-04,2,leg joint failed first week,True,2025-12-22
+REV0120,WE-LAMP-07,4,Love this piece.,False,2025-11-09
+REV0121,WE-MIRROR-3,3,Fast delivery and beautiful product.,False,2026-01-09
+REV0122,WE-DESK-11,3,Exactly as described.,True,2025-10-21
+REV0123,WE-RUG-99,5,Fast delivery and beautiful product.,False,2026-03-08
+REV0124,WE-TABLE-88,3,Fast delivery and beautiful product.,True,2025-12-15
+REV0125,WE-DESK-11,3,Fast delivery and beautiful product.,False,2026-02-10
+REV0126,WE-CHAIR-05,2,finish looks different than photo,False,2025-12-31
+REV0127,WE-SOFA-22,3,Exactly as described.,False,2025-12-07
+REV0128,WE-TBL-04,2,leg joint failed first week,False,2025-12-09
+REV0129,WE-SHELF-14,4,Exactly as described.,False,2025-11-14
+REV0130,WE-SOFA-22,3,Great quality!,False,2026-03-14
+REV0131,WE-BED-33,3,Exactly as described.,False,2025-12-13
+REV0132,WE-LAMP-07,4,Fast delivery and beautiful product.,True,2025-11-03
+REV0133,WE-CHAIR-05,1,finish looks different than photo,True,2025-10-15
+REV0134,WE-MIRROR-3,3,Fast delivery and beautiful product.,False,2025-11-16
+REV0135,WE-BED-33,3,Great quality!,False,2025-11-15
+REV0136,WE-SHELF-14,3,Great quality!,False,2025-11-09
+REV0137,WE-SHELF-14,3,Fast delivery and beautiful product.,True,2026-01-22
+REV0138,WE-LAMP-07,4,Great quality!,False,2026-03-14
+REV0139,WE-BENCH-21,4,Fast delivery and beautiful product.,False,2025-12-05
+REV0140,WE-BENCH-21,3,Great quality!,True,2026-02-14
+REV0141,WE-SOFA-22,4,Great quality!,True,2025-10-23
+REV0142,WE-SOFA-22,2,love the sofa but wrong size for me,False,2025-11-04
+REV0143,WE-MIRROR-3,3,Exactly as described.,False,2025-11-16
+REV0144,WE-BENCH-21,4,Exactly as described.,False,2026-01-12
+REV0145,WE-TABLE-88,2,colour is not what I expected,False,2026-03-26
+REV0146,WE-BED-33,3,Great quality!,True,2025-10-12
+REV0147,WE-RUG-99,4,Exactly as described.,True,2026-02-09
+REV0148,WE-LAMP-07,3,Fast delivery and beautiful product.,False,2026-01-19
+REV0149,WE-LAMP-07,3,Love this piece.,False,2026-02-25
+REV0150,WE-SHELF-14,4,Love this piece.,True,2025-11-19
+REV0151,WE-LAMP-07,4,Fast delivery and beautiful product.,True,2026-01-27
+REV0152,WE-BENCH-21,3,Love this piece.,True,2026-04-08
+REV0153,WE-TABLE-88,2,Fast delivery and beautiful product.,True,2026-03-20
+REV0154,WE-SOFA-22,3,Fast delivery and beautiful product.,False,2025-10-14
+REV0155,WE-MIRROR-3,5,Fast delivery and beautiful product.,False,2025-12-23
+REV0156,WE-RUG-99,3,Fast delivery and beautiful product.,False,2026-01-10
+REV0157,WE-CHAIR-05,3,Fast delivery and beautiful product.,False,2026-02-09
+REV0158,WE-RUG-99,4,Exactly as described.,False,2025-11-22
+REV0159,WE-MIRROR-3,2,minor quality issue on arrival,True,2025-11-13
+REV0160,WE-SHELF-14,5,Great quality!,True,2025-11-27
+REV0161,WE-DESK-11,3,Great quality!,True,2025-12-11
+REV0162,WE-BENCH-21,4,Great quality!,False,2025-10-30
+REV0163,WE-RUG-99,3,Great quality!,False,2025-11-25
+REV0164,WE-TBL-04,2,wobble on one leg,False,2025-11-15
+REV0165,WE-BED-33,2,Exactly as described.,True,2026-04-01
+REV0166,WE-MIRROR-3,5,Exactly as described.,False,2025-11-17
+REV0167,WE-DESK-11,4,Love this piece.,False,2026-03-28
+REV0168,WE-BENCH-21,4,Exactly as described.,False,2025-11-02
+REV0169,WE-TBL-04,3,Great quality!,False,2026-02-05
+REV0170,WE-SOFA-22,3,Exactly as described.,False,2026-02-04
+REV0171,WE-TBL-04,3,Love this piece.,False,2025-12-17
+REV0172,WE-BED-33,2,Exactly as described.,False,2026-02-09
+REV0173,WE-SHELF-14,4,Great quality!,False,2026-03-20
+REV0174,WE-SOFA-22,4,Love this piece.,False,2025-12-26
+REV0175,WE-LAMP-07,4,Love this piece.,True,2025-11-14
+REV0176,WE-BED-33,4,Great quality!,False,2026-02-02
+REV0177,WE-TABLE-88,3,Fast delivery and beautiful product.,False,2025-12-10
+REV0178,WE-RUG-99,4,Love this piece.,False,2025-10-18
+REV0179,WE-LAMP-07,3,Fast delivery and beautiful product.,True,2026-01-27
+REV0180,WE-SHELF-14,4,Fast delivery and beautiful product.,False,2026-01-20
+REV0181,WE-RUG-99,3,Exactly as described.,False,2025-11-05
+REV0182,WE-BENCH-21,4,Exactly as described.,False,2026-01-31
+REV0183,WE-DESK-11,4,Fast delivery and beautiful product.,False,2025-10-20
+REV0184,WE-CHAIR-05,2,Love this piece.,False,2026-01-14
+REV0185,WE-BENCH-21,4,Great quality!,False,2026-04-08
+REV0186,WE-TABLE-88,2,colour is not what I expected,False,2026-03-15
+REV0187,WE-BENCH-21,3,Exactly as described.,False,2026-02-20
+REV0188,WE-TBL-04,3,Great quality!,False,2026-03-18
+REV0189,WE-TBL-04,4,Love this piece.,False,2025-10-29
+REV0190,WE-TABLE-88,2,Great quality!,True,2025-11-07
+REV0191,WE-SOFA-22,2,bigger than expected,True,2025-10-14
+REV0192,WE-SOFA-22,4,Exactly as described.,False,2025-12-12
+REV0193,WE-BENCH-21,5,Exactly as described.,False,2025-10-15
+REV0194,WE-BENCH-21,3,Exactly as described.,False,2026-02-28
+REV0195,WE-TABLE-88,3,Fast delivery and beautiful product.,False,2026-03-26
+REV0196,WE-DESK-11,4,Exactly as described.,True,2025-12-19
+REV0197,WE-TABLE-88,1,colour is not what I expected,False,2025-12-06
+REV0198,WE-TABLE-88,3,Love this piece.,False,2025-12-21
+REV0199,WE-CHAIR-05,3,Fast delivery and beautiful product.,False,2026-02-03
+REV0200,WE-TABLE-88,2,colour is not what I expected,False,2026-02-05
+REV0201,WE-SHELF-14,4,Great quality!,True,2025-10-22
+REV0202,WE-LAMP-07,4,Exactly as described.,True,2025-10-13
+REV0203,WE-BED-33,4,Fast delivery and beautiful product.,False,2025-12-20
+REV0204,WE-LAMP-07,3,Great quality!,False,2026-02-12
+REV0205,WE-TBL-04,2,Great quality!,False,2025-11-24
+REV0206,WE-BED-33,4,Exactly as described.,False,2026-01-23
+REV0207,WE-LAMP-07,5,Great quality!,False,2025-11-25
+REV0208,WE-BED-33,4,Great quality!,False,2026-01-26
+REV0209,WE-BENCH-21,4,Fast delivery and beautiful product.,False,2026-02-21
+REV0210,WE-DESK-11,5,Fast delivery and beautiful product.,True,2025-10-31
+REV0211,WE-BED-33,2,bed is stunning but very large,True,2026-04-01
+REV0212,WE-CHAIR-05,3,Great quality!,False,2025-11-10
+REV0213,WE-CHAIR-05,3,Exactly as described.,False,2025-11-25
+REV0214,WE-SHELF-14,4,Great quality!,True,2026-01-14
+REV0215,WE-TBL-04,2,leg joint failed first week,False,2025-10-22
+REV0216,WE-RUG-99,4,Fast delivery and beautiful product.,False,2025-11-24
+REV0217,WE-SOFA-22,3,Great quality!,True,2026-03-05
+REV0218,WE-SHELF-14,3,Great quality!,False,2025-11-03
+REV0219,WE-TBL-04,3,Great quality!,True,2025-10-31
+REV0220,WE-TBL-04,4,Exactly as described.,True,2025-12-15
+REV0221,WE-MIRROR-3,4,Great quality!,True,2025-12-04
+REV0222,WE-MIRROR-3,5,Love this piece.,True,2026-02-18
+REV0223,WE-LAMP-07,3,Fast delivery and beautiful product.,False,2026-03-11
+REV0224,WE-BENCH-21,5,Love this piece.,False,2026-02-15
+REV0225,WE-TBL-04,2,leg joint failed first week,False,2026-02-26
+REV0226,WE-BED-33,3,Love this piece.,False,2026-02-07
+REV0227,WE-MIRROR-3,4,Fast delivery and beautiful product.,True,2026-04-06
+REV0228,WE-SHELF-14,4,Great quality!,True,2026-04-09
+REV0229,WE-SOFA-22,4,Exactly as described.,False,2025-10-15
+REV0230,WE-SHELF-14,3,Love this piece.,True,2026-03-05
+REV0231,WE-BENCH-21,4,Love this piece.,True,2025-11-05
+REV0232,WE-TBL-04,4,Love this piece.,False,2025-12-04
+REV0233,WE-MIRROR-3,5,Exactly as described.,False,2025-12-24
+REV0234,WE-TBL-04,2,leg joint failed first week,True,2025-11-26
+REV0235,WE-TABLE-88,1,Love this piece.,False,2025-11-01
+REV0236,WE-BENCH-21,3,Love this piece.,False,2026-03-28
+REV0237,WE-CHAIR-05,3,Fast delivery and beautiful product.,False,2026-02-24
+REV0238,WE-SOFA-22,3,Great quality!,True,2025-10-27
+REV0239,WE-BED-33,3,Exactly as described.,False,2025-12-15
+REV0240,WE-TBL-04,4,Great quality!,False,2026-03-28
+REV0241,WE-RUG-99,4,Fast delivery and beautiful product.,False,2026-03-12
+REV0242,WE-TABLE-88,4,Love this piece.,False,2025-12-18
+REV0243,WE-MIRROR-3,3,Exactly as described.,True,2026-03-13
+REV0244,WE-BED-33,3,Love this piece.,True,2026-02-09
+REV0245,WE-LAMP-07,4,Love this piece.,True,2025-12-11
+REV0246,WE-MIRROR-3,3,Fast delivery and beautiful product.,True,2025-12-20
+REV0247,WE-SOFA-22,3,Love this piece.,False,2026-01-05
+REV0248,WE-SOFA-22,4,Fast delivery and beautiful product.,False,2026-02-20
+REV0249,WE-BENCH-21,3,Exactly as described.,True,2026-04-02
+REV0250,WE-MIRROR-3,4,Great quality!,False,2026-03-07
+REV0251,WE-TABLE-88,3,Love this piece.,False,2026-02-13
+REV0252,WE-DESK-11,3,Love this piece.,False,2025-11-05
+REV0253,WE-SOFA-22,2,love the sofa but wrong size for me,False,2025-12-06
+REV0254,WE-CHAIR-05,3,Fast delivery and beautiful product.,False,2026-01-29
+REV0255,WE-TBL-04,3,Love this piece.,True,2026-01-17
+REV0256,WE-LAMP-07,3,Love this piece.,False,2026-03-03
+REV0257,WE-MIRROR-3,4,Great quality!,True,2025-12-11
+REV0258,WE-RUG-99,3,Great quality!,False,2025-11-26
+REV0259,WE-LAMP-07,2,Fast delivery and beautiful product.,False,2026-02-08
+REV0260,WE-TABLE-88,3,Great quality!,False,2025-12-27
+REV0261,WE-CHAIR-05,3,Great quality!,True,2025-12-09
+REV0262,WE-BENCH-21,4,Exactly as described.,True,2025-10-12
+REV0263,WE-SHELF-14,4,Great quality!,False,2025-12-13
+REV0264,WE-SOFA-22,2,Fast delivery and beautiful product.,True,2026-01-06
+REV0265,WE-BENCH-21,3,Great quality!,False,2025-10-16
+REV0266,WE-BED-33,4,Great quality!,False,2025-12-22
+REV0267,WE-DESK-11,3,Love this piece.,False,2026-03-21
+REV0268,WE-MIRROR-3,3,Exactly as described.,False,2026-03-27
+REV0269,WE-RUG-99,4,Great quality!,True,2026-01-02
+REV0270,WE-BED-33,3,Fast delivery and beautiful product.,False,2026-03-31
+REV0271,WE-BED-33,3,Great quality!,False,2026-02-17
+REV0272,WE-SOFA-22,4,Exactly as described.,True,2025-11-23
+REV0273,WE-TABLE-88,2,Love this piece.,False,2026-02-12
+REV0274,WE-BED-33,2,bed is stunning but very large,False,2025-10-18
+REV0275,WE-LAMP-07,4,Exactly as described.,False,2025-12-07
+REV0276,WE-RUG-99,4,Great quality!,False,2025-11-25
+REV0277,WE-BENCH-21,5,Fast delivery and beautiful product.,False,2026-01-06
+REV0278,WE-BENCH-21,2,Great quality!,True,2025-12-14
+REV0279,WE-TABLE-88,4,Exactly as described.,True,2026-03-14
+REV0280,WE-SOFA-22,4,Exactly as described.,True,2025-10-14
+REV0281,WE-SOFA-22,1,bigger than expected,False,2025-12-25
+REV0282,WE-BENCH-21,4,Love this piece.,False,2026-01-12
+REV0283,WE-LAMP-07,3,Exactly as described.,True,2026-03-25
+REV0284,WE-TBL-04,3,Love this piece.,False,2025-10-27
+REV0285,WE-BED-33,3,Exactly as described.,False,2025-11-10
+REV0286,WE-BENCH-21,4,Fast delivery and beautiful product.,False,2026-01-23
+REV0287,WE-MIRROR-3,5,Love this piece.,False,2026-02-11
+REV0288,WE-SHELF-14,5,Exactly as described.,False,2026-03-29
+REV0289,WE-SOFA-22,3,Love this piece.,False,2026-02-28
+REV0290,WE-RUG-99,4,Exactly as described.,True,2026-02-25
+REV0291,WE-BENCH-21,4,Great quality!,True,2026-01-19
+REV0292,WE-MIRROR-3,3,Love this piece.,False,2026-02-03
+REV0293,WE-BED-33,4,Great quality!,False,2026-01-19
+REV0294,WE-BED-33,4,Love this piece.,False,2025-12-17
+REV0295,WE-RUG-99,4,Great quality!,True,2025-12-28
+REV0296,WE-SHELF-14,3,Love this piece.,False,2026-01-19
+REV0297,WE-SOFA-22,4,Exactly as described.,False,2025-10-12
+REV0298,WE-DESK-11,4,Fast delivery and beautiful product.,False,2025-11-15
+REV0299,WE-BENCH-21,4,Fast delivery and beautiful product.,False,2025-10-16
+REV0300,WE-TABLE-88,3,Fast delivery and beautiful product.,True,2026-03-06
+REV0301,WE-BENCH-21,3,Fast delivery and beautiful product.,False,2026-02-13
+REV0302,WE-SHELF-14,3,Exactly as described.,True,2026-01-17
+REV0303,WE-TBL-04,2,beautiful but leg cracked,True,2026-04-05
+REV0304,WE-TABLE-88,2,looks grey not warm brown as shown,False,2025-10-21
+REV0305,WE-TABLE-88,3,Fast delivery and beautiful product.,False,2025-11-07
+REV0306,WE-MIRROR-3,4,Great quality!,False,2026-01-08
+REV0307,WE-LAMP-07,5,Exactly as described.,False,2026-01-05
+REV0308,WE-TBL-04,4,Exactly as described.,False,2026-01-11
+REV0309,WE-DESK-11,5,Great quality!,True,2025-12-18
+REV0310,WE-LAMP-07,4,Fast delivery and beautiful product.,False,2026-02-28
+REV0311,WE-LAMP-07,4,Great quality!,True,2026-02-16
+REV0312,WE-DESK-11,3,Fast delivery and beautiful product.,False,2026-01-15
+REV0313,WE-TABLE-88,4,Fast delivery and beautiful product.,True,2026-04-09
+REV0314,WE-LAMP-07,3,Exactly as described.,False,2026-02-25
+REV0315,WE-RUG-99,2,Love this piece.,True,2026-01-03
+REV0316,WE-DESK-11,4,Fast delivery and beautiful product.,True,2026-01-23
+REV0317,WE-MIRROR-3,3,Fast delivery and beautiful product.,True,2026-04-04
+REV0318,WE-TBL-04,4,Love this piece.,False,2026-01-24
+REV0319,WE-BENCH-21,4,Exactly as described.,False,2026-02-24
+REV0320,WE-SHELF-14,3,Love this piece.,True,2026-03-11
+REV0321,WE-DESK-11,1,drawer mechanism is stiff,False,2025-12-08
+REV0322,WE-MIRROR-3,4,Fast delivery and beautiful product.,False,2025-11-01
+REV0323,WE-BENCH-21,3,Great quality!,False,2025-11-30
+REV0324,WE-MIRROR-3,4,Great quality!,False,2026-02-28
+REV0325,WE-MIRROR-3,4,Love this piece.,False,2026-02-28
+REV0326,WE-TBL-04,3,Exactly as described.,False,2025-12-24
+REV0327,WE-BENCH-21,4,Exactly as described.,False,2025-11-26
+REV0328,WE-BENCH-21,3,Great quality!,False,2026-02-20
+REV0329,WE-BENCH-21,4,Love this piece.,False,2026-01-18
+REV0330,WE-BED-33,4,Exactly as described.,False,2025-10-17
+REV0331,WE-BED-33,4,Love this piece.,True,2026-03-06
+REV0332,WE-RUG-99,4,Exactly as described.,False,2025-12-07
+REV0333,WE-LAMP-07,3,Great quality!,True,2026-03-02
+REV0334,WE-RUG-99,5,Love this piece.,True,2025-11-18
+REV0335,WE-MIRROR-3,3,Great quality!,False,2025-12-14
+REV0336,WE-TABLE-88,1,colour is not what I expected,True,2025-12-09
+REV0337,WE-BED-33,3,Fast delivery and beautiful product.,False,2025-11-28
+REV0338,WE-BED-33,4,Love this piece.,False,2026-01-23
+REV0339,WE-TBL-04,3,Love this piece.,False,2026-03-05
+REV0340,WE-CHAIR-05,3,Exactly as described.,True,2026-02-16
+REV0341,WE-SOFA-22,4,Great quality!,True,2026-04-06
+REV0342,WE-SHELF-14,3,Fast delivery and beautiful product.,True,2026-02-19
+REV0343,WE-TABLE-88,4,Great quality!,False,2026-03-11
+REV0344,WE-DESK-11,4,Great quality!,True,2026-01-23
+REV0345,WE-BENCH-21,4,Great quality!,False,2026-02-17
+REV0346,WE-MIRROR-3,4,Love this piece.,True,2025-10-21
+REV0347,WE-BED-33,4,Exactly as described.,False,2026-01-11
+REV0348,WE-BED-33,3,Love this piece.,False,2025-11-05
+REV0349,WE-CHAIR-05,3,Great quality!,False,2026-02-14
+REV0350,WE-CHAIR-05,3,Exactly as described.,True,2025-11-24
+REV0351,WE-TBL-04,3,Love this piece.,False,2025-12-10
+REV0352,WE-BED-33,3,Love this piece.,False,2025-10-20
+REV0353,WE-TABLE-88,3,Fast delivery and beautiful product.,False,2026-02-15
+REV0354,WE-RUG-99,4,Love this piece.,False,2026-03-13
+REV0355,WE-BED-33,4,Love this piece.,False,2026-01-08
+REV0356,WE-DESK-11,4,Great quality!,True,2026-01-17
+REV0357,WE-SHELF-14,4,Exactly as described.,False,2025-12-18
+REV0358,WE-CHAIR-05,3,Fast delivery and beautiful product.,False,2025-12-22
+REV0359,WE-CHAIR-05,4,Fast delivery and beautiful product.,False,2026-01-06
+REV0360,WE-SOFA-22,2,love the sofa but wrong size for me,False,2026-03-15
+REV0361,WE-LAMP-07,3,Great quality!,True,2026-03-05
+REV0362,WE-LAMP-07,4,Fast delivery and beautiful product.,False,2025-11-10
+REV0363,WE-TABLE-88,3,Love this piece.,True,2026-01-07
+REV0364,WE-CHAIR-05,1,finish looks different than photo,True,2026-02-10
+REV0365,WE-LAMP-07,4,Exactly as described.,False,2025-12-29
+REV0366,WE-BED-33,3,Fast delivery and beautiful product.,False,2025-11-07
+REV0367,WE-LAMP-07,5,Love this piece.,False,2026-03-14
+REV0368,WE-TABLE-88,3,Exactly as described.,False,2025-12-04
+REV0369,WE-CHAIR-05,3,Great quality!,False,2026-03-28
+REV0370,WE-TABLE-88,2,colour is not what I expected,True,2026-01-03
+REV0371,WE-MIRROR-3,4,Great quality!,True,2025-10-23
+REV0372,WE-RUG-99,3,Fast delivery and beautiful product.,False,2026-02-18
+REV0373,WE-DESK-11,3,Exactly as described.,False,2026-01-13
+REV0374,WE-RUG-99,2,love the rug but colour is very orange,False,2026-03-11
+REV0375,WE-LAMP-07,2,nice lamp,True,2026-02-24
+REV0376,WE-RUG-99,4,Exactly as described.,False,2026-02-27
+REV0377,WE-SHELF-14,3,Fast delivery and beautiful product.,False,2026-03-13
+REV0378,WE-MIRROR-3,4,Fast delivery and beautiful product.,False,2025-11-20
+REV0379,WE-BENCH-21,3,Love this piece.,False,2026-03-27
+REV0380,WE-LAMP-07,4,Exactly as described.,False,2025-11-10
+REV0381,WE-LAMP-07,3,Exactly as described.,False,2026-03-26
+REV0382,WE-TBL-04,2,leg joint failed first week,False,2026-01-11
+REV0383,WE-MIRROR-3,5,Exactly as described.,False,2026-03-17
+REV0384,WE-LAMP-07,4,Exactly as described.,False,2025-12-26
+REV0385,WE-BED-33,4,Love this piece.,False,2026-01-21
+REV0386,WE-MIRROR-3,4,Great quality!,False,2026-03-25
+REV0387,WE-DESK-11,4,Exactly as described.,True,2025-12-14
+REV0388,WE-BENCH-21,4,Fast delivery and beautiful product.,False,2025-11-30
+REV0389,WE-LAMP-07,4,Great quality!,False,2026-01-04
+REV0390,WE-MIRROR-3,5,Fast delivery and beautiful product.,False,2025-11-15
+REV0391,WE-TABLE-88,3,Love this piece.,False,2025-12-04
+REV0392,WE-RUG-99,3,Exactly as described.,True,2025-11-04
+REV0393,WE-DESK-11,3,Fast delivery and beautiful product.,False,2026-03-22
+REV0394,WE-RUG-99,4,Love this piece.,False,2026-02-02
+REV0395,WE-TBL-04,2,Great quality!,False,2025-11-13
+REV0396,WE-TABLE-88,4,Exactly as described.,False,2026-03-24
+REV0397,WE-MIRROR-3,4,Love this piece.,False,2026-03-22
+REV0398,WE-BENCH-21,3,Exactly as described.,False,2026-01-24
+REV0399,WE-LAMP-07,4,Fast delivery and beautiful product.,False,2026-02-05
+REV0400,WE-MIRROR-3,3,Fast delivery and beautiful product.,False,2025-11-21
+REV0401,WE-SOFA-22,4,Love this piece.,False,2025-12-04
+REV0402,WE-CHAIR-05,2,finish looks different than photo,False,2025-10-29
+REV0403,WE-RUG-99,4,Fast delivery and beautiful product.,False,2025-11-01
+REV0404,WE-TBL-04,1,beautiful but leg cracked,False,2026-03-04
+REV0405,WE-CHAIR-05,4,Exactly as described.,False,2025-12-26
+REV0406,WE-BED-33,4,Great quality!,False,2026-02-17
+REV0407,WE-LAMP-07,4,Love this piece.,False,2025-10-17
+REV0408,WE-MIRROR-3,4,Love this piece.,False,2026-02-08
+REV0409,WE-TABLE-88,3,Exactly as described.,False,2025-12-07
+REV0410,WE-RUG-99,3,Fast delivery and beautiful product.,False,2025-10-27
+REV0411,WE-TBL-04,3,Great quality!,False,2026-01-29
+REV0412,WE-BENCH-21,4,Love this piece.,False,2026-03-31
+REV0413,WE-SHELF-14,4,Great quality!,False,2025-11-07
+REV0414,WE-DESK-11,3,Great quality!,False,2026-01-07
+REV0415,WE-BENCH-21,4,Love this piece.,True,2026-03-13
+REV0416,WE-MIRROR-3,3,Great quality!,False,2025-10-22
+REV0417,WE-MIRROR-3,5,Exactly as described.,False,2026-03-18
+REV0418,WE-CHAIR-05,2,finish looks different than photo,False,2025-11-12
+REV0419,WE-LAMP-07,4,Fast delivery and beautiful product.,True,2026-03-05
+REV0420,WE-TABLE-88,1,looks grey not warm brown as shown,False,2025-12-27
+REV0421,WE-DESK-11,4,Exactly as described.,False,2026-03-13
+REV0422,WE-BED-33,3,Fast delivery and beautiful product.,False,2025-10-18
+REV0423,WE-CHAIR-05,5,Love this piece.,False,2025-12-10
+REV0424,WE-BED-33,3,Exactly as described.,True,2025-10-27
+REV0425,WE-MIRROR-3,5,Great quality!,False,2025-10-21
+REV0426,WE-CHAIR-05,3,Exactly as described.,False,2026-01-02
+REV0427,WE-DESK-11,3,Great quality!,False,2026-02-09
+REV0428,WE-SHELF-14,3,Fast delivery and beautiful product.,True,2025-12-31
+REV0429,WE-DESK-11,3,Love this piece.,False,2026-02-16
+REV0430,WE-SOFA-22,5,Fast delivery and beautiful product.,False,2026-01-19
+REV0431,WE-BENCH-21,4,Great quality!,False,2025-12-11
+REV0432,WE-LAMP-07,4,Exactly as described.,False,2025-12-23
+REV0433,WE-TABLE-88,3,Great quality!,False,2025-12-24
+REV0434,WE-MIRROR-3,3,Exactly as described.,False,2025-10-15
+REV0435,WE-TBL-04,3,Love this piece.,False,2025-12-18
+REV0436,WE-BENCH-21,3,Love this piece.,True,2025-12-29
+REV0437,WE-CHAIR-05,3,Great quality!,True,2026-03-01
+REV0438,WE-CHAIR-05,2,finish looks different than photo,False,2025-10-17
+REV0439,WE-LAMP-07,4,Fast delivery and beautiful product.,False,2026-03-07
+REV0440,WE-DESK-11,3,Love this piece.,False,2025-11-10
+REV0441,WE-BED-33,4,Fast delivery and beautiful product.,False,2026-02-23
+REV0442,WE-LAMP-07,3,Fast delivery and beautiful product.,False,2026-02-12
+REV0443,WE-TBL-04,4,Love this piece.,True,2025-12-13
+REV0444,WE-CHAIR-05,2,finish looks different than photo,True,2025-12-29
+REV0445,WE-MIRROR-3,3,Great quality!,False,2026-02-26
+REV0446,WE-MIRROR-3,4,Great quality!,True,2025-11-27
+REV0447,WE-LAMP-07,4,Fast delivery and beautiful product.,True,2026-02-12
+REV0448,WE-CHAIR-05,1,finish looks different than photo,False,2025-12-05
+REV0449,WE-LAMP-07,5,Love this piece.,False,2025-10-19
+REV0450,WE-CHAIR-05,4,Fast delivery and beautiful product.,True,2025-12-27

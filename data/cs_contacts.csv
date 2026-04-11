@@ -1,0 +1,321 @@
+contact_id,return_id,sku_id,contact_reason,transcript,resolution,part_requested,contact_date
+CS0001,,WE-SOFA-22,color_inquiry,Customer upset that the finish doesn't match the listing.,exchange_offered,Hardware kit,2025-12-16
+CS0002,,WE-CHAIR-05,quality_complaint,Warranty claim: structural failure at joint confirmed.,information_provided,Leg,2026-04-08
+CS0003,,WE-SHELF-14,size_confusion,Customer said item is too big for their space.,information_provided,None,2026-02-15
+CS0004,,WE-LAMP-07,warranty_claim,Structural failure documented; replacement parts shipped.,discount_applied,Leg,2026-03-17
+CS0005,R0241,WE-RUG-99,color_inquiry,Customer asked why the colour looks different from website photos.,information_provided,Drawer slide,2025-11-06
+CS0006,R0517,WE-BENCH-21,general_inquiry,Customer asked about care instructions.,escalated_to_team,Top panel,2026-01-23
+CS0007,R0043,WE-LAMP-07,warranty_claim,Structural failure documented; replacement parts shipped.,escalated_to_team,Hinge,2026-02-03
+CS0008,,WE-SOFA-22,general_inquiry,Inquiry about warranty coverage.,information_provided,Hinge,2026-03-19
+CS0009,R0120,WE-BED-33,warranty_claim,Structural failure documented; replacement parts shipped.,discount_applied,Leg,2026-03-09
+CS0010,,WE-SHELF-14,quality_complaint,Warranty claim: structural failure at joint confirmed.,information_provided,Drawer slide,2026-02-02
+CS0011,R0169,WE-MIRROR-3,quality_complaint,Warranty claim: structural failure at joint confirmed.,discount_applied,None,2025-12-06
+CS0012,R0153,WE-SOFA-22,general_inquiry,Inquiry about warranty coverage.,return_initiated,Hinge,2026-02-23
+CS0013,R0479,WE-TBL-04,shipping_issue,Item arrived with damaged box.,information_provided,Leg,2025-12-05
+CS0014,,WE-TBL-04,shipping_issue,Item arrived with damaged box.,escalated_to_team,Top panel,2025-12-14
+CS0015,R0096,WE-SHELF-14,color_inquiry,Customer asked why the colour looks different from website photos.,exchange_offered,Drawer slide,2026-02-23
+CS0016,,WE-SOFA-22,warranty_claim,Structural failure documented; replacement parts shipped.,resolved_no_action,Hardware kit,2026-02-15
+CS0017,,WE-MIRROR-3,color_inquiry,Customer asked why the colour looks different from website photos.,return_initiated,Hinge,2025-12-04
+CS0018,R0125,WE-BENCH-21,color_inquiry,Customer upset that the finish doesn't match the listing.,information_provided,Drawer slide,2025-11-10
+CS0019,R0472,WE-TABLE-88,quality_complaint,Customer reported leg snapped during setup. Escalated to quality.,resolved_no_action,None,2025-12-09
+CS0020,,WE-SHELF-14,warranty_claim,Structural failure documented; replacement parts shipped.,return_initiated,Drawer slide,2026-03-30
+CS0021,R0133,WE-BENCH-21,general_inquiry,Inquiry about warranty coverage.,exchange_offered,Leg,2025-10-28
+CS0022,,WE-DESK-11,quality_complaint,Customer reported leg snapped during setup. Escalated to quality.,escalated_to_team,Hardware kit,2026-01-03
+CS0023,R0409,WE-TABLE-88,shipping_issue,Item arrived with damaged box.,return_initiated,Leg,2026-02-16
+CS0024,R0158,WE-SOFA-22,shipping_issue,Item arrived with damaged box.,return_initiated,Drawer slide,2025-12-06
+CS0025,,WE-LAMP-07,warranty_claim,Structural failure documented; replacement parts shipped.,escalated_to_team,Hinge,2026-01-09
+CS0026,,WE-BENCH-21,color_inquiry,Customer upset that the finish doesn't match the listing.,information_provided,Top panel,2026-01-01
+CS0027,,WE-SHELF-14,quality_complaint,Warranty claim: structural failure at joint confirmed.,return_initiated,Top panel,2026-01-06
+CS0028,,WE-MIRROR-3,size_confusion,Customer said item is too big for their space.,return_initiated,Leg,2025-11-30
+CS0029,,WE-BED-33,shipping_issue,Package delayed by 3 days. Agent applied discount code.,resolved_no_action,Hinge,2025-12-05
+CS0030,R0448,WE-RUG-99,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,return_initiated,Top panel,2026-01-24
+CS0031,,WE-SOFA-22,size_confusion,Customer said item is too big for their space.,escalated_to_team,Top panel,2026-01-25
+CS0032,,WE-MIRROR-3,color_inquiry,Customer asked why the colour looks different from website photos.,escalated_to_team,Leg,2025-12-01
+CS0033,,WE-LAMP-07,shipping_issue,Package delayed by 3 days. Agent applied discount code.,resolved_no_action,Hardware kit,2026-02-05
+CS0034,R0516,WE-BED-33,quality_complaint,Warranty claim: structural failure at joint confirmed.,return_initiated,Leg,2025-10-23
+CS0035,,WE-SHELF-14,size_confusion,Customer couldn't visualise scale from photos.,return_initiated,Leg,2025-12-25
+CS0036,,WE-DESK-11,quality_complaint,Warranty claim: structural failure at joint confirmed.,resolved_no_action,Top panel,2025-11-02
+CS0037,R0081,WE-DESK-11,quality_complaint,Customer reported leg snapped during setup. Escalated to quality.,resolved_no_action,Hardware kit,2026-02-03
+CS0038,,WE-BENCH-21,color_inquiry,Customer upset that the finish doesn't match the listing.,return_initiated,Top panel,2026-03-12
+CS0039,,WE-TBL-04,size_confusion,Customer said item is too big for their space.,information_provided,None,2025-11-07
+CS0040,,WE-SHELF-14,quality_complaint,Warranty claim: structural failure at joint confirmed.,escalated_to_team,Drawer slide,2025-10-16
+CS0041,,WE-BENCH-21,warranty_claim,Structural failure documented; replacement parts shipped.,return_initiated,Hinge,2026-03-07
+CS0042,,WE-TBL-04,size_confusion,Customer couldn't visualise scale from photos.,resolved_no_action,Hinge,2026-04-04
+CS0043,,WE-CHAIR-05,shipping_issue,Package delayed by 3 days. Agent applied discount code.,information_provided,None,2025-11-24
+CS0044,,WE-CHAIR-05,color_inquiry,Customer upset that the finish doesn't match the listing.,exchange_offered,Top panel,2025-12-23
+CS0045,,WE-TBL-04,color_inquiry,Customer asked why the colour looks different from website photos.,resolved_no_action,None,2025-12-18
+CS0046,,WE-SHELF-14,shipping_issue,Package delayed by 3 days. Agent applied discount code.,escalated_to_team,Hinge,2026-02-18
+CS0047,R0009,WE-DESK-11,general_inquiry,Inquiry about warranty coverage.,return_initiated,None,2025-12-21
+CS0048,R0410,WE-LAMP-07,shipping_issue,Item arrived with damaged box.,information_provided,Hardware kit,2025-11-10
+CS0049,R0063,WE-MIRROR-3,warranty_claim,Structural failure documented; replacement parts shipped.,escalated_to_team,Leg,2025-12-23
+CS0050,R0428,WE-MIRROR-3,quality_complaint,Warranty claim: structural failure at joint confirmed.,information_provided,Leg,2025-12-05
+CS0051,,WE-MIRROR-3,warranty_claim,Structural failure documented; replacement parts shipped.,information_provided,Leg,2026-02-28
+CS0052,,WE-DESK-11,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,information_provided,Hinge,2025-12-02
+CS0053,,WE-CHAIR-05,general_inquiry,Inquiry about warranty coverage.,resolved_no_action,None,2025-12-12
+CS0054,,WE-SOFA-22,quality_complaint,Warranty claim: structural failure at joint confirmed.,information_provided,None,2025-10-25
+CS0055,,WE-BED-33,shipping_issue,Package delayed by 3 days. Agent applied discount code.,discount_applied,None,2026-03-19
+CS0056,R0161,WE-BENCH-21,shipping_issue,Package delayed by 3 days. Agent applied discount code.,escalated_to_team,Top panel,2026-03-16
+CS0057,R0049,WE-LAMP-07,shipping_issue,Item arrived with damaged box.,return_initiated,Drawer slide,2026-02-03
+CS0058,R0516,WE-BED-33,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,return_initiated,Leg,2026-01-14
+CS0059,R0230,WE-LAMP-07,color_inquiry,Customer asked why the colour looks different from website photos.,information_provided,Drawer slide,2026-01-13
+CS0060,,WE-BED-33,color_inquiry,Customer upset that the finish doesn't match the listing.,resolved_no_action,Hardware kit,2025-11-07
+CS0061,,WE-BENCH-21,color_inquiry,Customer asked why the colour looks different from website photos.,information_provided,Top panel,2026-03-13
+CS0062,,WE-TABLE-88,general_inquiry,Customer asked about care instructions.,return_initiated,Hardware kit,2026-03-15
+CS0063,,WE-SOFA-22,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,discount_applied,Hinge,2026-01-26
+CS0064,,WE-SHELF-14,general_inquiry,Inquiry about warranty coverage.,return_initiated,Hinge,2025-10-27
+CS0065,R0207,WE-BED-33,quality_complaint,Customer reported leg snapped during setup. Escalated to quality.,information_provided,Top panel,2026-04-09
+CS0066,R0176,WE-CHAIR-05,shipping_issue,Item arrived with damaged box.,return_initiated,Drawer slide,2026-01-05
+CS0067,,WE-LAMP-07,quality_complaint,Warranty claim: structural failure at joint confirmed.,exchange_offered,Hardware kit,2025-12-24
+CS0068,,WE-CHAIR-05,size_confusion,Customer said item is too big for their space.,information_provided,Top panel,2025-11-29
+CS0069,,WE-BENCH-21,quality_complaint,Customer reported leg snapped during setup. Escalated to quality.,return_initiated,None,2025-11-29
+CS0070,R0169,WE-TABLE-88,color_inquiry,Customer upset that the finish doesn't match the listing.,information_provided,Leg,2025-12-31
+CS0071,,WE-TBL-04,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,return_initiated,None,2025-10-23
+CS0072,,WE-RUG-99,quality_complaint,Complaint about wobbly leg. Agent sent replacement hardware.,resolved_no_action,None,2025-11-20
+CS0073,,WE-DESK-11,warranty_claim,Structural failure documented; replacement parts shipped.,return_initiated,Drawer slide,2025-11-26
+CS0074,,WE-MIRROR-3,size_confusion,Customer said item is too big for their space.,exchange_offered,Hardware kit,2025-11-02
+CS0075,,WE-MIRROR-3,warranty_claim,Structural failure documented; replacement parts shipped.,resolved_no_action,Top panel,2026-02-19
+CS0076,,WE-DESK-11,color_inquiry,Customer asked why the colour looks different from website photos.,information_provided,None,2026-03-09
+CS0077,R0320,WE-RUG-99,general_inquiry,Inquiry about warranty coverage.,escalated_to_team,Drawer slide,2025-10-30
+CS0078,,WE-SOFA-22,color_inquiry,Customer asked why the colour looks different from website photos.,escalated_to_team,Hardware kit,2026-02-03
+CS0079,,WE-CHAIR-05,quality_complaint,Warranty claim: structural failure at joint confirmed.,escalated_to_team,Leg,2026-03-26
+CS0080,,WE-BED-33,quality_complaint,Warranty claim: structural failure at joint confirmed.,return_initiated,Leg,2025-10-26
+CS0081,,WE-TABLE-88,shipping_issue,Item arrived with damaged box.,return_initiated,Top panel,2026-01-14
+CS0082,,WE-CHAIR-05,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,discount_applied,None,2025-11-15
+CS0083,,WE-BENCH-21,size_confusion,Customer said item is too big for their space.,exchange_offered,Leg,2026-01-17
+CS0084,,WE-RUG-99,general_inquiry,Customer asked about care instructions.,discount_applied,Top panel,2026-03-16
+CS0085,,WE-SOFA-22,warranty_claim,Structural failure documented; replacement parts shipped.,return_initiated,Leg,2026-03-26
+CS0086,R0080,WE-LAMP-07,size_confusion,Customer said item is too big for their space.,discount_applied,None,2025-11-27
+CS0087,,WE-LAMP-07,general_inquiry,Inquiry about warranty coverage.,escalated_to_team,Top panel,2025-10-30
+CS0088,,WE-LAMP-07,shipping_issue,Item arrived with damaged box.,information_provided,Hinge,2026-03-05
+CS0089,,WE-RUG-99,size_confusion,Customer said item is too big for their space.,exchange_offered,None,2025-11-30
+CS0090,,WE-RUG-99,color_inquiry,Customer asked why the colour looks different from website photos.,return_initiated,None,2026-03-01
+CS0091,,WE-RUG-99,quality_complaint,Customer reported leg snapped during setup. Escalated to quality.,information_provided,Leg,2026-03-11
+CS0092,R0157,WE-BED-33,general_inquiry,Inquiry about warranty coverage.,return_initiated,Drawer slide,2026-01-22
+CS0093,,WE-BED-33,quality_complaint,Complaint about wobbly leg. Agent sent replacement hardware.,exchange_offered,Hinge,2025-11-11
+CS0094,,WE-LAMP-07,color_inquiry,Customer upset that the finish doesn't match the listing.,exchange_offered,Hinge,2025-12-06
+CS0095,R0046,WE-TBL-04,color_inquiry,Customer upset that the finish doesn't match the listing.,information_provided,Top panel,2025-11-15
+CS0096,,WE-DESK-11,general_inquiry,Inquiry about warranty coverage.,information_provided,Top panel,2025-11-06
+CS0097,,WE-SOFA-22,size_confusion,Customer said item is too big for their space.,resolved_no_action,Top panel,2026-03-03
+CS0098,,WE-BED-33,color_inquiry,Customer upset that the finish doesn't match the listing.,information_provided,Drawer slide,2025-11-23
+CS0099,,WE-TBL-04,warranty_claim,Structural failure documented; replacement parts shipped.,resolved_no_action,Leg,2026-02-27
+CS0100,,WE-TBL-04,general_inquiry,Inquiry about warranty coverage.,return_initiated,None,2025-11-18
+CS0101,,WE-TABLE-88,size_confusion,Customer couldn't visualise scale from photos.,escalated_to_team,Hinge,2025-12-10
+CS0102,,WE-RUG-99,color_inquiry,Customer asked why the colour looks different from website photos.,escalated_to_team,Hinge,2026-04-06
+CS0103,,WE-DESK-11,size_confusion,Customer couldn't visualise scale from photos.,escalated_to_team,Top panel,2026-03-20
+CS0104,,WE-RUG-99,general_inquiry,Inquiry about warranty coverage.,return_initiated,Top panel,2026-04-05
+CS0105,,WE-BED-33,shipping_issue,Package delayed by 3 days. Agent applied discount code.,escalated_to_team,Drawer slide,2026-01-03
+CS0106,,WE-DESK-11,color_inquiry,Customer asked why the colour looks different from website photos.,escalated_to_team,Hinge,2026-01-27
+CS0107,,WE-SOFA-22,size_confusion,Customer said item is too big for their space.,exchange_offered,Drawer slide,2025-12-27
+CS0108,,WE-BENCH-21,size_confusion,Customer couldn't visualise scale from photos.,discount_applied,Hinge,2026-04-04
+CS0109,R0146,WE-TBL-04,quality_complaint,Complaint about wobbly leg. Agent sent replacement hardware.,information_provided,Drawer slide,2026-02-03
+CS0110,R0243,WE-LAMP-07,color_inquiry,Customer asked why the colour looks different from website photos.,information_provided,Hardware kit,2025-12-02
+CS0111,R0476,WE-LAMP-07,color_inquiry,Customer upset that the finish doesn't match the listing.,escalated_to_team,Top panel,2026-03-25
+CS0112,,WE-SHELF-14,color_inquiry,Customer upset that the finish doesn't match the listing.,return_initiated,Drawer slide,2025-11-20
+CS0113,R0129,WE-MIRROR-3,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,discount_applied,Hardware kit,2025-12-27
+CS0114,,WE-SHELF-14,color_inquiry,Customer asked why the colour looks different from website photos.,exchange_offered,Drawer slide,2025-11-23
+CS0115,,WE-SOFA-22,size_confusion,Customer said item is too big for their space.,escalated_to_team,Top panel,2026-03-31
+CS0116,,WE-TBL-04,shipping_issue,Item arrived with damaged box.,exchange_offered,Leg,2026-03-26
+CS0117,R0390,WE-SHELF-14,quality_complaint,Warranty claim: structural failure at joint confirmed.,discount_applied,None,2026-02-15
+CS0118,R0072,WE-MIRROR-3,general_inquiry,Inquiry about warranty coverage.,discount_applied,Leg,2025-12-30
+CS0119,,WE-TABLE-88,size_confusion,Customer said item is too big for their space.,exchange_offered,Hardware kit,2025-12-02
+CS0120,,WE-BED-33,warranty_claim,Structural failure documented; replacement parts shipped.,resolved_no_action,Top panel,2026-01-31
+CS0121,R0471,WE-CHAIR-05,warranty_claim,Structural failure documented; replacement parts shipped.,escalated_to_team,Drawer slide,2026-04-06
+CS0122,,WE-SOFA-22,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,return_initiated,Leg,2025-10-20
+CS0123,,WE-SOFA-22,shipping_issue,Item arrived with damaged box.,escalated_to_team,Leg,2025-10-26
+CS0124,,WE-BENCH-21,color_inquiry,Customer asked why the colour looks different from website photos.,resolved_no_action,Top panel,2025-10-20
+CS0125,,WE-TABLE-88,quality_complaint,Complaint about wobbly leg. Agent sent replacement hardware.,discount_applied,Top panel,2026-02-24
+CS0126,,WE-TBL-04,color_inquiry,Customer upset that the finish doesn't match the listing.,exchange_offered,Top panel,2026-04-08
+CS0127,,WE-CHAIR-05,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,resolved_no_action,None,2026-01-09
+CS0128,,WE-CHAIR-05,color_inquiry,Customer upset that the finish doesn't match the listing.,exchange_offered,Hinge,2025-12-05
+CS0129,,WE-BED-33,color_inquiry,Customer upset that the finish doesn't match the listing.,resolved_no_action,None,2025-11-06
+CS0130,,WE-CHAIR-05,color_inquiry,Customer asked why the colour looks different from website photos.,resolved_no_action,Top panel,2026-03-13
+CS0131,R0199,WE-DESK-11,general_inquiry,Inquiry about warranty coverage.,resolved_no_action,None,2025-11-17
+CS0132,R0132,WE-BENCH-21,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,resolved_no_action,Leg,2026-03-09
+CS0133,,WE-DESK-11,general_inquiry,Customer asked about care instructions.,resolved_no_action,Drawer slide,2026-02-20
+CS0134,,WE-BENCH-21,color_inquiry,Customer upset that the finish doesn't match the listing.,information_provided,Leg,2025-12-22
+CS0135,,WE-BENCH-21,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,discount_applied,Top panel,2025-12-27
+CS0136,,WE-DESK-11,color_inquiry,Customer upset that the finish doesn't match the listing.,escalated_to_team,Leg,2026-02-12
+CS0137,,WE-TBL-04,quality_complaint,Complaint about wobbly leg. Agent sent replacement hardware.,discount_applied,Leg,2025-12-31
+CS0138,,WE-CHAIR-05,quality_complaint,Customer reported leg snapped during setup. Escalated to quality.,return_initiated,None,2026-02-12
+CS0139,R0338,WE-LAMP-07,color_inquiry,Customer asked why the colour looks different from website photos.,discount_applied,Leg,2025-11-01
+CS0140,,WE-BENCH-21,color_inquiry,Customer asked why the colour looks different from website photos.,return_initiated,Hardware kit,2025-11-01
+CS0141,R0245,WE-BED-33,quality_complaint,Customer reported leg snapped during setup. Escalated to quality.,discount_applied,Leg,2026-01-15
+CS0142,,WE-RUG-99,size_confusion,Customer couldn't visualise scale from photos.,escalated_to_team,Top panel,2026-03-17
+CS0143,R0063,WE-BENCH-21,shipping_issue,Package delayed by 3 days. Agent applied discount code.,return_initiated,Top panel,2026-01-20
+CS0144,,WE-TABLE-88,size_confusion,Customer couldn't visualise scale from photos.,information_provided,Leg,2026-01-23
+CS0145,R0058,WE-MIRROR-3,warranty_claim,Structural failure documented; replacement parts shipped.,escalated_to_team,Leg,2026-01-25
+CS0146,,WE-LAMP-07,shipping_issue,Package delayed by 3 days. Agent applied discount code.,information_provided,Hinge,2025-11-08
+CS0147,,WE-BENCH-21,general_inquiry,Customer asked about care instructions.,information_provided,Top panel,2025-11-03
+CS0148,,WE-MIRROR-3,color_inquiry,Customer upset that the finish doesn't match the listing.,resolved_no_action,Leg,2025-12-15
+CS0149,R0106,WE-RUG-99,quality_complaint,Warranty claim: structural failure at joint confirmed.,return_initiated,Hardware kit,2026-03-24
+CS0150,,WE-MIRROR-3,size_confusion,Customer couldn't visualise scale from photos.,discount_applied,Drawer slide,2025-12-24
+CS0151,R0141,WE-SHELF-14,warranty_claim,Structural failure documented; replacement parts shipped.,return_initiated,Leg,2026-03-09
+CS0152,,WE-DESK-11,general_inquiry,Inquiry about warranty coverage.,resolved_no_action,Drawer slide,2026-01-21
+CS0153,R0317,WE-MIRROR-3,general_inquiry,Customer asked about care instructions.,escalated_to_team,Drawer slide,2026-01-26
+CS0154,R0520,WE-BED-33,color_inquiry,Customer asked why the colour looks different from website photos.,escalated_to_team,Leg,2025-12-23
+CS0155,,WE-BED-33,size_confusion,Customer couldn't visualise scale from photos.,exchange_offered,Leg,2026-01-13
+CS0156,,WE-CHAIR-05,warranty_claim,Structural failure documented; replacement parts shipped.,information_provided,Hardware kit,2025-10-15
+CS0157,,WE-BED-33,general_inquiry,Inquiry about warranty coverage.,information_provided,Drawer slide,2026-02-28
+CS0158,,WE-TABLE-88,shipping_issue,Package delayed by 3 days. Agent applied discount code.,return_initiated,None,2026-02-12
+CS0159,R0340,WE-CHAIR-05,shipping_issue,Package delayed by 3 days. Agent applied discount code.,resolved_no_action,Top panel,2026-02-17
+CS0160,,WE-LAMP-07,size_confusion,Customer couldn't visualise scale from photos.,return_initiated,Drawer slide,2026-04-03
+CS0161,R0200,WE-RUG-99,color_inquiry,Customer asked why the colour looks different from website photos.,resolved_no_action,Hardware kit,2026-01-08
+CS0162,R0179,WE-TBL-04,color_inquiry,Customer asked why the colour looks different from website photos.,exchange_offered,Drawer slide,2026-02-25
+CS0163,R0023,WE-BED-33,general_inquiry,Customer asked about care instructions.,exchange_offered,Drawer slide,2026-03-16
+CS0164,,WE-TBL-04,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,return_initiated,Drawer slide,2026-02-16
+CS0165,,WE-DESK-11,shipping_issue,Package delayed by 3 days. Agent applied discount code.,discount_applied,None,2026-02-26
+CS0166,,WE-RUG-99,general_inquiry,Inquiry about warranty coverage.,return_initiated,Leg,2026-03-05
+CS0167,,WE-SOFA-22,size_confusion,Customer couldn't visualise scale from photos.,resolved_no_action,Drawer slide,2026-01-19
+CS0168,,WE-MIRROR-3,shipping_issue,Package delayed by 3 days. Agent applied discount code.,escalated_to_team,Hardware kit,2026-02-21
+CS0169,R0055,WE-RUG-99,quality_complaint,Customer reported leg snapped during setup. Escalated to quality.,resolved_no_action,Drawer slide,2026-03-09
+CS0170,R0084,WE-RUG-99,general_inquiry,Inquiry about warranty coverage.,information_provided,None,2025-11-04
+CS0171,,WE-TABLE-88,size_confusion,Customer said item is too big for their space.,resolved_no_action,Hardware kit,2026-01-05
+CS0172,R0383,WE-SHELF-14,general_inquiry,Inquiry about warranty coverage.,escalated_to_team,None,2025-12-08
+CS0173,,WE-SHELF-14,shipping_issue,Item arrived with damaged box.,resolved_no_action,Hardware kit,2025-10-26
+CS0174,,WE-TBL-04,size_confusion,Customer couldn't visualise scale from photos.,information_provided,Hinge,2025-12-30
+CS0175,,WE-CHAIR-05,quality_complaint,Complaint about wobbly leg. Agent sent replacement hardware.,escalated_to_team,Hinge,2026-01-05
+CS0176,R0087,WE-DESK-11,general_inquiry,Customer asked about care instructions.,discount_applied,Top panel,2025-11-29
+CS0177,,WE-BED-33,size_confusion,Customer couldn't visualise scale from photos.,escalated_to_team,Drawer slide,2025-12-22
+CS0178,,WE-SHELF-14,shipping_issue,Item arrived with damaged box.,information_provided,Drawer slide,2026-01-31
+CS0179,,WE-LAMP-07,color_inquiry,Customer asked why the colour looks different from website photos.,discount_applied,None,2026-03-22
+CS0180,,WE-BED-33,color_inquiry,Customer upset that the finish doesn't match the listing.,escalated_to_team,Hardware kit,2025-10-28
+CS0181,R0074,WE-TABLE-88,quality_complaint,Customer reported leg snapped during setup. Escalated to quality.,discount_applied,Leg,2025-11-22
+CS0182,,WE-CHAIR-05,quality_complaint,Customer reported leg snapped during setup. Escalated to quality.,discount_applied,Drawer slide,2025-10-18
+CS0183,,WE-DESK-11,size_confusion,Customer couldn't visualise scale from photos.,resolved_no_action,None,2025-11-22
+CS0184,R0355,WE-DESK-11,color_inquiry,Customer upset that the finish doesn't match the listing.,information_provided,Top panel,2025-11-13
+CS0185,,WE-BENCH-21,color_inquiry,Customer upset that the finish doesn't match the listing.,exchange_offered,Top panel,2026-02-11
+CS0186,,WE-CHAIR-05,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,escalated_to_team,Hardware kit,2025-11-20
+CS0187,R0088,WE-SHELF-14,warranty_claim,Structural failure documented; replacement parts shipped.,discount_applied,Hinge,2025-12-22
+CS0188,,WE-LAMP-07,size_confusion,Customer said item is too big for their space.,escalated_to_team,Leg,2026-01-05
+CS0189,R0010,WE-SOFA-22,general_inquiry,Customer asked about care instructions.,information_provided,None,2026-01-10
+CS0190,,WE-BED-33,size_confusion,Customer said item is too big for their space.,information_provided,None,2025-11-24
+CS0191,R0033,WE-DESK-11,quality_complaint,Warranty claim: structural failure at joint confirmed.,exchange_offered,Hinge,2026-01-16
+CS0192,,WE-MIRROR-3,warranty_claim,Structural failure documented; replacement parts shipped.,exchange_offered,Top panel,2026-03-25
+CS0193,,WE-RUG-99,shipping_issue,Package delayed by 3 days. Agent applied discount code.,discount_applied,Hardware kit,2025-12-16
+CS0194,R0182,WE-BENCH-21,quality_complaint,Customer reported leg snapped during setup. Escalated to quality.,return_initiated,None,2025-11-07
+CS0195,R0396,WE-SHELF-14,color_inquiry,Customer asked why the colour looks different from website photos.,discount_applied,Hinge,2026-02-10
+CS0196,,WE-DESK-11,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,discount_applied,Hardware kit,2026-04-08
+CS0197,,WE-SOFA-22,quality_complaint,Complaint about wobbly leg. Agent sent replacement hardware.,return_initiated,Hinge,2025-11-24
+CS0198,,WE-LAMP-07,shipping_issue,Package delayed by 3 days. Agent applied discount code.,exchange_offered,Hinge,2026-02-17
+CS0199,R0318,WE-DESK-11,shipping_issue,Item arrived with damaged box.,escalated_to_team,Hinge,2025-12-03
+CS0200,R0147,WE-BENCH-21,shipping_issue,Item arrived with damaged box.,information_provided,Leg,2025-12-29
+CS0201,,WE-MIRROR-3,size_confusion,Customer said item is too big for their space.,information_provided,Top panel,2025-12-13
+CS0202,R0468,WE-MIRROR-3,color_inquiry,Customer asked why the colour looks different from website photos.,discount_applied,None,2026-01-24
+CS0203,,WE-LAMP-07,general_inquiry,Customer asked about care instructions.,exchange_offered,Hardware kit,2025-12-21
+CS0204,,WE-SHELF-14,shipping_issue,Package delayed by 3 days. Agent applied discount code.,return_initiated,Top panel,2025-10-14
+CS0205,R0299,WE-TBL-04,size_confusion,Customer couldn't visualise scale from photos.,resolved_no_action,Leg,2025-10-14
+CS0206,,WE-CHAIR-05,shipping_issue,Item arrived with damaged box.,escalated_to_team,Leg,2026-01-06
+CS0207,,WE-TABLE-88,color_inquiry,Customer upset that the finish doesn't match the listing.,exchange_offered,Drawer slide,2026-02-16
+CS0208,R0473,WE-RUG-99,color_inquiry,Customer upset that the finish doesn't match the listing.,information_provided,Drawer slide,2025-12-29
+CS0209,R0118,WE-CHAIR-05,shipping_issue,Package delayed by 3 days. Agent applied discount code.,resolved_no_action,Hinge,2026-01-17
+CS0210,,WE-BENCH-21,warranty_claim,Structural failure documented; replacement parts shipped.,return_initiated,Leg,2025-11-21
+CS0211,R0286,WE-BENCH-21,size_confusion,Customer said item is too big for their space.,exchange_offered,Hinge,2026-04-06
+CS0212,R0401,WE-MIRROR-3,color_inquiry,Customer asked why the colour looks different from website photos.,exchange_offered,Leg,2025-10-21
+CS0213,R0367,WE-TBL-04,warranty_claim,Structural failure documented; replacement parts shipped.,exchange_offered,Hinge,2026-04-02
+CS0214,,WE-BENCH-21,general_inquiry,Customer asked about care instructions.,return_initiated,None,2025-11-28
+CS0215,,WE-BENCH-21,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,discount_applied,Top panel,2026-03-28
+CS0216,,WE-MIRROR-3,color_inquiry,Customer asked why the colour looks different from website photos.,exchange_offered,Hinge,2026-01-05
+CS0217,R0029,WE-CHAIR-05,size_confusion,Customer couldn't visualise scale from photos.,return_initiated,Drawer slide,2026-02-20
+CS0218,R0099,WE-BENCH-21,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,resolved_no_action,Hinge,2026-02-27
+CS0219,,WE-TBL-04,shipping_issue,Package delayed by 3 days. Agent applied discount code.,discount_applied,Hardware kit,2025-11-01
+CS0220,,WE-CHAIR-05,general_inquiry,Customer asked about care instructions.,information_provided,Top panel,2026-03-11
+CS0221,,WE-CHAIR-05,size_confusion,Customer couldn't visualise scale from photos.,exchange_offered,Leg,2025-12-29
+CS0222,,WE-BENCH-21,quality_complaint,Customer reported leg snapped during setup. Escalated to quality.,information_provided,Hinge,2026-03-25
+CS0223,,WE-BENCH-21,quality_complaint,Warranty claim: structural failure at joint confirmed.,return_initiated,Leg,2026-02-14
+CS0224,,WE-LAMP-07,quality_complaint,Warranty claim: structural failure at joint confirmed.,return_initiated,None,2025-11-24
+CS0225,,WE-MIRROR-3,size_confusion,Customer said item is too big for their space.,escalated_to_team,Drawer slide,2025-10-31
+CS0226,R0326,WE-LAMP-07,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,resolved_no_action,Top panel,2026-03-24
+CS0227,,WE-BED-33,color_inquiry,Customer upset that the finish doesn't match the listing.,resolved_no_action,None,2026-02-10
+CS0228,R0128,WE-RUG-99,general_inquiry,Customer asked about care instructions.,discount_applied,Hinge,2025-12-22
+CS0229,R0384,WE-CHAIR-05,general_inquiry,Customer asked about care instructions.,information_provided,Drawer slide,2026-02-18
+CS0230,,WE-SOFA-22,shipping_issue,Package delayed by 3 days. Agent applied discount code.,exchange_offered,None,2025-11-08
+CS0231,R0326,WE-SHELF-14,warranty_claim,Structural failure documented; replacement parts shipped.,resolved_no_action,Leg,2025-11-28
+CS0232,,WE-LAMP-07,warranty_claim,Structural failure documented; replacement parts shipped.,exchange_offered,None,2026-01-16
+CS0233,,WE-BED-33,size_confusion,Customer couldn't visualise scale from photos.,resolved_no_action,Hinge,2025-10-17
+CS0234,,WE-CHAIR-05,general_inquiry,Inquiry about warranty coverage.,exchange_offered,Top panel,2025-10-31
+CS0235,R0198,WE-TBL-04,color_inquiry,Customer upset that the finish doesn't match the listing.,return_initiated,None,2026-03-05
+CS0236,R0210,WE-CHAIR-05,size_confusion,Customer couldn't visualise scale from photos.,exchange_offered,Hardware kit,2026-03-21
+CS0237,R0203,WE-LAMP-07,warranty_claim,Structural failure documented; replacement parts shipped.,exchange_offered,Top panel,2026-02-24
+CS0238,R0460,WE-MIRROR-3,size_confusion,Customer said item is too big for their space.,resolved_no_action,Hinge,2026-01-31
+CS0239,,WE-SHELF-14,color_inquiry,Customer upset that the finish doesn't match the listing.,exchange_offered,Top panel,2025-12-19
+CS0240,,WE-LAMP-07,general_inquiry,Inquiry about warranty coverage.,information_provided,Leg,2026-01-03
+CS0241,,WE-LAMP-07,color_inquiry,Customer upset that the finish doesn't match the listing.,exchange_offered,Hardware kit,2026-02-25
+CS0242,R0291,WE-DESK-11,shipping_issue,Item arrived with damaged box.,information_provided,Hardware kit,2025-11-06
+CS0243,R0481,WE-SHELF-14,color_inquiry,Customer upset that the finish doesn't match the listing.,exchange_offered,Hinge,2026-02-21
+CS0244,,WE-TBL-04,color_inquiry,Customer upset that the finish doesn't match the listing.,information_provided,Top panel,2026-01-05
+CS0245,,WE-LAMP-07,shipping_issue,Item arrived with damaged box.,escalated_to_team,Leg,2025-12-27
+CS0246,,WE-TBL-04,color_inquiry,Customer upset that the finish doesn't match the listing.,exchange_offered,Hinge,2025-12-20
+CS0247,,WE-DESK-11,warranty_claim,Structural failure documented; replacement parts shipped.,information_provided,None,2025-10-16
+CS0248,,WE-BED-33,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,information_provided,None,2026-02-06
+CS0249,,WE-CHAIR-05,shipping_issue,Package delayed by 3 days. Agent applied discount code.,discount_applied,None,2025-10-12
+CS0250,R0467,WE-BENCH-21,color_inquiry,Customer asked why the colour looks different from website photos.,resolved_no_action,Hinge,2026-02-04
+CS0251,R0095,WE-CHAIR-05,general_inquiry,Customer asked about care instructions.,resolved_no_action,None,2026-01-02
+CS0252,,WE-LAMP-07,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,exchange_offered,Top panel,2026-02-27
+CS0253,R0392,WE-LAMP-07,quality_complaint,Warranty claim: structural failure at joint confirmed.,escalated_to_team,Drawer slide,2025-12-26
+CS0254,,WE-TABLE-88,color_inquiry,Customer upset that the finish doesn't match the listing.,discount_applied,None,2026-02-16
+CS0255,R0173,WE-LAMP-07,warranty_claim,Structural failure documented; replacement parts shipped.,information_provided,Leg,2026-03-17
+CS0256,,WE-TABLE-88,warranty_claim,Structural failure documented; replacement parts shipped.,resolved_no_action,Drawer slide,2025-12-21
+CS0257,R0138,WE-SOFA-22,size_confusion,Customer said item is too big for their space.,exchange_offered,Top panel,2026-02-23
+CS0258,,WE-RUG-99,color_inquiry,Customer upset that the finish doesn't match the listing.,exchange_offered,Hinge,2026-02-18
+CS0259,,WE-TBL-04,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,exchange_offered,Drawer slide,2025-12-27
+CS0260,,WE-SHELF-14,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,exchange_offered,Leg,2026-01-25
+CS0261,R0351,WE-TABLE-88,shipping_issue,Package delayed by 3 days. Agent applied discount code.,return_initiated,Hardware kit,2026-02-09
+CS0262,R0273,WE-SHELF-14,shipping_issue,Package delayed by 3 days. Agent applied discount code.,return_initiated,None,2025-11-12
+CS0263,,WE-TBL-04,color_inquiry,Customer asked why the colour looks different from website photos.,return_initiated,Top panel,2025-11-07
+CS0264,,WE-RUG-99,quality_complaint,Complaint about wobbly leg. Agent sent replacement hardware.,discount_applied,Hardware kit,2025-12-22
+CS0265,,WE-BED-33,quality_complaint,Warranty claim: structural failure at joint confirmed.,discount_applied,Hinge,2026-01-08
+CS0266,,WE-BENCH-21,shipping_issue,Item arrived with damaged box.,discount_applied,Drawer slide,2026-03-16
+CS0267,,WE-TBL-04,shipping_issue,Item arrived with damaged box.,exchange_offered,Leg,2025-11-07
+CS0268,,WE-TABLE-88,general_inquiry,Inquiry about warranty coverage.,exchange_offered,Drawer slide,2025-12-16
+CS0269,,WE-MIRROR-3,warranty_claim,Structural failure documented; replacement parts shipped.,resolved_no_action,Hinge,2026-04-10
+CS0270,,WE-BENCH-21,quality_complaint,Customer reported leg snapped during setup. Escalated to quality.,return_initiated,None,2026-01-17
+CS0271,,WE-BENCH-21,shipping_issue,Package delayed by 3 days. Agent applied discount code.,information_provided,None,2025-11-05
+CS0272,,WE-TABLE-88,quality_complaint,Complaint about wobbly leg. Agent sent replacement hardware.,information_provided,None,2025-10-13
+CS0273,R0200,WE-TABLE-88,warranty_claim,Structural failure documented; replacement parts shipped.,resolved_no_action,Hinge,2025-11-28
+CS0274,R0090,WE-MIRROR-3,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,discount_applied,None,2025-11-21
+CS0275,,WE-SHELF-14,size_confusion,Customer said item is too big for their space.,information_provided,None,2025-11-23
+CS0276,R0092,WE-CHAIR-05,size_confusion,Customer couldn't visualise scale from photos.,return_initiated,Top panel,2026-04-03
+CS0277,,WE-SOFA-22,quality_complaint,Complaint about wobbly leg. Agent sent replacement hardware.,exchange_offered,None,2026-02-04
+CS0278,,WE-BENCH-21,shipping_issue,Package delayed by 3 days. Agent applied discount code.,escalated_to_team,None,2025-12-06
+CS0279,,WE-TABLE-88,warranty_claim,Structural failure documented; replacement parts shipped.,escalated_to_team,Hardware kit,2026-03-25
+CS0280,,WE-BENCH-21,quality_complaint,Complaint about wobbly leg. Agent sent replacement hardware.,resolved_no_action,None,2026-01-03
+CS0281,,WE-BENCH-21,warranty_claim,Structural failure documented; replacement parts shipped.,exchange_offered,Drawer slide,2026-03-12
+CS0282,R0193,WE-DESK-11,color_inquiry,Customer asked why the colour looks different from website photos.,resolved_no_action,Leg,2025-11-15
+CS0283,,WE-BED-33,size_confusion,Customer said item is too big for their space.,escalated_to_team,None,2026-04-10
+CS0284,,WE-DESK-11,color_inquiry,Customer asked why the colour looks different from website photos.,information_provided,Drawer slide,2026-01-07
+CS0285,R0010,WE-BENCH-21,size_confusion,Customer couldn't visualise scale from photos.,escalated_to_team,Top panel,2026-01-20
+CS0286,,WE-SOFA-22,quality_complaint,Customer reported leg snapped during setup. Escalated to quality.,information_provided,Hinge,2025-11-08
+CS0287,,WE-DESK-11,size_confusion,Customer couldn't visualise scale from photos.,discount_applied,Hardware kit,2025-10-16
+CS0288,,WE-TABLE-88,quality_complaint,Warranty claim: structural failure at joint confirmed.,resolved_no_action,Hinge,2025-12-05
+CS0289,R0342,WE-DESK-11,warranty_claim,Structural failure documented; replacement parts shipped.,exchange_offered,None,2026-02-16
+CS0290,,WE-CHAIR-05,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,exchange_offered,Top panel,2025-12-31
+CS0291,,WE-DESK-11,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,escalated_to_team,Top panel,2026-01-14
+CS0292,,WE-LAMP-07,warranty_claim,Structural failure documented; replacement parts shipped.,information_provided,Top panel,2026-03-23
+CS0293,R0200,WE-RUG-99,warranty_claim,Structural failure documented; replacement parts shipped.,resolved_no_action,Hardware kit,2025-12-31
+CS0294,,WE-TABLE-88,size_confusion,Customer said item is too big for their space.,escalated_to_team,Leg,2026-01-23
+CS0295,,WE-SHELF-14,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,information_provided,None,2025-12-08
+CS0296,R0201,WE-DESK-11,size_confusion,Customer couldn't visualise scale from photos.,resolved_no_action,None,2026-04-08
+CS0297,,WE-BED-33,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,exchange_offered,Top panel,2025-12-22
+CS0298,R0486,WE-BENCH-21,size_confusion,Customer couldn't visualise scale from photos.,exchange_offered,Leg,2026-03-11
+CS0299,,WE-RUG-99,warranty_claim,Structural failure documented; replacement parts shipped.,exchange_offered,None,2025-12-28
+CS0300,R0501,WE-CHAIR-05,color_inquiry,Customer asked why the colour looks different from website photos.,discount_applied,None,2025-11-09
+CS0301,,WE-SOFA-22,warranty_claim,Structural failure documented; replacement parts shipped.,resolved_no_action,None,2026-03-19
+CS0302,R0456,WE-SHELF-14,warranty_claim,Structural failure documented; replacement parts shipped.,discount_applied,Leg,2026-03-11
+CS0303,,WE-TABLE-88,color_inquiry,Customer asked why the colour looks different from website photos.,resolved_no_action,Hardware kit,2026-02-12
+CS0304,R0097,WE-TBL-04,general_inquiry,Inquiry about warranty coverage.,escalated_to_team,Hinge,2026-01-02
+CS0305,R0129,WE-SHELF-14,warranty_claim,Structural failure documented; replacement parts shipped.,return_initiated,Drawer slide,2026-03-25
+CS0306,,WE-RUG-99,size_confusion,Customer said item is too big for their space.,return_initiated,Top panel,2025-11-19
+CS0307,R0128,WE-RUG-99,general_inquiry,Inquiry about warranty coverage.,exchange_offered,None,2026-03-11
+CS0308,R0458,WE-SOFA-22,general_inquiry,Customer asked about care instructions.,discount_applied,Leg,2026-03-31
+CS0309,,WE-SOFA-22,general_inquiry,Customer asked about care instructions.,return_initiated,Hardware kit,2026-02-04
+CS0310,,WE-TBL-04,color_inquiry,Customer asked why the colour looks different from website photos.,discount_applied,Hardware kit,2026-02-26
+CS0311,R0048,WE-LAMP-07,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,escalated_to_team,Drawer slide,2025-10-24
+CS0312,,WE-RUG-99,shipping_issue,Package delayed by 3 days. Agent applied discount code.,resolved_no_action,Drawer slide,2025-11-28
+CS0313,,WE-BED-33,general_inquiry,Customer asked about care instructions.,resolved_no_action,Leg,2026-02-09
+CS0314,R0221,WE-TBL-04,size_confusion,Customer couldn't visualise scale from photos.,exchange_offered,Hardware kit,2025-11-20
+CS0315,R0433,WE-CHAIR-05,general_inquiry,Inquiry about warranty coverage.,return_initiated,Hardware kit,2026-02-04
+CS0316,,WE-DESK-11,shipping_issue,Package delayed by 3 days. Agent applied discount code.,return_initiated,Drawer slide,2025-10-19
+CS0317,,WE-LAMP-07,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,return_initiated,None,2026-02-01
+CS0318,,WE-BENCH-21,warranty_claim,Formal warranty claim filed for broken hinge assembly batch 402.,escalated_to_team,None,2025-10-27
+CS0319,,WE-RUG-99,general_inquiry,Customer asked about care instructions.,exchange_offered,Drawer slide,2025-12-20
+CS0320,R0128,WE-LAMP-07,color_inquiry,Customer asked why the colour looks different from website photos.,escalated_to_team,Leg,2025-10-17

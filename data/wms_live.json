@@ -1,0 +1,188 @@
+[
+  {
+    "hub_id": "WH001",
+    "name": "Olive Branch, MS",
+    "current_capacity": 62,
+    "labor_availability": 6,
+    "lat": 34.96,
+    "lon": -89.83,
+    "processing_rate": 1.0,
+    "demand_score": {
+      "WE-TBL-04": 9,
+      "WE-TABLE-88": 8
+    }
+  },
+  {
+    "hub_id": "WH002",
+    "name": "Reno, NV",
+    "current_capacity": 78,
+    "labor_availability": 5,
+    "lat": 39.53,
+    "lon": -119.81,
+    "processing_rate": 1.05,
+    "demand_score": {
+      "WE-SOFA-22": 7
+    }
+  },
+  {
+    "hub_id": "WH003",
+    "name": "Baltimore, MD",
+    "current_capacity": 55,
+    "labor_availability": 7,
+    "lat": 39.29,
+    "lon": -76.61,
+    "processing_rate": 0.98,
+    "demand_score": {
+      "WE-BED-33": 6
+    }
+  },
+  {
+    "hub_id": "WH004",
+    "name": "Dallas, TX",
+    "current_capacity": 82,
+    "labor_availability": 6,
+    "lat": 32.78,
+    "lon": -96.8,
+    "processing_rate": 1.0,
+    "demand_score": {
+      "WE-LAMP-07": 4
+    }
+  },
+  {
+    "hub_id": "WH005",
+    "name": "Columbus, OH",
+    "current_capacity": 88,
+    "labor_availability": 4,
+    "lat": 39.96,
+    "lon": -82.99,
+    "processing_rate": 1.02,
+    "demand_score": {
+      "WE-DESK-11": 5
+    }
+  },
+   {
+    "hub_id": "WH006",
+    "name": "Atlanta, GA",
+    "current_capacity": 74,
+    "labor_availability": 6,
+    "lat": 33.75,
+    "lon": -84.39,
+    "processing_rate": 1.03,
+    "demand_score": {
+      "WE-SOFA-22": 8,
+      "WE-LAMP-07": 6
+    }
+  },
+  {
+    "hub_id": "WH007",
+    "name": "Chicago, IL",
+    "current_capacity": 69,
+    "labor_availability": 7,
+    "lat": 41.88,
+    "lon": -87.63,
+    "processing_rate": 1.01,
+    "demand_score": {
+      "WE-TBL-04": 7,
+      "WE-DESK-11": 6
+    }
+  },
+  {
+    "hub_id": "WH008",
+    "name": "Phoenix, AZ",
+    "current_capacity": 81,
+    "labor_availability": 5,
+    "lat": 33.45,
+    "lon": -112.07,
+    "processing_rate": 1.06,
+    "demand_score": {
+      "WE-BED-33": 8
+    }
+  },
+  {
+    "hub_id": "WH009",
+    "name": "Los Angeles, CA",
+    "current_capacity": 90,
+    "labor_availability": 4,
+    "lat": 34.05,
+    "lon": -118.24,
+    "processing_rate": 1.08,
+    "demand_score": {
+      "WE-SOFA-22": 9,
+      "WE-TABLE-88": 7
+    }
+  },
+  {
+    "hub_id": "WH010",
+    "name": "Seattle, WA",
+    "current_capacity": 58,
+    "labor_availability": 6,
+    "lat": 47.61,
+    "lon": -122.33,
+    "processing_rate": 0.97,
+    "demand_score": {
+      "WE-LAMP-07": 6
+    }
+  },
+  {
+    "hub_id": "WH011",
+    "name": "Denver, CO",
+    "current_capacity": 66,
+    "labor_availability": 7,
+    "lat": 39.74,
+    "lon": -104.99,
+    "processing_rate": 1.02,
+    "demand_score": {
+      "WE-DESK-11": 7
+    }
+  },
+  {
+    "hub_id": "WH012",
+    "name": "Miami, FL",
+    "current_capacity": 72,
+    "labor_availability": 5,
+    "lat": 25.76,
+    "lon": -80.19,
+    "processing_rate": 1.04,
+    "demand_score": {
+      "WE-BED-33": 7,
+      "WE-TBL-04": 6
+    }
+  },
+  {
+    "hub_id": "WH013",
+    "name": "Newark, NJ",
+    "current_capacity": 85,
+    "labor_availability": 6,
+    "lat": 40.73,
+    "lon": -74.17,
+    "processing_rate": 1.05,
+    "demand_score": {
+      "WE-SOFA-22": 8
+    }
+  },
+  {
+    "hub_id": "WH014",
+    "name": "Minneapolis, MN",
+    "current_capacity": 63,
+    "labor_availability": 7,
+    "lat": 44.98,
+    "lon": -93.26,
+    "processing_rate": 0.99,
+    "demand_score": {
+      "WE-TABLE-88": 6
+    }
+  },
+  {
+    "hub_id": "WH015",
+    "name": "Kansas City, MO",
+    "current_capacity": 77,
+    "labor_availability": 6,
+    "lat": 39.10,
+    "lon": -94.58,
+    "processing_rate": 1.03,
+    "demand_score": {
+      "WE-DESK-11": 5,
+      "WE-LAMP-07": 6
+    }
+  }
+]

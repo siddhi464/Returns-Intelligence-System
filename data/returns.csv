@@ -1,0 +1,524 @@
+return_id,order_id,sku_id,return_reason,return_note,return_condition,return_date,days_to_return,city,state,region,zip_code,cost_of_return
+R0001,ORD98696,WE-BENCH-21,no_longer_needed,cancelled renovation project,like_new,2026-03-03,7.0,Boston,MA,East,2101.0,179.05
+R0002,ORD36062,WE-TBL-04,does_not_match_description,The finish on this table looks much darker in person than the catalog photo. The wood grain is not as vibrant.,defective,2026-04-30,36.0,Denver,CO,West,80202.0,142.04
+R0003,ORD54597,WE-MIRROR-3,defective_or_damaged,frame had minor dent,damaged,2025-11-01,28.0,San Francisco,CA,West,94102.0,135.55
+R0004,ORD15695,WE-BED-33,wrong_size,didn't fit through door,defective,2025-11-14,17.0,Seattle,WA,West,98101.0,173.62
+R0005,ORD35203,WE-LAMP-07,no_longer_needed,cheap lamp not worth return shipping,like_new,2026-02-04,37.0,Atlanta,GA,East,30301.0,124.58
+R0006,ORD93320,WE-CHAIR-05,does_not_match_description,ordered by mistake,damaged,2026-02-18,30.0,Nashville,TN,South,37201.0,136.27
+R0007,ORD32431,WE-BED-33,wrong_size,didn't fit through door,open_box,2025-12-07,41.0,Los Angeles,CA,West,90001.0,136.34
+R0008,ORD17331,WE-LAMP-07,no_longer_needed,"arrived broken, not worth fixing",open_box,2025-10-28,21.0,Boston,MA,East,2101.0,202.18
+R0009,ORD37869,WE-BED-33,wrong_size,headboard too tall,defective,2025-10-20,21.0,Denver,CO,West,80202.0,159.56
+R0010,ORD86622,WE-BENCH-21,no_longer_needed,moved house,defective,2025-12-01,17.0,Atlanta,GA,East,30301.0,209.78
+R0011,ORD30033,WE-LAMP-07,no_longer_needed,changed my mind on the style,open_box,2026-03-27,8.0,New York,NY,East,10001.0,199.21
+R0012,ORD82512,WE-LAMP-07,no_longer_needed,cheap lamp not worth return shipping,like_new,2025-12-03,17.0,Miami,FL,East,33101.0,188.03
+R0013,ORD66985,WE-TABLE-88,does_not_match_description,warmer in the photo than in person,open_box,2026-03-22,19.0,Seattle,WA,West,98101.0,165.37
+R0014,ORD89818,WE-DESK-11,wrong_size,changed my mind,open_box,2025-11-21,33.0,Detroit,MI,North,48201.0,135.28
+R0015,ORD12552,WE-SOFA-22,wrong_size,sofa is huge compared to the listing,like_new,2026-02-09,32.0,Atlanta,GA,East,30301.0,212.91
+R0016,ORD19071,WE-DESK-11,defective_or_damaged,wobbly leg,open_box,2026-04-11,32.0,Chicago,IL,North,60601.0,132.84
+R0017,ORD80686,WE-SHELF-14,wrong_size,colour slightly different,open_box,2025-12-27,14.0,Charlotte,NC,South,28201.0,191.29
+R0018,ORD39451,WE-LAMP-07,defective_or_damaged,size not right,like_new,2026-03-17,16.0,Miami,FL,East,33101.0,153.81
+R0019,ORD53309,WE-MIRROR-3,no_longer_needed,cancelled event,like_new,2026-03-17,3.0,San Francisco,CA,West,94102.0,171.42
+R0020,ORD41850,WE-DESK-11,defective_or_damaged,wobbly leg,defective,2025-12-05,31.0,Columbus,OH,North,43201.0,200.75
+R0021,ORD98259,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,like_new,2025-12-06,4.0,Nashville,TN,South,37201.0,126.06
+R0022,ORD65296,WE-BED-33,does_not_match_description,ordered by mistake,open_box,2025-12-16,9.0,Denver,CO,West,80202.0,147.85
+R0023,ORD95477,WE-CHAIR-05,does_not_match_description,size not right,like_new,2026-03-10,4.0,Charlotte,NC,South,28201.0,216.9
+R0024,ORD59672,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,like_new,2026-03-27,11.0,Nashville,TN,South,37201.0,218.53
+R0025,ORD30289,WE-DESK-11,no_longer_needed,colour slightly different,open_box,2025-11-14,32.0,Columbus,OH,North,43201.0,149.67
+R0026,ORD72493,WE-TBL-04,defective_or_damaged,"Table arrived, leg snapped when I stood it up",open_box,2026-04-26,38.0,Los Angeles,CA,West,90001.0,125.69
+R0027,ORD84668,WE-RUG-99,no_longer_needed,cancelled event,open_box,2025-12-26,8.0,Minneapolis,MN,North,55401.0,177.89
+R0028,ORD44179,WE-TBL-04,defective_or_damaged,surface scratch on top,open_box,2025-12-09,21.0,Denver,CO,West,80202.0,186.97
+R0029,ORD19508,WE-BED-33,wrong_size,didn't fit through door,like_new,2025-12-25,21.0,Seattle,WA,West,98101.0,165.83
+R0030,ORD42018,WE-MIRROR-3,does_not_match_description,ordered by mistake,damaged,2026-01-06,5.0,San Francisco,CA,West,94102.0,148.5
+R0031,ORD23577,WE-SHELF-14,defective_or_damaged,changed my mind,open_box,2026-02-26,43.0,Charlotte,NC,South,28201.0,146.45
+R0032,ORD36685,WE-TABLE-88,wrong_size,colour slightly different,damaged,2025-10-21,22.0,San Francisco,CA,West,94102.0,170.54
+R0033,ORD53719,WE-DESK-11,does_not_match_description,changed my mind,open_box,2026-03-21,1.0,Detroit,MI,North,48201.0,183.71
+R0034,ORD24663,WE-DESK-11,defective_or_damaged,drawer doesn't close smoothly,like_new,2025-11-09,1.0,Milwaukee,WI,North,53202.0,214.51
+R0035,ORD15482,WE-SOFA-22,wrong_size,much larger than expected,damaged,2025-12-20,9.0,Boston,MA,East,2101.0,156.47
+R0036,ORD91351,WE-TBL-04,wrong_size,ordered by mistake,open_box,2025-12-05,27.0,Seattle,WA,West,98101.0,212.58
+R0037,ORD44970,WE-CHAIR-05,no_longer_needed,moved house,open_box,2025-10-27,16.0,Nashville,TN,South,37201.0,198.74
+R0038,ORD55830,WE-TABLE-88,does_not_match_description,colour looked different in real life,damaged,2026-03-10,30.0,San Francisco,CA,West,94102.0,202.05
+R0039,ORD56025,WE-CHAIR-05,does_not_match_description,brass looks too yellow in person,defective,2026-04-01,18.0,Austin,TX,South,78701.0,187.95
+R0040,ORD44795,WE-RUG-99,does_not_match_description,much more orange than terracotta,like_new,2026-03-24,38.0,Detroit,MI,North,48201.0,130.84
+R0041,ORD85574,WE-LAMP-07,no_longer_needed,cheap lamp not worth return shipping,open_box,2026-03-27,25.0,Atlanta,GA,East,30301.0,145.47
+R0042,ORD19171,WE-LAMP-07,no_longer_needed,"arrived broken, not worth fixing",damaged,2026-01-25,28.0,Boston,MA,East,2101.0,182.32
+R0043,ORD48752,WE-BENCH-21,defective_or_damaged,colour slightly different,open_box,2026-02-01,45.0,Philadelphia,PA,East,19101.0,139.18
+R0044,ORD37549,WE-BENCH-21,wrong_size,colour slightly different,defective,2026-02-01,19.0,New York,NY,East,10001.0,198.58
+R0045,ORD32241,WE-MIRROR-3,defective_or_damaged,slight imperfection in glass,like_new,2025-12-22,31.0,San Francisco,CA,West,94102.0,148.38
+R0046,ORD39444,WE-BENCH-21,no_longer_needed,moved house,open_box,2025-10-30,20.0,Boston,MA,East,2101.0,134.74
+R0047,ORD92544,WE-TBL-04,defective_or_damaged,surface scratch on top,open_box,2026-01-01,27.0,Los Angeles,CA,West,90001.0,191.83
+R0048,ORD38683,WE-LAMP-07,no_longer_needed,changed my mind on the style,open_box,2026-04-01,28.0,New York,NY,East,10001.0,200.41
+R0049,ORD70901,WE-RUG-99,does_not_match_description,much more orange than terracotta,damaged,2025-12-14,9.0,Chicago,IL,North,60601.0,215.0
+R0050,ORD72216,WE-SHELF-14,does_not_match_description,not the right white for my walls,defective,2025-12-18,11.0,Charlotte,NC,South,28201.0,145.92
+R0051,ORD47450,WE-CHAIR-05,defective_or_damaged,size not right,open_box,2025-12-14,5.0,Austin,TX,South,78701.0,147.17
+R0052,ORD38043,WE-BED-33,does_not_match_description,ordered by mistake,like_new,2025-10-15,10.0,Portland,OR,West,97201.0,161.49
+R0053,ORD12560,WE-BED-33,no_longer_needed,no longer need it,defective,2025-12-17,45.0,Portland,OR,West,97201.0,167.7
+R0054,ORD89069,WE-BED-33,wrong_size,didn't fit through door,open_box,2025-12-19,35.0,Portland,OR,West,97201.0,168.82
+R0055,ORD71261,WE-DESK-11,defective_or_damaged,wobbly leg,open_box,2025-10-08,11.0,Milwaukee,WI,North,53202.0,218.07
+R0056,ORD66179,WE-RUG-99,does_not_match_description,colour is off from photos,open_box,2026-04-21,42.0,Chicago,IL,North,60601.0,206.69
+R0057,ORD59692,WE-SOFA-22,wrong_size,much larger than expected,damaged,2026-01-29,22.0,Miami,FL,East,33101.0,195.2
+R0058,ORD39389,WE-LAMP-07,no_longer_needed,changed my mind on the style,like_new,2026-04-10,23.0,Atlanta,GA,East,30301.0,198.12
+R0059,ORD29973,WE-BENCH-21,no_longer_needed,no longer needed,open_box,2026-05-05,40.0,Boston,MA,East,2101.0,132.62
+R0060,ORD89415,WE-BENCH-21,no_longer_needed,no longer needed,like_new,2026-01-07,11.0,Philadelphia,PA,East,19101.0,197.78
+R0061,ORD61990,WE-SOFA-22,does_not_match_description,changed my mind,open_box,2025-11-03,25.0,Atlanta,GA,East,30301.0,127.6
+R0062,ORD15383,WE-BENCH-21,no_longer_needed,cancelled renovation project,damaged,2026-04-07,37.0,Atlanta,GA,East,30301.0,173.27
+R0063,ORD23833,WE-BENCH-21,no_longer_needed,cancelled renovation project,defective,2026-01-15,32.0,New York,NY,East,10001.0,216.08
+R0064,ORD90728,WE-BENCH-21,no_longer_needed,ordered by mistake,defective,2025-11-03,18.0,Atlanta,GA,East,30301.0,166.49
+R0065,ORD41963,WE-MIRROR-3,defective_or_damaged,frame had minor dent,defective,2026-02-17,29.0,Los Angeles,CA,West,90001.0,176.98
+R0066,ORD37802,WE-BENCH-21,no_longer_needed,no longer needed,damaged,2026-03-17,32.0,Philadelphia,PA,East,19101.0,199.78
+R0067,ORD77715,WE-BED-33,wrong_size,larger than I imagined,open_box,2025-11-10,1.0,Seattle,WA,West,98101.0,128.56
+R0068,ORD22196,WE-LAMP-07,no_longer_needed,changed my mind on the style,damaged,2025-12-09,2.0,Miami,FL,East,33101.0,142.16
+R0069,ORD82140,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,damaged,2026-01-30,28.0,Charlotte,NC,South,28201.0,155.18
+R0070,ORD80236,WE-SHELF-14,does_not_match_description,not the right white for my walls,open_box,2026-01-18,8.0,Dallas,TX,South,75201.0,139.15
+R0071,ORD57301,WE-SHELF-14,does_not_match_description,not the right white for my walls,open_box,2026-01-30,15.0,Dallas,TX,South,75201.0,150.23
+R0072,ORD26551,WE-RUG-99,does_not_match_description,much more orange than terracotta,defective,2026-03-02,45.0,Columbus,OH,North,43201.0,130.26
+R0073,ORD43092,WE-TBL-04,defective_or_damaged,surface scratch on top,defective,2026-02-16,4.0,Seattle,WA,West,98101.0,131.41
+R0074,ORD83772,WE-TABLE-88,does_not_match_description,colour looked different in real life,damaged,2026-03-03,10.0,Los Angeles,CA,West,90001.0,128.52
+R0075,ORD59856,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,defective,2026-03-08,34.0,Charlotte,NC,South,28201.0,210.85
+R0076,ORD37235,WE-DESK-11,no_longer_needed,colour slightly different,open_box,2025-11-02,7.0,Chicago,IL,North,60601.0,146.46
+R0077,ORD69048,WE-TABLE-88,does_not_match_description,colour looked different in real life,defective,2026-04-27,27.0,San Francisco,CA,West,94102.0,149.13
+R0078,ORD40595,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,damaged,2026-04-26,44.0,Nashville,TN,South,37201.0,198.78
+R0079,ORD29528,WE-BENCH-21,no_longer_needed,no longer needed,damaged,2026-03-16,42.0,Atlanta,GA,East,30301.0,202.66
+R0080,ORD26299,WE-TABLE-88,does_not_match_description,looks grey not warm brown,defective,2026-02-15,29.0,Denver,CO,West,80202.0,188.87
+R0081,ORD89129,WE-LAMP-07,no_longer_needed,size not right,damaged,2026-01-01,21.0,New York,NY,East,10001.0,122.59
+R0082,ORD95394,WE-CHAIR-05,does_not_match_description,colour slightly different,defective,2026-01-04,34.0,Dallas,TX,South,75201.0,211.61
+R0083,ORD53687,WE-SOFA-22,no_longer_needed,size not right,damaged,2026-01-28,27.0,Miami,FL,East,33101.0,187.01
+R0084,ORD69614,WE-SOFA-22,wrong_size,sofa is huge compared to the listing,like_new,2025-11-14,3.0,Miami,FL,East,33101.0,151.45
+R0085,ORD70552,WE-BED-33,wrong_size,didn't fit through door,defective,2025-11-18,35.0,Los Angeles,CA,West,90001.0,125.42
+R0086,ORD81987,WE-RUG-99,does_not_match_description,colour is off from photos,open_box,2026-02-25,18.0,Chicago,IL,North,60601.0,212.77
+R0087,ORD11792,WE-SHELF-14,no_longer_needed,home renovation cancelled,defective,2026-02-16,36.0,Dallas,TX,South,75201.0,129.32
+R0088,ORD76698,WE-TABLE-88,does_not_match_description,colour looked different in real life,damaged,2025-12-13,19.0,San Francisco,CA,West,94102.0,161.55
+R0089,ORD76616,WE-SHELF-14,wrong_size,size not right,open_box,2026-03-22,39.0,Nashville,TN,South,37201.0,206.4
+R0090,ORD47072,WE-DESK-11,no_longer_needed,colour slightly different,damaged,2026-01-23,1.0,Columbus,OH,North,43201.0,203.75
+R0091,ORD82340,WE-MIRROR-3,no_longer_needed,ordered by mistake,defective,2026-01-24,22.0,Portland,OR,West,97201.0,165.53
+R0092,ORD71993,WE-BED-33,wrong_size,size not right,defective,2026-04-10,21.0,Portland,OR,West,97201.0,158.61
+R0093,ORD53515,WE-BENCH-21,wrong_size,size not right,like_new,2025-12-31,38.0,Boston,MA,East,2101.0,207.42
+R0094,ORD19807,WE-SHELF-14,no_longer_needed,home renovation cancelled,defective,2025-10-25,10.0,Nashville,TN,South,37201.0,198.15
+R0095,ORD79942,WE-DESK-11,defective_or_damaged,slight scratch on arrival,defective,2026-02-19,44.0,Chicago,IL,North,60601.0,215.41
+R0096,ORD47667,WE-BENCH-21,no_longer_needed,changed my mind,open_box,2025-12-04,44.0,Boston,MA,East,2101.0,194.68
+R0097,ORD52516,WE-LAMP-07,does_not_match_description,size not right,like_new,2026-03-27,3.0,Philadelphia,PA,East,19101.0,149.34
+R0098,ORD32280,WE-BED-33,wrong_size,headboard too tall,open_box,2025-10-20,12.0,Denver,CO,West,80202.0,127.9
+R0099,ORD70443,WE-LAMP-07,no_longer_needed,changed my mind on the style,damaged,2026-03-10,15.0,Atlanta,GA,East,30301.0,165.96
+R0100,ORD67898,WE-BENCH-21,no_longer_needed,moved house,damaged,2026-02-24,5.0,Atlanta,GA,East,30301.0,218.77
+R0101,ORD60422,WE-DESK-11,defective_or_damaged,drawer doesn't close smoothly,defective,2026-01-26,13.0,Milwaukee,WI,North,53202.0,130.67
+R0102,ORD61879,WE-LAMP-07,no_longer_needed,"arrived broken, not worth fixing",damaged,2026-05-08,43.0,Philadelphia,PA,East,19101.0,120.81
+R0103,ORD56179,WE-BENCH-21,does_not_match_description,size not right,open_box,2026-03-12,39.0,Philadelphia,PA,East,19101.0,183.66
+R0104,ORD14373,WE-MIRROR-3,defective_or_damaged,frame had minor dent,damaged,2026-02-09,29.0,Los Angeles,CA,West,90001.0,193.24
+R0105,ORD79579,WE-TABLE-88,defective_or_damaged,size not right,damaged,2025-12-07,24.0,San Francisco,CA,West,94102.0,203.05
+R0106,ORD19869,WE-DESK-11,no_longer_needed,colour slightly different,open_box,2026-04-01,30.0,Detroit,MI,North,48201.0,195.42
+R0107,ORD80329,WE-CHAIR-05,no_longer_needed,colour slightly different,like_new,2026-04-14,17.0,Nashville,TN,South,37201.0,165.48
+R0108,ORD40647,WE-BENCH-21,defective_or_damaged,size not right,defective,2026-04-17,44.0,Philadelphia,PA,East,19101.0,122.5
+R0109,ORD95097,WE-RUG-99,does_not_match_description,much more orange than terracotta,defective,2025-10-23,20.0,Milwaukee,WI,North,53202.0,131.67
+R0110,ORD60940,WE-TBL-04,defective_or_damaged,size not right,defective,2025-11-23,9.0,San Francisco,CA,West,94102.0,157.1
+R0111,ORD63492,WE-RUG-99,does_not_match_description,much more orange than terracotta,damaged,2026-01-05,40.0,Chicago,IL,North,60601.0,123.27
+R0112,ORD58147,WE-BED-33,wrong_size,didn't fit through door,damaged,2026-04-19,44.0,Seattle,WA,West,98101.0,126.06
+R0113,ORD37801,WE-DESK-11,defective_or_damaged,wobbly leg,like_new,2026-04-20,43.0,Milwaukee,WI,North,53202.0,125.06
+R0114,ORD37152,WE-BED-33,wrong_size,headboard too tall,open_box,2026-04-19,36.0,San Francisco,CA,West,94102.0,201.31
+R0115,ORD28964,WE-CHAIR-05,does_not_match_description,brass looks too yellow in person,open_box,2026-04-18,18.0,Charlotte,NC,South,28201.0,174.02
+R0116,ORD52437,WE-SOFA-22,wrong_size,too big for my living room,like_new,2026-03-09,38.0,Philadelphia,PA,East,19101.0,137.42
+R0117,ORD57453,WE-TBL-04,defective_or_damaged,surface scratch on top,like_new,2025-12-29,29.0,Los Angeles,CA,West,90001.0,165.2
+R0118,ORD62640,WE-CHAIR-05,does_not_match_description,colour slightly different,defective,2026-04-16,31.0,Houston,TX,South,77001.0,188.61
+R0119,ORD18609,WE-SHELF-14,no_longer_needed,changed my mind,open_box,2025-11-06,10.0,Austin,TX,South,78701.0,147.5
+R0120,ORD69469,WE-BENCH-21,no_longer_needed,cancelled renovation project,defective,2025-12-05,19.0,Atlanta,GA,East,30301.0,129.92
+R0121,ORD69441,WE-TABLE-88,wrong_size,size not right,defective,2026-01-07,22.0,San Francisco,CA,West,94102.0,161.6
+R0122,ORD72163,WE-TABLE-88,does_not_match_description,looks grey not warm brown,like_new,2026-04-05,44.0,Seattle,WA,West,98101.0,129.12
+R0123,ORD17861,WE-TABLE-88,does_not_match_description,colour looked different in real life,damaged,2026-04-03,36.0,Seattle,WA,West,98101.0,187.0
+R0124,ORD47700,WE-LAMP-07,no_longer_needed,"arrived broken, not worth fixing",damaged,2025-10-02,4.0,Miami,FL,East,33101.0,155.16
+R0125,ORD82910,WE-MIRROR-3,defective_or_damaged,frame had minor dent,damaged,2026-03-27,23.0,San Francisco,CA,West,94102.0,131.49
+R0126,ORD94239,WE-DESK-11,defective_or_damaged,drawer doesn't close smoothly,like_new,2025-12-08,44.0,Columbus,OH,North,43201.0,180.9
+R0127,ORD10800,WE-BENCH-21,defective_or_damaged,changed my mind,open_box,2026-01-27,23.0,Philadelphia,PA,East,19101.0,206.99
+R0128,ORD38197,WE-MIRROR-3,defective_or_damaged,frame had minor dent,defective,2026-04-11,34.0,Los Angeles,CA,West,90001.0,161.98
+R0129,ORD16895,WE-BED-33,wrong_size,didn't fit through door,open_box,2025-11-05,6.0,Denver,CO,West,80202.0,135.74
+R0130,ORD67939,WE-MIRROR-3,defective_or_damaged,frame had minor dent,defective,2026-01-05,39.0,Portland,OR,West,97201.0,147.32
+R0131,ORD97442,WE-RUG-99,does_not_match_description,colour is off from photos,damaged,2025-12-31,34.0,Columbus,OH,North,43201.0,124.54
+R0132,ORD47938,WE-LAMP-07,does_not_match_description,changed my mind,damaged,2026-03-13,17.0,Boston,MA,East,2101.0,132.0
+R0133,ORD97562,WE-SHELF-14,wrong_size,ordered by mistake,damaged,2025-12-29,36.0,Dallas,TX,South,75201.0,127.21
+R0134,ORD85156,WE-TBL-04,defective_or_damaged,surface scratch on top,defective,2025-12-02,28.0,Seattle,WA,West,98101.0,190.95
+R0135,ORD57428,WE-LAMP-07,no_longer_needed,moved house,like_new,2025-11-23,30.0,Boston,MA,East,2101.0,163.67
+R0136,ORD54500,WE-TABLE-88,does_not_match_description,warmer in the photo than in person,open_box,2026-01-09,20.0,Los Angeles,CA,West,90001.0,153.31
+R0137,ORD56019,WE-SOFA-22,wrong_size,sofa is huge compared to the listing,open_box,2026-03-05,23.0,Atlanta,GA,East,30301.0,143.63
+R0138,ORD74764,WE-SOFA-22,wrong_size,too big for my living room,defective,2026-03-27,41.0,New York,NY,East,10001.0,195.44
+R0139,ORD18950,WE-MIRROR-3,defective_or_damaged,slight imperfection in glass,defective,2026-03-22,29.0,Seattle,WA,West,98101.0,164.22
+R0140,ORD14929,WE-DESK-11,does_not_match_description,colour slightly different,like_new,2026-01-01,29.0,Detroit,MI,North,48201.0,156.87
+R0141,ORD86064,WE-DESK-11,defective_or_damaged,wobbly leg,like_new,2026-01-22,30.0,Columbus,OH,North,43201.0,164.97
+R0142,ORD69050,WE-MIRROR-3,defective_or_damaged,slight imperfection in glass,like_new,2026-02-25,4.0,Denver,CO,West,80202.0,201.1
+R0143,ORD89928,WE-BED-33,no_longer_needed,no longer need it,open_box,2025-12-21,34.0,Portland,OR,West,97201.0,156.39
+R0144,ORD53863,WE-DESK-11,defective_or_damaged,drawer doesn't close smoothly,like_new,2025-12-02,42.0,Chicago,IL,North,60601.0,152.97
+R0145,ORD20682,WE-RUG-99,does_not_match_description,colour is off from photos,open_box,2026-03-15,22.0,Columbus,OH,North,43201.0,211.67
+R0146,ORD59372,WE-DESK-11,no_longer_needed,ordered by mistake,damaged,2026-02-16,36.0,Chicago,IL,North,60601.0,201.32
+R0147,ORD33627,WE-BENCH-21,does_not_match_description,size not right,open_box,2026-01-18,20.0,New York,NY,East,10001.0,154.17
+R0148,ORD80748,WE-SHELF-14,does_not_match_description,more yellow than white,like_new,2026-04-08,33.0,Austin,TX,South,78701.0,186.19
+R0149,ORD31697,WE-MIRROR-3,defective_or_damaged,slight imperfection in glass,defective,2025-11-14,40.0,San Francisco,CA,West,94102.0,124.37
+R0150,ORD40671,WE-BED-33,wrong_size,headboard too tall,open_box,2026-02-16,29.0,Denver,CO,West,80202.0,150.95
+R0151,ORD46932,WE-SHELF-14,wrong_size,colour slightly different,defective,2026-01-08,30.0,Charlotte,NC,South,28201.0,170.29
+R0152,ORD58655,WE-LAMP-07,wrong_size,ordered by mistake,like_new,2025-11-18,31.0,New York,NY,East,10001.0,191.14
+R0153,ORD29313,WE-RUG-99,defective_or_damaged,changed my mind,defective,2026-01-08,33.0,Detroit,MI,North,48201.0,129.17
+R0154,ORD40903,WE-CHAIR-05,defective_or_damaged,changed my mind,defective,2025-12-17,24.0,Nashville,TN,South,37201.0,219.45
+R0155,ORD15020,WE-BED-33,wrong_size,didn't fit through door,damaged,2026-03-03,9.0,Seattle,WA,West,98101.0,211.74
+R0156,ORD10688,WE-SHELF-14,does_not_match_description,more yellow than white,like_new,2026-01-16,40.0,Nashville,TN,South,37201.0,121.9
+R0157,ORD16258,WE-CHAIR-05,no_longer_needed,changed my mind,open_box,2026-01-21,8.0,Dallas,TX,South,75201.0,161.98
+R0158,ORD12154,WE-MIRROR-3,defective_or_damaged,frame had minor dent,open_box,2025-12-04,35.0,Portland,OR,West,97201.0,191.85
+R0159,ORD97080,WE-DESK-11,defective_or_damaged,slight scratch on arrival,like_new,2025-12-27,12.0,Columbus,OH,North,43201.0,172.35
+R0160,ORD61177,WE-BED-33,wrong_size,larger than I imagined,defective,2025-11-12,2.0,Denver,CO,West,80202.0,124.35
+R0161,ORD96127,WE-LAMP-07,defective_or_damaged,changed my mind,like_new,2026-01-18,16.0,New York,NY,East,10001.0,197.15
+R0162,ORD72722,WE-BED-33,wrong_size,didn't fit through door,open_box,2025-11-06,30.0,San Francisco,CA,West,94102.0,201.15
+R0163,ORD51365,WE-TABLE-88,no_longer_needed,changed my mind,damaged,2026-02-11,3.0,Los Angeles,CA,West,90001.0,171.54
+R0164,ORD16265,WE-RUG-99,does_not_match_description,much more orange than terracotta,damaged,2026-02-09,23.0,Minneapolis,MN,North,55401.0,147.32
+R0165,ORD75038,WE-BED-33,wrong_size,didn't fit through door,defective,2026-01-16,12.0,Portland,OR,West,97201.0,156.73
+R0166,ORD33652,WE-RUG-99,does_not_match_description,much more orange than terracotta,damaged,2026-01-19,39.0,Chicago,IL,North,60601.0,152.12
+R0167,ORD31842,WE-TABLE-88,does_not_match_description,looks grey not warm brown,defective,2025-10-27,28.0,Denver,CO,West,80202.0,155.15
+R0168,ORD93560,WE-TBL-04,defective_or_damaged,size not right,defective,2026-04-24,43.0,Los Angeles,CA,West,90001.0,156.33
+R0169,ORD14561,WE-BENCH-21,no_longer_needed,no longer needed,open_box,2025-11-07,29.0,Atlanta,GA,East,30301.0,126.72
+R0170,ORD99006,WE-BENCH-21,no_longer_needed,moved house,defective,2025-11-07,10.0,New York,NY,East,10001.0,214.88
+R0171,ORD51207,WE-BED-33,wrong_size,headboard too tall,damaged,2026-01-23,26.0,Denver,CO,West,80202.0,144.96
+R0172,ORD44311,WE-TABLE-88,does_not_match_description,colour looked different in real life,damaged,2025-11-16,8.0,Portland,OR,West,97201.0,190.4
+R0173,ORD32630,WE-CHAIR-05,defective_or_damaged,size not right,defective,2026-04-11,29.0,Dallas,TX,South,75201.0,219.73
+R0174,ORD49315,WE-BENCH-21,defective_or_damaged,colour slightly different,open_box,2025-12-02,19.0,Atlanta,GA,East,30301.0,191.18
+R0175,ORD41029,WE-BENCH-21,no_longer_needed,moved house,defective,2026-02-17,9.0,New York,NY,East,10001.0,122.63
+R0176,ORD21300,WE-RUG-99,does_not_match_description,colour is off from photos,like_new,2026-04-07,40.0,Columbus,OH,North,43201.0,150.93
+R0177,ORD94192,WE-SHELF-14,does_not_match_description,not the right white for my walls,like_new,2026-03-20,21.0,Houston,TX,South,77001.0,165.0
+R0178,ORD33850,WE-BENCH-21,no_longer_needed,no longer needed,open_box,2025-11-26,38.0,Atlanta,GA,East,30301.0,163.26
+R0179,ORD55353,WE-TBL-04,wrong_size,colour slightly different,damaged,2025-10-16,15.0,Seattle,WA,West,98101.0,204.59
+R0180,ORD22245,WE-DESK-11,defective_or_damaged,slight scratch on arrival,open_box,2025-11-29,35.0,Detroit,MI,North,48201.0,179.18
+R0181,ORD20646,WE-MIRROR-3,defective_or_damaged,slight imperfection in glass,like_new,2026-03-23,2.0,Denver,CO,West,80202.0,214.85
+R0182,ORD13969,WE-MIRROR-3,defective_or_damaged,frame had minor dent,defective,2025-12-04,41.0,Portland,OR,West,97201.0,208.9
+R0183,ORD19564,WE-RUG-99,does_not_match_description,colour is off from photos,like_new,2026-02-13,30.0,Milwaukee,WI,North,53202.0,135.81
+R0184,ORD55268,WE-LAMP-07,no_longer_needed,changed my mind on the style,defective,2026-01-31,21.0,Boston,MA,East,2101.0,133.08
+R0185,ORD68929,WE-BED-33,wrong_size,headboard too tall,open_box,2026-03-18,18.0,Portland,OR,West,97201.0,134.09
+R0186,ORD52917,WE-TBL-04,defective_or_damaged,surface scratch on top,damaged,2026-02-07,11.0,Portland,OR,West,97201.0,138.98
+R0187,ORD21802,WE-SOFA-22,wrong_size,sofa is huge compared to the listing,defective,2025-11-26,2.0,Philadelphia,PA,East,19101.0,170.54
+R0188,ORD98148,WE-CHAIR-05,no_longer_needed,moved house,defective,2025-12-11,42.0,Nashville,TN,South,37201.0,148.57
+R0189,ORD15930,WE-TBL-04,no_longer_needed,ordered by mistake,defective,2026-01-11,24.0,Seattle,WA,West,98101.0,125.12
+R0190,ORD99181,WE-RUG-99,no_longer_needed,no longer need it,like_new,2026-02-28,40.0,Columbus,OH,North,43201.0,132.87
+R0191,ORD88966,WE-TABLE-88,does_not_match_description,looks grey not warm brown,defective,2026-03-08,13.0,Seattle,WA,West,98101.0,170.01
+R0192,ORD89463,WE-TBL-04,defective_or_damaged,hinge hardware stripped during assembly,open_box,2025-12-15,10.0,Denver,CO,West,80202.0,152.8
+R0193,ORD76494,WE-MIRROR-3,defective_or_damaged,slight imperfection in glass,defective,2025-11-22,22.0,Seattle,WA,West,98101.0,190.87
+R0194,ORD50327,WE-DESK-11,defective_or_damaged,wobbly leg,like_new,2026-01-22,38.0,Chicago,IL,North,60601.0,179.69
+R0195,ORD91230,WE-DESK-11,wrong_size,changed my mind,defective,2025-12-28,41.0,Minneapolis,MN,North,55401.0,134.78
+R0196,ORD67807,WE-BENCH-21,no_longer_needed,cancelled renovation project,damaged,2026-02-13,2.0,New York,NY,East,10001.0,161.88
+R0197,ORD28098,WE-LAMP-07,no_longer_needed,cheap lamp not worth return shipping,open_box,2025-12-05,4.0,Atlanta,GA,East,30301.0,176.09
+R0198,ORD54869,WE-BENCH-21,no_longer_needed,moved house,damaged,2026-01-08,35.0,Boston,MA,East,2101.0,187.59
+R0199,ORD46569,WE-BENCH-21,no_longer_needed,cancelled renovation project,damaged,2026-02-26,16.0,Miami,FL,East,33101.0,142.49
+R0200,ORD47721,WE-DESK-11,wrong_size,size not right,like_new,2025-11-26,18.0,Detroit,MI,North,48201.0,177.35
+R0201,ORD47700,WE-RUG-99,does_not_match_description,colour is off from photos,like_new,2026-01-19,3.0,Minneapolis,MN,North,55401.0,154.64
+R0202,ORD45601,WE-SHELF-14,does_not_match_description,not the right white for my walls,open_box,2026-02-26,36.0,Charlotte,NC,South,28201.0,130.92
+R0203,ORD40518,WE-MIRROR-3,defective_or_damaged,frame had minor dent,like_new,2026-03-15,41.0,Denver,CO,West,80202.0,130.02
+R0204,ORD72580,WE-BED-33,no_longer_needed,home renovation cancelled,open_box,2025-11-15,31.0,Portland,OR,West,97201.0,195.59
+R0205,ORD14888,WE-DESK-11,no_longer_needed,cancelled event,open_box,2026-03-07,35.0,Columbus,OH,North,43201.0,161.79
+R0206,ORD11214,WE-SOFA-22,does_not_match_description,size not right,damaged,2026-01-19,3.0,Boston,MA,East,2101.0,176.8
+R0207,ORD27589,WE-TABLE-88,defective_or_damaged,colour slightly different,defective,2025-12-19,32.0,Denver,CO,West,80202.0,147.28
+R0208,ORD11846,WE-TABLE-88,does_not_match_description,warmer in the photo than in person,damaged,2025-10-11,12.0,Seattle,WA,West,98101.0,199.08
+R0209,ORD52982,WE-MIRROR-3,defective_or_damaged,frame had minor dent,like_new,2026-01-14,33.0,Portland,OR,West,97201.0,160.08
+R0210,ORD60275,WE-TABLE-88,does_not_match_description,colour looked different in real life,open_box,2026-04-16,17.0,San Francisco,CA,West,94102.0,164.67
+R0211,ORD18142,WE-DESK-11,defective_or_damaged,changed my mind,like_new,2025-10-21,16.0,Detroit,MI,North,48201.0,166.54
+R0212,ORD93717,WE-SOFA-22,wrong_size,sofa is huge compared to the listing,damaged,2025-10-14,8.0,Philadelphia,PA,East,19101.0,156.75
+R0213,ORD64505,WE-CHAIR-05,does_not_match_description,brass looks too yellow in person,defective,2025-11-20,24.0,Nashville,TN,South,37201.0,195.74
+R0214,ORD20237,WE-BENCH-21,wrong_size,changed my mind,like_new,2025-10-26,24.0,Atlanta,GA,East,30301.0,126.18
+R0215,ORD99167,WE-RUG-99,wrong_size,ordered by mistake,open_box,2025-12-16,8.0,Columbus,OH,North,43201.0,191.69
+R0216,ORD64450,WE-SHELF-14,does_not_match_description,not the right white for my walls,defective,2026-03-31,33.0,Nashville,TN,South,37201.0,176.39
+R0217,ORD38560,WE-RUG-99,does_not_match_description,colour is off from photos,like_new,2026-01-26,1.0,Milwaukee,WI,North,53202.0,124.53
+R0218,ORD63591,WE-BED-33,does_not_match_description,changed my mind,open_box,2026-04-11,19.0,Portland,OR,West,97201.0,196.9
+R0219,ORD59236,WE-BENCH-21,no_longer_needed,colour slightly different,like_new,2026-01-01,25.0,Miami,FL,East,33101.0,188.27
+R0220,ORD26691,WE-BENCH-21,wrong_size,colour slightly different,open_box,2026-01-24,34.0,Atlanta,GA,East,30301.0,203.48
+R0221,ORD55371,WE-TBL-04,no_longer_needed,size not right,open_box,2026-02-26,30.0,San Francisco,CA,West,94102.0,147.56
+R0222,ORD18819,WE-TABLE-88,does_not_match_description,warmer in the photo than in person,like_new,2026-02-12,14.0,Los Angeles,CA,West,90001.0,179.39
+R0223,ORD40715,WE-SHELF-14,does_not_match_description,more yellow than white,open_box,2026-01-17,29.0,Houston,TX,South,77001.0,195.44
+R0224,ORD88370,WE-TBL-04,defective_or_damaged,hinge hardware stripped during assembly,damaged,2026-02-15,37.0,Denver,CO,West,80202.0,143.69
+R0225,ORD32955,WE-SOFA-22,wrong_size,size not right,defective,2025-12-17,38.0,New York,NY,East,10001.0,175.59
+R0226,ORD59343,WE-TBL-04,no_longer_needed,colour slightly different,open_box,2026-03-13,20.0,Portland,OR,West,97201.0,195.44
+R0227,ORD83713,WE-SHELF-14,does_not_match_description,more yellow than white,defective,2025-12-07,4.0,Dallas,TX,South,75201.0,216.78
+R0228,ORD20363,WE-RUG-99,does_not_match_description,colour is off from photos,defective,2026-02-17,42.0,Minneapolis,MN,North,55401.0,204.71
+R0229,ORD19539,WE-TABLE-88,no_longer_needed,no longer need it,open_box,2025-10-31,3.0,Denver,CO,West,80202.0,200.47
+R0230,ORD37762,WE-MIRROR-3,wrong_size,size not right,open_box,2026-01-14,1.0,Seattle,WA,West,98101.0,216.21
+R0231,ORD82362,WE-TABLE-88,no_longer_needed,ordered by mistake,damaged,2026-01-05,16.0,San Francisco,CA,West,94102.0,197.55
+R0232,ORD75179,WE-LAMP-07,no_longer_needed,"arrived broken, not worth fixing",defective,2026-01-31,33.0,Philadelphia,PA,East,19101.0,129.86
+R0233,ORD39002,WE-SHELF-14,defective_or_damaged,ordered by mistake,open_box,2026-04-26,37.0,Nashville,TN,South,37201.0,121.62
+R0234,ORD84683,WE-RUG-99,no_longer_needed,colour slightly different,open_box,2026-02-26,25.0,Detroit,MI,North,48201.0,169.93
+R0235,ORD74303,WE-BENCH-21,defective_or_damaged,colour slightly different,defective,2025-11-08,42.0,Miami,FL,East,33101.0,136.82
+R0236,ORD17698,WE-BED-33,wrong_size,larger than I imagined,like_new,2025-12-25,42.0,San Francisco,CA,West,94102.0,203.91
+R0237,ORD11198,WE-TABLE-88,does_not_match_description,changed my mind,open_box,2026-03-24,10.0,San Francisco,CA,West,94102.0,170.57
+R0238,ORD73944,WE-BED-33,wrong_size,larger than I imagined,like_new,2026-01-10,43.0,Denver,CO,West,80202.0,120.66
+R0239,ORD12246,WE-RUG-99,does_not_match_description,much more orange than terracotta,defective,2025-12-03,19.0,Detroit,MI,North,48201.0,200.62
+R0240,ORD79003,WE-SOFA-22,wrong_size,too big for my living room,damaged,2026-03-22,40.0,Boston,MA,East,2101.0,201.52
+R0241,ORD39603,WE-DESK-11,does_not_match_description,colour slightly different,damaged,2025-11-23,16.0,Milwaukee,WI,North,53202.0,188.4
+R0242,ORD59436,WE-TABLE-88,does_not_match_description,warmer in the photo than in person,defective,2026-01-12,25.0,Los Angeles,CA,West,90001.0,125.61
+R0243,ORD79226,WE-TBL-04,does_not_match_description,size not right,like_new,2025-11-14,7.0,Seattle,WA,West,98101.0,142.98
+R0244,ORD96259,WE-MIRROR-3,defective_or_damaged,frame had minor dent,like_new,2025-12-19,37.0,Seattle,WA,West,98101.0,137.94
+R0245,ORD31292,WE-BED-33,wrong_size,headboard too tall,open_box,2026-04-01,20.0,Portland,OR,West,97201.0,176.67
+R0246,ORD75639,WE-LAMP-07,no_longer_needed,"arrived broken, not worth fixing",damaged,2025-10-12,6.0,Boston,MA,East,2101.0,125.37
+R0247,ORD52778,WE-LAMP-07,no_longer_needed,changed my mind on the style,like_new,2025-11-25,26.0,Atlanta,GA,East,30301.0,183.41
+R0248,ORD99088,WE-SHELF-14,does_not_match_description,not the right white for my walls,defective,2025-12-23,12.0,Nashville,TN,South,37201.0,128.57
+R0249,ORD59807,WE-MIRROR-3,defective_or_damaged,frame had minor dent,open_box,2026-02-01,10.0,Los Angeles,CA,West,90001.0,193.97
+R0250,ORD23399,WE-BED-33,no_longer_needed,moved house,open_box,2026-01-16,18.0,Portland,OR,West,97201.0,128.73
+R0251,ORD56388,WE-LAMP-07,no_longer_needed,"arrived broken, not worth fixing",like_new,2026-03-31,6.0,New York,NY,East,10001.0,179.69
+R0252,ORD41816,WE-BED-33,does_not_match_description,colour slightly different,open_box,2025-11-02,36.0,Los Angeles,CA,West,90001.0,188.53
+R0253,ORD66973,WE-SOFA-22,wrong_size,much larger than expected,damaged,2026-03-26,11.0,Boston,MA,East,2101.0,162.11
+R0254,ORD35630,WE-SHELF-14,defective_or_damaged,colour slightly different,defective,2025-12-09,40.0,Nashville,TN,South,37201.0,130.7
+R0255,ORD67700,WE-DESK-11,defective_or_damaged,drawer doesn't close smoothly,damaged,2026-01-15,22.0,Columbus,OH,North,43201.0,163.06
+R0256,ORD33283,WE-BENCH-21,wrong_size,colour slightly different,defective,2025-12-20,21.0,Boston,MA,East,2101.0,216.87
+R0257,ORD24927,WE-DESK-11,no_longer_needed,ordered by mistake,open_box,2026-01-14,24.0,Detroit,MI,North,48201.0,179.22
+R0258,ORD67469,WE-RUG-99,does_not_match_description,much more orange than terracotta,damaged,2025-10-15,14.0,Milwaukee,WI,North,53202.0,203.13
+R0259,ORD96332,WE-TABLE-88,no_longer_needed,size not right,open_box,2026-02-15,17.0,Seattle,WA,West,98101.0,191.52
+R0260,ORD64827,WE-LAMP-07,no_longer_needed,"arrived broken, not worth fixing",like_new,2025-12-18,33.0,Miami,FL,East,33101.0,199.07
+R0261,ORD90304,WE-BED-33,does_not_match_description,changed my mind,like_new,2026-03-31,42.0,Seattle,WA,West,98101.0,176.32
+R0262,ORD11382,WE-BENCH-21,no_longer_needed,moved house,like_new,2025-12-18,7.0,Philadelphia,PA,East,19101.0,145.87
+R0263,ORD75597,WE-RUG-99,wrong_size,size not right,open_box,2025-11-16,38.0,Milwaukee,WI,North,53202.0,154.5
+R0264,ORD55656,WE-TBL-04,defective_or_damaged,hinge hardware stripped during assembly,damaged,2026-03-12,10.0,Los Angeles,CA,West,90001.0,154.31
+R0265,ORD69303,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,damaged,2025-11-12,45.0,Nashville,TN,South,37201.0,126.72
+R0266,ORD41970,WE-TBL-04,does_not_match_description,changed my mind,open_box,2025-10-20,11.0,Los Angeles,CA,West,90001.0,175.19
+R0267,ORD34430,WE-BED-33,wrong_size,didn't fit through door,defective,2025-11-02,12.0,Portland,OR,West,97201.0,159.56
+R0268,ORD18200,WE-MIRROR-3,no_longer_needed,size not right,like_new,2026-02-25,18.0,San Francisco,CA,West,94102.0,199.95
+R0269,ORD74157,WE-RUG-99,does_not_match_description,colour is off from photos,damaged,2026-03-07,43.0,Chicago,IL,North,60601.0,179.7
+R0270,ORD98288,WE-MIRROR-3,defective_or_damaged,frame had minor dent,damaged,2025-11-05,12.0,Portland,OR,West,97201.0,211.87
+R0271,ORD33992,WE-MIRROR-3,defective_or_damaged,frame had minor dent,damaged,2026-01-20,8.0,San Francisco,CA,West,94102.0,189.34
+R0272,ORD93296,WE-RUG-99,does_not_match_description,much more orange than terracotta,open_box,2026-03-16,32.0,Milwaukee,WI,North,53202.0,175.49
+R0273,ORD57059,WE-SHELF-14,does_not_match_description,more yellow than white,like_new,2025-10-28,4.0,Nashville,TN,South,37201.0,168.46
+R0274,ORD74054,WE-CHAIR-05,no_longer_needed,size not right,open_box,2025-10-30,29.0,Nashville,TN,South,37201.0,128.27
+R0275,ORD69942,WE-TBL-04,no_longer_needed,home renovation cancelled,defective,2026-01-28,11.0,Denver,CO,West,80202.0,174.97
+R0276,ORD67850,WE-TABLE-88,does_not_match_description,looks grey not warm brown,open_box,2025-11-16,3.0,Seattle,WA,West,98101.0,218.98
+R0277,ORD55688,WE-TABLE-88,wrong_size,colour slightly different,like_new,2025-12-23,17.0,Los Angeles,CA,West,90001.0,163.91
+R0278,ORD89988,WE-TABLE-88,wrong_size,ordered by mistake,defective,2025-10-29,23.0,Denver,CO,West,80202.0,136.6
+R0279,ORD80617,WE-SOFA-22,wrong_size,changed my mind,open_box,2026-02-27,39.0,Atlanta,GA,East,30301.0,152.37
+R0280,ORD27771,WE-DESK-11,defective_or_damaged,drawer doesn't close smoothly,defective,2025-10-16,7.0,Columbus,OH,North,43201.0,211.88
+R0281,ORD61472,WE-DESK-11,wrong_size,ordered by mistake,defective,2026-03-12,44.0,Detroit,MI,North,48201.0,134.22
+R0282,ORD62802,WE-BENCH-21,no_longer_needed,moved house,damaged,2025-10-26,6.0,New York,NY,East,10001.0,189.47
+R0283,ORD70089,WE-BED-33,wrong_size,didn't fit through door,damaged,2025-10-01,6.0,Los Angeles,CA,West,90001.0,205.01
+R0284,ORD47171,WE-RUG-99,does_not_match_description,colour is off from photos,damaged,2026-02-12,21.0,Milwaukee,WI,North,53202.0,174.73
+R0285,ORD92074,WE-SOFA-22,wrong_size,much larger than expected,defective,2026-03-27,7.0,New York,NY,East,10001.0,121.63
+R0286,ORD27290,WE-SOFA-22,wrong_size,too big for my living room,damaged,2026-03-25,45.0,Miami,FL,East,33101.0,135.9
+R0287,ORD31695,WE-DESK-11,defective_or_damaged,drawer doesn't close smoothly,like_new,2025-11-23,42.0,Detroit,MI,North,48201.0,159.63
+R0288,ORD72496,WE-DESK-11,wrong_size,size not right,like_new,2026-04-14,14.0,Chicago,IL,North,60601.0,133.27
+R0289,ORD27324,WE-CHAIR-05,no_longer_needed,moved house,defective,2026-01-27,45.0,Houston,TX,South,77001.0,127.08
+R0290,ORD60164,WE-LAMP-07,no_longer_needed,changed my mind on the style,open_box,2026-01-23,9.0,Philadelphia,PA,East,19101.0,184.16
+R0291,ORD67684,WE-BENCH-21,no_longer_needed,cancelled renovation project,damaged,2025-10-27,11.0,Atlanta,GA,East,30301.0,192.24
+R0292,ORD26142,WE-BENCH-21,no_longer_needed,size not right,defective,2026-03-15,9.0,New York,NY,East,10001.0,155.15
+R0293,ORD88774,WE-LAMP-07,no_longer_needed,changed my mind on the style,damaged,2026-03-04,36.0,New York,NY,East,10001.0,197.9
+R0294,ORD48737,WE-TBL-04,defective_or_damaged,ordered by mistake,like_new,2026-03-09,26.0,Denver,CO,West,80202.0,198.38
+R0295,ORD11581,WE-CHAIR-05,does_not_match_description,brass looks too yellow in person,damaged,2026-04-16,34.0,Charlotte,NC,South,28201.0,213.39
+R0296,ORD71736,WE-SOFA-22,wrong_size,sofa is huge compared to the listing,like_new,2025-10-20,12.0,Atlanta,GA,East,30301.0,121.67
+R0297,ORD92388,WE-TABLE-88,no_longer_needed,cancelled event,defective,2025-12-11,19.0,Portland,OR,West,97201.0,162.36
+R0298,ORD50620,WE-LAMP-07,no_longer_needed,"arrived broken, not worth fixing",like_new,2026-01-25,6.0,Boston,MA,East,2101.0,171.13
+R0299,ORD67342,WE-CHAIR-05,wrong_size,colour slightly different,open_box,2026-02-25,45.0,Houston,TX,South,77001.0,125.79
+R0300,ORD96252,WE-TABLE-88,does_not_match_description,size not right,open_box,2026-02-23,43.0,Los Angeles,CA,West,90001.0,131.94
+R0301,ORD31884,WE-SOFA-22,wrong_size,size not right,damaged,2025-12-06,17.0,Atlanta,GA,East,30301.0,132.69
+R0302,ORD18371,WE-DESK-11,does_not_match_description,changed my mind,damaged,2026-02-24,34.0,Milwaukee,WI,North,53202.0,191.23
+R0303,ORD84302,WE-MIRROR-3,defective_or_damaged,slight imperfection in glass,open_box,2026-04-18,32.0,Seattle,WA,West,98101.0,156.77
+R0304,ORD42053,WE-DESK-11,does_not_match_description,ordered by mistake,like_new,2026-03-21,1.0,Chicago,IL,North,60601.0,167.18
+R0305,ORD42540,WE-LAMP-07,wrong_size,changed my mind,defective,2026-02-23,21.0,Miami,FL,East,33101.0,211.59
+R0306,ORD16903,WE-BED-33,wrong_size,headboard too tall,open_box,2026-01-06,44.0,Los Angeles,CA,West,90001.0,142.32
+R0307,ORD21322,WE-RUG-99,no_longer_needed,changed my mind,defective,2026-02-01,21.0,Detroit,MI,North,48201.0,120.8
+R0308,ORD87554,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,defective,2025-12-27,24.0,Dallas,TX,South,75201.0,219.78
+R0309,ORD55406,WE-CHAIR-05,no_longer_needed,no longer need it,like_new,2026-03-07,35.0,Houston,TX,South,77001.0,215.1
+R0310,ORD74491,WE-TBL-04,no_longer_needed,colour slightly different,like_new,2026-02-26,27.0,Denver,CO,West,80202.0,217.26
+R0311,ORD58823,WE-SOFA-22,does_not_match_description,changed my mind,defective,2026-01-30,45.0,Atlanta,GA,East,30301.0,217.46
+R0312,ORD84425,WE-TABLE-88,does_not_match_description,warmer in the photo than in person,like_new,2026-04-19,38.0,Portland,OR,West,97201.0,163.5
+R0313,ORD51688,WE-SOFA-22,wrong_size,much larger than expected,defective,2025-10-24,21.0,Miami,FL,East,33101.0,147.2
+R0314,ORD51160,WE-TABLE-88,wrong_size,changed my mind,defective,2026-01-05,30.0,San Francisco,CA,West,94102.0,132.07
+R0315,ORD30658,WE-BED-33,wrong_size,size not right,damaged,2026-03-07,6.0,Seattle,WA,West,98101.0,202.64
+R0316,ORD77300,WE-MIRROR-3,defective_or_damaged,slight imperfection in glass,like_new,2026-01-25,26.0,San Francisco,CA,West,94102.0,187.72
+R0317,ORD42748,WE-DESK-11,wrong_size,changed my mind,like_new,2025-12-15,36.0,Milwaukee,WI,North,53202.0,166.2
+R0318,ORD62505,WE-SOFA-22,wrong_size,too big for my living room,damaged,2026-03-11,13.0,Boston,MA,East,2101.0,188.63
+R0319,ORD35919,WE-BENCH-21,no_longer_needed,cancelled renovation project,defective,2026-03-31,5.0,New York,NY,East,10001.0,200.93
+R0320,ORD66774,WE-TABLE-88,no_longer_needed,no longer need it,defective,2026-03-25,37.0,Los Angeles,CA,West,90001.0,169.61
+R0321,ORD68459,WE-LAMP-07,no_longer_needed,changed my mind on the style,open_box,2026-02-07,18.0,Boston,MA,East,2101.0,123.46
+R0322,ORD21497,WE-MIRROR-3,defective_or_damaged,slight imperfection in glass,damaged,2025-12-03,4.0,Denver,CO,West,80202.0,158.3
+R0323,ORD57069,WE-LAMP-07,no_longer_needed,"arrived broken, not worth fixing",defective,2026-04-21,25.0,Atlanta,GA,East,30301.0,174.45
+R0324,ORD88265,WE-SHELF-14,does_not_match_description,not the right white for my walls,open_box,2026-04-15,21.0,Dallas,TX,South,75201.0,122.93
+R0325,ORD23124,WE-DESK-11,defective_or_damaged,drawer doesn't close smoothly,open_box,2026-02-11,11.0,Columbus,OH,North,43201.0,185.69
+R0326,ORD32768,WE-DESK-11,no_longer_needed,home renovation cancelled,open_box,2026-01-14,23.0,Columbus,OH,North,43201.0,143.66
+R0327,ORD28625,WE-BED-33,defective_or_damaged,changed my mind,open_box,2025-12-13,37.0,Seattle,WA,West,98101.0,203.67
+R0328,ORD88861,WE-SHELF-14,does_not_match_description,more yellow than white,open_box,2026-04-01,15.0,Houston,TX,South,77001.0,121.99
+R0329,ORD52413,WE-SHELF-14,does_not_match_description,more yellow than white,like_new,2025-10-11,12.0,Austin,TX,South,78701.0,122.19
+R0330,ORD96787,WE-MIRROR-3,wrong_size,changed my mind,defective,2026-04-06,24.0,Seattle,WA,West,98101.0,178.6
+R0331,ORD95089,WE-BED-33,wrong_size,headboard too tall,damaged,2025-11-20,32.0,Portland,OR,West,97201.0,137.42
+R0332,ORD50215,WE-RUG-99,does_not_match_description,colour is off from photos,damaged,2026-03-12,25.0,Columbus,OH,North,43201.0,132.73
+R0333,ORD93839,WE-TBL-04,no_longer_needed,changed my mind,like_new,2025-11-10,15.0,Seattle,WA,West,98101.0,213.67
+R0334,ORD21629,WE-SOFA-22,wrong_size,too big for my living room,damaged,2026-03-30,41.0,Philadelphia,PA,East,19101.0,164.66
+R0335,ORD16310,WE-DESK-11,no_longer_needed,moved house,defective,2025-09-29,1.0,Chicago,IL,North,60601.0,163.82
+R0336,ORD23294,WE-LAMP-07,no_longer_needed,size not right,defective,2025-12-07,25.0,Philadelphia,PA,East,19101.0,198.87
+R0337,ORD12631,WE-MIRROR-3,defective_or_damaged,frame had minor dent,damaged,2026-04-11,19.0,Los Angeles,CA,West,90001.0,146.11
+R0338,ORD81702,WE-TABLE-88,does_not_match_description,colour looked different in real life,like_new,2025-09-30,5.0,San Francisco,CA,West,94102.0,153.8
+R0339,ORD30591,WE-MIRROR-3,does_not_match_description,size not right,like_new,2025-11-24,28.0,San Francisco,CA,West,94102.0,130.13
+R0340,ORD16505,WE-CHAIR-05,no_longer_needed,colour slightly different,defective,2026-02-06,7.0,Austin,TX,South,78701.0,177.18
+R0341,ORD88671,WE-SHELF-14,no_longer_needed,cancelled event,defective,2025-11-23,41.0,Austin,TX,South,78701.0,139.97
+R0342,ORD62096,WE-TBL-04,defective_or_damaged,hinge hardware stripped during assembly,defective,2026-03-22,20.0,Portland,OR,West,97201.0,168.91
+R0343,ORD58418,WE-BENCH-21,no_longer_needed,cancelled renovation project,open_box,2026-01-21,25.0,Boston,MA,East,2101.0,164.58
+R0344,ORD29808,WE-DESK-11,defective_or_damaged,drawer doesn't close smoothly,like_new,2025-11-11,4.0,Detroit,MI,North,48201.0,128.57
+R0345,ORD80190,WE-BED-33,no_longer_needed,ordered by mistake,defective,2025-12-15,27.0,Portland,OR,West,97201.0,177.27
+R0346,ORD77740,WE-CHAIR-05,does_not_match_description,brass looks too yellow in person,open_box,2025-12-30,37.0,Houston,TX,South,77001.0,132.03
+R0347,ORD65492,WE-SHELF-14,does_not_match_description,more yellow than white,like_new,2026-03-02,3.0,Dallas,TX,South,75201.0,218.83
+R0348,ORD18783,WE-LAMP-07,no_longer_needed,"arrived broken, not worth fixing",like_new,2026-02-14,21.0,Atlanta,GA,East,30301.0,158.81
+R0349,ORD87014,WE-LAMP-07,no_longer_needed,cheap lamp not worth return shipping,defective,2025-11-12,40.0,New York,NY,East,10001.0,131.25
+R0350,ORD23237,WE-SOFA-22,wrong_size,sofa is huge compared to the listing,damaged,2026-04-10,37.0,New York,NY,East,10001.0,206.75
+R0351,ORD14910,WE-BED-33,defective_or_damaged,size not right,open_box,2025-11-27,31.0,Denver,CO,West,80202.0,147.54
+R0352,ORD41139,WE-SOFA-22,wrong_size,sofa is huge compared to the listing,like_new,2026-01-11,22.0,New York,NY,East,10001.0,194.57
+R0353,ORD74437,WE-DESK-11,does_not_match_description,colour slightly different,like_new,2026-01-29,18.0,Detroit,MI,North,48201.0,217.25
+R0354,ORD89295,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,like_new,2026-02-18,27.0,Austin,TX,South,78701.0,138.79
+R0355,ORD30836,WE-CHAIR-05,no_longer_needed,size not right,like_new,2026-04-19,33.0,Austin,TX,South,78701.0,151.11
+R0356,ORD14334,WE-RUG-99,does_not_match_description,much more orange than terracotta,defective,2026-04-02,16.0,Minneapolis,MN,North,55401.0,125.06
+R0357,ORD26236,WE-BED-33,defective_or_damaged,colour slightly different,like_new,2026-01-30,41.0,Denver,CO,West,80202.0,144.19
+R0358,ORD55843,WE-SHELF-14,does_not_match_description,more yellow than white,damaged,2025-12-07,36.0,Nashville,TN,South,37201.0,136.35
+R0359,ORD39012,WE-DESK-11,no_longer_needed,cancelled event,open_box,2025-11-19,14.0,Minneapolis,MN,North,55401.0,187.77
+R0360,ORD32701,WE-DESK-11,no_longer_needed,cancelled event,like_new,2026-04-09,42.0,Milwaukee,WI,North,53202.0,142.38
+R0361,ORD43029,WE-MIRROR-3,defective_or_damaged,colour slightly different,open_box,2026-01-31,30.0,Portland,OR,West,97201.0,166.67
+R0362,ORD96816,WE-BENCH-21,no_longer_needed,cancelled renovation project,damaged,2026-05-02,33.0,New York,NY,East,10001.0,176.15
+R0363,ORD46239,WE-MIRROR-3,defective_or_damaged,slight imperfection in glass,damaged,2026-04-06,22.0,Portland,OR,West,97201.0,206.15
+R0364,ORD17441,WE-DESK-11,defective_or_damaged,slight scratch on arrival,defective,2025-12-05,16.0,Minneapolis,MN,North,55401.0,186.05
+R0365,ORD63031,WE-BENCH-21,no_longer_needed,no longer needed,defective,2026-02-20,27.0,Philadelphia,PA,East,19101.0,193.67
+R0366,ORD93665,WE-MIRROR-3,wrong_size,colour slightly different,defective,2025-11-11,35.0,San Francisco,CA,West,94102.0,210.65
+R0367,ORD22793,WE-BENCH-21,no_longer_needed,moved house,defective,2026-03-04,19.0,Atlanta,GA,East,30301.0,132.79
+R0368,ORD50250,WE-DESK-11,wrong_size,colour slightly different,defective,2026-01-15,15.0,Minneapolis,MN,North,55401.0,198.81
+R0369,ORD93151,WE-BED-33,wrong_size,larger than I imagined,like_new,2025-12-05,4.0,Los Angeles,CA,West,90001.0,167.22
+R0370,ORD28004,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,open_box,2026-03-28,10.0,Nashville,TN,South,37201.0,154.27
+R0371,ORD53598,WE-MIRROR-3,no_longer_needed,ordered by mistake,open_box,2026-04-12,32.0,San Francisco,CA,West,94102.0,151.34
+R0372,ORD74169,WE-TBL-04,defective_or_damaged,hinge hardware stripped during assembly,like_new,2025-11-15,11.0,San Francisco,CA,West,94102.0,132.94
+R0373,ORD14944,WE-LAMP-07,no_longer_needed,cheap lamp not worth return shipping,open_box,2025-12-24,1.0,Miami,FL,East,33101.0,193.07
+R0374,ORD55134,WE-TBL-04,wrong_size,changed my mind,damaged,2026-03-19,45.0,San Francisco,CA,West,94102.0,132.89
+R0375,ORD69759,WE-LAMP-07,no_longer_needed,cheap lamp not worth return shipping,damaged,2026-02-02,19.0,New York,NY,East,10001.0,163.37
+R0376,ORD12506,WE-BENCH-21,defective_or_damaged,size not right,open_box,2026-03-15,26.0,Boston,MA,East,2101.0,142.43
+R0377,ORD95267,WE-SOFA-22,wrong_size,too big for my living room,like_new,2026-03-24,24.0,Boston,MA,East,2101.0,157.52
+R0378,ORD24170,WE-BENCH-21,no_longer_needed,cancelled renovation project,like_new,2026-05-01,43.0,Atlanta,GA,East,30301.0,124.82
+R0379,ORD30070,WE-TABLE-88,does_not_match_description,looks grey not warm brown,open_box,2026-01-14,45.0,Seattle,WA,West,98101.0,189.52
+R0380,ORD89381,WE-BENCH-21,no_longer_needed,moved house,open_box,2026-03-02,40.0,Atlanta,GA,East,30301.0,161.88
+R0381,ORD36037,WE-TABLE-88,does_not_match_description,warmer in the photo than in person,open_box,2026-04-05,32.0,Los Angeles,CA,West,90001.0,197.8
+R0382,ORD37222,WE-RUG-99,defective_or_damaged,size not right,defective,2025-12-13,32.0,Chicago,IL,North,60601.0,153.06
+R0383,ORD29548,WE-TBL-04,defective_or_damaged,"Table arrived, leg snapped when I stood it up",like_new,2025-11-12,32.0,Denver,CO,West,80202.0,197.95
+R0384,ORD70853,WE-TABLE-88,does_not_match_description,colour slightly different,like_new,2026-02-01,17.0,Portland,OR,West,97201.0,129.98
+R0385,ORD22451,WE-SOFA-22,defective_or_damaged,colour slightly different,like_new,2025-12-20,8.0,Philadelphia,PA,East,19101.0,120.97
+R0386,ORD22183,WE-SOFA-22,wrong_size,too big for my living room,damaged,2025-11-10,18.0,Miami,FL,East,33101.0,201.5
+R0387,ORD72684,WE-SOFA-22,wrong_size,much larger than expected,defective,2026-02-06,45.0,Philadelphia,PA,East,19101.0,184.88
+R0388,ORD87430,WE-SOFA-22,wrong_size,sofa is huge compared to the listing,defective,2026-04-01,27.0,Boston,MA,East,2101.0,200.23
+R0389,ORD99714,WE-BENCH-21,no_longer_needed,cancelled renovation project,open_box,2025-10-28,2.0,Philadelphia,PA,East,19101.0,168.31
+R0390,ORD51187,WE-SHELF-14,does_not_match_description,not the right white for my walls,like_new,2026-03-07,42.0,Houston,TX,South,77001.0,190.46
+R0391,ORD54341,WE-BENCH-21,no_longer_needed,cancelled renovation project,like_new,2026-03-17,43.0,Atlanta,GA,East,30301.0,163.28
+R0392,ORD11526,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,open_box,2025-10-30,4.0,Charlotte,NC,South,28201.0,170.56
+R0393,ORD46458,WE-SHELF-14,wrong_size,changed my mind,like_new,2026-02-20,22.0,Austin,TX,South,78701.0,170.69
+R0394,ORD85108,WE-RUG-99,does_not_match_description,colour is off from photos,defective,2026-01-02,29.0,Chicago,IL,North,60601.0,128.8
+R0395,ORD64046,WE-SHELF-14,does_not_match_description,more yellow than white,like_new,2026-03-31,26.0,Houston,TX,South,77001.0,175.71
+R0396,ORD17113,WE-TBL-04,defective_or_damaged,ordered by mistake,open_box,2026-01-27,24.0,Portland,OR,West,97201.0,204.43
+R0397,ORD24945,WE-BED-33,wrong_size,larger than I imagined,like_new,2025-10-28,29.0,Seattle,WA,West,98101.0,195.93
+R0398,ORD59006,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,like_new,2025-12-15,34.0,Austin,TX,South,78701.0,124.58
+R0399,ORD90065,WE-SOFA-22,wrong_size,sofa is huge compared to the listing,open_box,2026-03-21,17.0,Miami,FL,East,33101.0,138.75
+R0400,ORD93000,WE-LAMP-07,no_longer_needed,changed my mind on the style,like_new,2025-12-18,3.0,New York,NY,East,10001.0,197.21
+R0401,ORD82512,WE-SHELF-14,does_not_match_description,more yellow than white,defective,2025-11-20,4.0,Houston,TX,South,77001.0,203.88
+R0402,ORD96182,WE-SHELF-14,wrong_size,ordered by mistake,damaged,2026-03-30,25.0,Dallas,TX,South,75201.0,170.41
+R0403,ORD54939,WE-LAMP-07,no_longer_needed,"arrived broken, not worth fixing",damaged,2026-02-15,26.0,Boston,MA,East,2101.0,165.28
+R0404,ORD81802,WE-SOFA-22,wrong_size,sofa is huge compared to the listing,damaged,2026-02-28,45.0,Atlanta,GA,East,30301.0,191.19
+R0405,ORD98129,WE-RUG-99,does_not_match_description,much more orange than terracotta,open_box,2025-10-30,23.0,Detroit,MI,North,48201.0,218.13
+R0406,ORD86389,WE-BENCH-21,wrong_size,colour slightly different,defective,2025-12-09,31.0,Philadelphia,PA,East,19101.0,187.42
+R0407,ORD59921,WE-RUG-99,does_not_match_description,colour is off from photos,open_box,2026-03-06,2.0,Columbus,OH,North,43201.0,125.31
+R0408,ORD48684,WE-TBL-04,defective_or_damaged,joint on leg feels weak,open_box,2026-02-26,4.0,Seattle,WA,West,98101.0,195.36
+R0409,ORD83566,WE-TBL-04,defective_or_damaged,surface scratch on top,defective,2026-03-16,42.0,Denver,CO,West,80202.0,143.76
+R0410,ORD50980,WE-DESK-11,defective_or_damaged,wobbly leg,like_new,2026-01-28,44.0,Milwaukee,WI,North,53202.0,121.3
+R0411,ORD89087,WE-DESK-11,defective_or_damaged,drawer doesn't close smoothly,open_box,2025-12-06,35.0,Detroit,MI,North,48201.0,197.61
+R0412,ORD77350,WE-CHAIR-05,does_not_match_description,brass looks too yellow in person,like_new,2026-02-24,12.0,Houston,TX,South,77001.0,157.72
+R0413,ORD53327,WE-LAMP-07,no_longer_needed,cheap lamp not worth return shipping,defective,2026-01-26,1.0,Atlanta,GA,East,30301.0,190.97
+R0414,ORD74297,WE-SOFA-22,wrong_size,much larger than expected,damaged,2025-11-02,20.0,Atlanta,GA,East,30301.0,127.29
+R0415,ORD81182,WE-BED-33,wrong_size,headboard too tall,defective,2026-03-18,27.0,Denver,CO,West,80202.0,129.19
+R0416,ORD72240,WE-CHAIR-05,defective_or_damaged,colour slightly different,like_new,2025-11-27,34.0,Dallas,TX,South,75201.0,131.47
+R0417,ORD99463,WE-BED-33,wrong_size,larger than I imagined,damaged,2026-01-31,3.0,Denver,CO,West,80202.0,158.14
+R0418,ORD77411,WE-TABLE-88,does_not_match_description,warmer in the photo than in person,defective,2025-12-13,24.0,Los Angeles,CA,West,90001.0,168.68
+R0419,ORD79888,WE-DESK-11,wrong_size,colour slightly different,like_new,2026-03-24,35.0,Chicago,IL,North,60601.0,182.69
+R0420,ORD80484,WE-CHAIR-05,does_not_match_description,brass looks too yellow in person,defective,2026-03-19,14.0,Nashville,TN,South,37201.0,184.66
+R0421,ORD19600,WE-TABLE-88,wrong_size,changed my mind,like_new,2026-03-28,6.0,Seattle,WA,West,98101.0,137.8
+R0422,ORD69129,WE-DESK-11,defective_or_damaged,slight scratch on arrival,defective,2026-01-11,25.0,Detroit,MI,North,48201.0,163.3
+R0423,ORD15965,WE-TBL-04,defective_or_damaged,"Table arrived, leg snapped when I stood it up",like_new,2026-04-22,38.0,Denver,CO,West,80202.0,155.77
+R0424,ORD61788,WE-RUG-99,does_not_match_description,colour is off from photos,like_new,2026-01-03,25.0,Detroit,MI,North,48201.0,167.4
+R0425,ORD28884,WE-RUG-99,does_not_match_description,colour is off from photos,damaged,2026-02-25,41.0,Columbus,OH,North,43201.0,187.73
+R0426,ORD15475,WE-BENCH-21,no_longer_needed,no longer needed,like_new,2026-03-03,8.0,Atlanta,GA,East,30301.0,177.27
+R0427,ORD94663,WE-LAMP-07,no_longer_needed,changed my mind on the style,open_box,2026-03-04,27.0,Philadelphia,PA,East,19101.0,136.1
+R0428,ORD17128,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,defective,2025-11-17,37.0,Dallas,TX,South,75201.0,184.47
+R0429,ORD73857,WE-TABLE-88,does_not_match_description,colour looked different in real life,damaged,2025-11-04,38.0,San Francisco,CA,West,94102.0,155.71
+R0430,ORD73682,WE-BENCH-21,no_longer_needed,no longer needed,defective,2026-03-03,21.0,New York,NY,East,10001.0,152.83
+R0431,ORD66139,WE-BENCH-21,no_longer_needed,cancelled renovation project,open_box,2026-01-18,21.0,Atlanta,GA,East,30301.0,120.48
+R0432,ORD72908,WE-CHAIR-05,no_longer_needed,colour slightly different,defective,2025-10-31,22.0,Dallas,TX,South,75201.0,164.54
+R0433,ORD28350,WE-DESK-11,defective_or_damaged,wobbly leg,open_box,2026-03-29,18.0,Columbus,OH,North,43201.0,146.32
+R0434,ORD86269,WE-BENCH-21,no_longer_needed,no longer needed,defective,2025-10-23,2.0,Atlanta,GA,East,30301.0,196.92
+R0435,ORD39269,WE-CHAIR-05,defective_or_damaged,size not right,damaged,2026-01-23,26.0,Dallas,TX,South,75201.0,133.39
+R0436,ORD90482,WE-RUG-99,does_not_match_description,colour is off from photos,open_box,2025-10-29,16.0,Chicago,IL,North,60601.0,195.72
+R0437,ORD73373,WE-SOFA-22,wrong_size,too big for my living room,damaged,2025-10-24,10.0,Atlanta,GA,East,30301.0,124.04
+R0438,ORD77880,WE-SHELF-14,does_not_match_description,not the right white for my walls,damaged,2025-10-25,14.0,Houston,TX,South,77001.0,158.81
+R0439,ORD44513,WE-SHELF-14,does_not_match_description,colour slightly different,open_box,2025-11-07,18.0,Charlotte,NC,South,28201.0,157.67
+R0440,ORD59326,WE-LAMP-07,no_longer_needed,"arrived broken, not worth fixing",open_box,2025-12-06,17.0,New York,NY,East,10001.0,171.64
+R0441,ORD28214,WE-BED-33,defective_or_damaged,size not right,defective,2026-05-02,33.0,Denver,CO,West,80202.0,136.56
+R0442,ORD88908,WE-TABLE-88,does_not_match_description,looks grey not warm brown,like_new,2026-03-15,24.0,San Francisco,CA,West,94102.0,186.11
+R0443,ORD31134,WE-LAMP-07,does_not_match_description,size not right,defective,2026-03-16,38.0,Miami,FL,East,33101.0,122.24
+R0444,ORD29249,WE-TBL-04,defective_or_damaged,joint on leg feels weak,like_new,2026-04-27,37.0,Denver,CO,West,80202.0,136.63
+R0445,ORD96736,WE-SOFA-22,wrong_size,much larger than expected,damaged,2025-10-21,2.0,Atlanta,GA,East,30301.0,214.73
+R0446,ORD88753,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,open_box,2026-03-02,27.0,Dallas,TX,South,75201.0,199.46
+R0447,ORD87410,WE-SOFA-22,wrong_size,sofa is huge compared to the listing,like_new,2026-01-13,39.0,Philadelphia,PA,East,19101.0,142.98
+R0448,ORD29603,WE-LAMP-07,no_longer_needed,changed my mind on the style,like_new,2025-11-03,27.0,Atlanta,GA,East,30301.0,137.74
+R0449,ORD10157,WE-MIRROR-3,defective_or_damaged,frame had minor dent,defective,2025-12-02,35.0,San Francisco,CA,West,94102.0,172.2
+R0450,ORD87207,WE-BED-33,no_longer_needed,ordered by mistake,like_new,2026-01-16,23.0,Portland,OR,West,97201.0,162.55
+R0451,ORD81267,WE-DESK-11,defective_or_damaged,wobbly leg,defective,2026-02-26,39.0,Chicago,IL,North,60601.0,145.78
+R0452,ORD51405,WE-TBL-04,does_not_match_description,changed my mind,defective,2025-10-29,14.0,Portland,OR,West,97201.0,156.23
+R0453,ORD57925,WE-SOFA-22,wrong_size,sofa is huge compared to the listing,damaged,2026-01-19,37.0,Atlanta,GA,East,30301.0,219.18
+R0454,ORD43263,WE-LAMP-07,no_longer_needed,size not right,damaged,2025-12-10,31.0,Atlanta,GA,East,30301.0,177.77
+R0455,ORD76629,WE-LAMP-07,does_not_match_description,ordered by mistake,defective,2026-03-20,14.0,Boston,MA,East,2101.0,198.61
+R0456,ORD71822,WE-RUG-99,does_not_match_description,much more orange than terracotta,defective,2026-03-18,10.0,Chicago,IL,North,60601.0,128.81
+R0457,ORD96006,WE-DESK-11,defective_or_damaged,wobbly leg,damaged,2026-01-28,40.0,Milwaukee,WI,North,53202.0,191.16
+R0458,ORD96099,WE-MIRROR-3,defective_or_damaged,frame had minor dent,damaged,2026-04-11,13.0,Portland,OR,West,97201.0,139.47
+R0459,ORD95854,WE-MIRROR-3,defective_or_damaged,frame had minor dent,like_new,2026-01-14,16.0,Los Angeles,CA,West,90001.0,217.56
+R0460,ORD77861,WE-TABLE-88,no_longer_needed,colour slightly different,like_new,2025-11-14,13.0,Portland,OR,West,97201.0,193.69
+R0461,ORD35496,WE-TABLE-88,defective_or_damaged,colour slightly different,defective,2026-03-13,39.0,Seattle,WA,West,98101.0,212.97
+R0462,ORD75951,WE-MIRROR-3,defective_or_damaged,frame had minor dent,damaged,2025-11-13,5.0,Los Angeles,CA,West,90001.0,154.0
+R0463,ORD41886,WE-TABLE-88,defective_or_damaged,colour slightly different,damaged,2025-12-08,31.0,Portland,OR,West,97201.0,216.12
+R0464,ORD93055,WE-SHELF-14,does_not_match_description,more yellow than white,open_box,2026-04-08,25.0,Austin,TX,South,78701.0,187.69
+R0465,ORD42539,WE-CHAIR-05,no_longer_needed,colour slightly different,damaged,2025-10-20,17.0,Houston,TX,South,77001.0,129.3
+R0466,ORD56338,WE-BENCH-21,defective_or_damaged,changed my mind,open_box,2025-12-21,21.0,Boston,MA,East,2101.0,209.43
+R0467,ORD40783,WE-DESK-11,defective_or_damaged,slight scratch on arrival,open_box,2025-12-07,13.0,Minneapolis,MN,North,55401.0,207.27
+R0468,ORD25712,WE-CHAIR-05,does_not_match_description,brass looks too yellow in person,like_new,2026-02-27,7.0,Austin,TX,South,78701.0,187.58
+R0469,ORD58653,WE-BENCH-21,no_longer_needed,no longer needed,damaged,2026-04-21,31.0,Atlanta,GA,East,30301.0,169.23
+R0470,ORD39110,WE-MIRROR-3,no_longer_needed,ordered by mistake,open_box,2026-02-14,26.0,Denver,CO,West,80202.0,125.41
+R0471,ORD69925,WE-LAMP-07,no_longer_needed,moved house,like_new,2025-10-19,12.0,Miami,FL,East,33101.0,189.82
+R0472,ORD52655,WE-SHELF-14,no_longer_needed,home renovation cancelled,damaged,2025-11-10,7.0,Nashville,TN,South,37201.0,181.28
+R0473,ORD57962,WE-DESK-11,defective_or_damaged,drawer doesn't close smoothly,open_box,2025-11-17,22.0,Milwaukee,WI,North,53202.0,169.88
+R0474,ORD33578,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,open_box,2026-02-17,29.0,Nashville,TN,South,37201.0,217.93
+R0475,ORD59923,WE-BENCH-21,no_longer_needed,no longer needed,open_box,2025-12-07,28.0,Boston,MA,East,2101.0,134.58
+R0476,ORD77765,WE-SOFA-22,wrong_size,too big for my living room,damaged,2026-04-07,41.0,Miami,FL,East,33101.0,198.53
+R0477,ORD43330,WE-DESK-11,no_longer_needed,cancelled event,defective,2026-03-30,14.0,Minneapolis,MN,North,55401.0,203.9
+R0478,ORD43779,WE-TABLE-88,does_not_match_description,looks grey not warm brown,damaged,2025-12-14,36.0,Seattle,WA,West,98101.0,121.98
+R0479,ORD95179,WE-TABLE-88,does_not_match_description,warmer in the photo than in person,open_box,2025-12-11,37.0,San Francisco,CA,West,94102.0,217.94
+R0480,ORD90434,WE-DESK-11,defective_or_damaged,slight scratch on arrival,damaged,2026-04-05,25.0,Milwaukee,WI,North,53202.0,166.38
+R0481,ORD20369,WE-SOFA-22,defective_or_damaged,size not right,open_box,2025-12-23,5.0,Atlanta,GA,East,30301.0,154.36
+R0482,ORD45553,WE-BED-33,wrong_size,didn't fit through door,defective,2025-11-12,26.0,Denver,CO,West,80202.0,198.1
+R0483,ORD96772,WE-BED-33,no_longer_needed,size not right,damaged,2026-03-15,16.0,Los Angeles,CA,West,90001.0,214.04
+R0484,ORD17055,WE-TABLE-88,does_not_match_description,looks grey not warm brown,like_new,2026-01-05,36.0,Los Angeles,CA,West,90001.0,197.09
+R0485,ORD61097,WE-RUG-99,does_not_match_description,changed my mind,damaged,2026-04-21,42.0,Minneapolis,MN,North,55401.0,142.94
+R0486,ORD96972,WE-DESK-11,defective_or_damaged,wobbly leg,damaged,2026-03-27,3.0,Minneapolis,MN,North,55401.0,206.04
+R0487,ORD33204,WE-BED-33,no_longer_needed,colour slightly different,defective,2025-11-08,35.0,San Francisco,CA,West,94102.0,183.1
+R0488,ORD21738,WE-BENCH-21,no_longer_needed,colour slightly different,defective,2025-11-28,15.0,Miami,FL,East,33101.0,150.79
+R0489,ORD80136,WE-LAMP-07,no_longer_needed,home renovation cancelled,like_new,2026-02-17,31.0,Philadelphia,PA,East,19101.0,188.78
+R0490,ORD10946,WE-SHELF-14,no_longer_needed,no longer need it,damaged,2025-11-14,15.0,Austin,TX,South,78701.0,138.86
+R0491,ORD44469,WE-RUG-99,does_not_match_description,much more orange than terracotta,like_new,2026-01-09,15.0,Milwaukee,WI,North,53202.0,162.22
+R0492,ORD34641,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,like_new,2026-02-18,27.0,Charlotte,NC,South,28201.0,138.24
+R0493,ORD74486,WE-DESK-11,defective_or_damaged,drawer doesn't close smoothly,open_box,2025-11-12,40.0,Detroit,MI,North,48201.0,152.06
+R0494,ORD67464,WE-SOFA-22,no_longer_needed,cancelled event,like_new,2026-01-31,9.0,Philadelphia,PA,East,19101.0,143.28
+R0495,ORD70776,WE-SOFA-22,wrong_size,too big for my living room,like_new,2025-12-18,24.0,Philadelphia,PA,East,19101.0,153.02
+R0496,ORD60014,WE-SOFA-22,no_longer_needed,no longer need it,like_new,2026-02-27,17.0,Boston,MA,East,2101.0,132.2
+R0497,ORD22315,WE-CHAIR-05,does_not_match_description,finish looks cheap not antique,open_box,2026-03-11,30.0,Houston,TX,South,77001.0,167.28
+R0498,ORD78278,WE-BENCH-21,defective_or_damaged,ordered by mistake,like_new,2025-10-28,36.0,New York,NY,East,10001.0,145.33
+R0499,ORD92956,WE-BENCH-21,no_longer_needed,moved house,defective,2026-03-19,16.0,Boston,MA,East,2101.0,152.45
+R0500,ORD72294,WE-SOFA-22,does_not_match_description,size not right,open_box,2026-04-28,38.0,New York,NY,East,10001.0,157.14
+R0501,ORD17871,WE-TABLE-88,does_not_match_description,looks grey not warm brown,like_new,2026-02-14,41.0,Denver,CO,West,80202.0,155.55
+R0502,ORD55523,WE-SOFA-22,does_not_match_description,ordered by mistake,defective,2025-12-21,42.0,Philadelphia,PA,East,19101.0,193.32
+R0503,ORD67344,WE-TBL-04,defective_or_damaged,hinge hardware stripped during assembly,damaged,2026-04-22,32.0,Seattle,WA,West,98101.0,174.27
+R0504,ORD46087,WE-SHELF-14,does_not_match_description,more yellow than white,open_box,2025-10-25,30.0,Austin,TX,South,78701.0,126.89
+R0505,ORD76316,WE-SOFA-22,wrong_size,much larger than expected,defective,2026-05-11,41.0,Miami,FL,East,33101.0,193.37
+R0506,ORD96283,WE-TBL-04,defective_or_damaged,hinge hardware stripped during assembly,defective,2026-01-13,5.0,San Francisco,CA,West,94102.0,138.99
+R0507,ORD94004,WE-BENCH-21,no_longer_needed,cancelled renovation project,damaged,2026-02-04,27.0,Philadelphia,PA,East,19101.0,131.05
+R0508,ORD36486,WE-RUG-99,does_not_match_description,much more orange than terracotta,like_new,2026-02-17,3.0,Minneapolis,MN,North,55401.0,168.54
+R0509,ORD87371,WE-TABLE-88,does_not_match_description,warmer in the photo than in person,damaged,2025-12-27,40.0,Portland,OR,West,97201.0,124.91
+R0510,ORD93744,WE-CHAIR-05,no_longer_needed,home renovation cancelled,like_new,2026-04-10,30.0,Nashville,TN,South,37201.0,156.09
+R0511,ORD38298,WE-LAMP-07,does_not_match_description,colour slightly different,like_new,2026-01-18,5.0,New York,NY,East,10001.0,130.12
+R0512,ORD33448,WE-CHAIR-05,does_not_match_description,brass looks too yellow in person,defective,2025-12-17,41.0,Dallas,TX,South,75201.0,194.61
+R0513,ORD33644,WE-BENCH-21,no_longer_needed,cancelled renovation project,defective,2026-03-16,11.0,Miami,FL,East,33101.0,170.47
+R0514,ORD52553,WE-BENCH-21,no_longer_needed,cancelled renovation project,damaged,2026-02-15,36.0,Philadelphia,PA,East,19101.0,161.23
+R0515,ORD38039,WE-BENCH-21,no_longer_needed,cancelled renovation project,defective,2025-12-12,35.0,Boston,MA,East,2101.0,196.57
+R0516,ORD47287,WE-DESK-11,defective_or_damaged,drawer doesn't close smoothly,like_new,2026-04-03,3.0,Milwaukee,WI,North,53202.0,171.76
+R0517,ORD46170,WE-DESK-11,defective_or_damaged,wobbly leg,open_box,2026-05-10,45.0,Detroit,MI,North,48201.0,129.43
+R0518,ORD43586,WE-SHELF-14,does_not_match_description,more yellow than white,damaged,2026-02-11,15.0,Charlotte,NC,South,28201.0,129.19
+R0519,ORD73999,WE-LAMP-07,no_longer_needed,changed my mind on the style,like_new,2025-12-10,12.0,Philadelphia,PA,East,19101.0,179.52
+R0520,ORD66925,WE-DESK-11,defective_or_damaged,slight scratch on arrival,defective,2026-01-28,23.0,Chicago,IL,North,60601.0,213.02
+R106815,,WE-RUG-99,no_longer_needed,my parents got the same rug for me. so i dont need this now.,,2026-04-10,,Los Angeles,CA,West,,150.0
+R379413,,WE-DESK-11,wrong_size,There are scratches on the desk top.,,2026-04-11,,Seattle,WA,West,,150.0
+R225019,,WE-SHELF-14,defective_or_damaged,There are scratches on the desk top.,,2026-04-11,,Seattle,WA,West,,150.0

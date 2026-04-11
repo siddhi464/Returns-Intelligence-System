@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.table-dense th,
+.table-dense td {
+  @apply px-2 py-1.5 text-xs border-b border-corp-border align-middle;
+}
+
+.table-dense th {
+  @apply bg-slate-50 font-semibold text-slate-600 uppercase tracking-wide whitespace-nowrap;
+}
+
+.table-dense {
+  @apply w-full border-collapse;
+}
+
+.table-dense td {
+  @apply text-slate-800;
+}
