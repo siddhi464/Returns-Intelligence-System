@@ -153,12 +153,6 @@ def build_disposition_insights(
             cluster_savings=savings,
             sentiment=ai["sentiment_score"],
         )
-
-        # OPTIONAL: force one retention offer for demo
-        if sku_id == "WE-CHAIR-05":
-            action = "RETENTION_OFFER"
-            justification = "High customer value — offering retention incentive instead of return."
-
         # routing
         route = route_to_hub(
             zip_code=zip_sample or "00000",

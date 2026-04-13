@@ -62,9 +62,9 @@ def index():
 
 @app.get("/api/dashboard")
 def dashboard():
-    cost = float(request.args.get("cost_per_return", 150))
-    multiplier = float(request.args.get("order_volume_multiplier", 10))
-    delta = float(request.args.get("scenario_rate_delta", 0.0))
+    cost = float(request.args.get("cost_per_return", 77))
+    multiplier = float(request.args.get("order_volume_multiplier", 2))
+    delta = float(request.args.get("scenario_rate_delta", 9.0))
 
     cache_key = f"{_DASHBOARD_KEY}:{cost}:{multiplier}:{delta}"
     cached = CACHE.get(cache_key)

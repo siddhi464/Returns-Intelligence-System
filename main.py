@@ -74,9 +74,9 @@ def health():
 
 @app.get("/api/dashboard")
 def dashboard(
-    cost_per_return: float = Query(150),
-    order_volume_multiplier: float = Query(10),
-    scenario_rate_delta: float = Query(0),
+    cost_per_return: float = Query(77),
+    order_volume_multiplier: float = Query(2),
+    scenario_rate_delta: float = Query(9),
 ):
     cache_key = f"{_DASHBOARD_KEY}:{cost_per_return}:{order_volume_multiplier}:{scenario_rate_delta}"
     cached = CACHE.get(cache_key)

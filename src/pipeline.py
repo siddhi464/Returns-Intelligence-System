@@ -49,9 +49,9 @@ def build_pipeline(data_dir: str = "data") -> PipelineArtifacts:
 def compute_dashboard_outputs(
     artifacts: PipelineArtifacts,
     *,
-    cost_per_return: float = 150.0,
-    order_volume_multiplier: float = 10.0,
-    scenario_rate_delta: float = 0.0,
+    cost_per_return: float = 77.0,
+    order_volume_multiplier: float = 2.0,
+    scenario_rate_delta: float = 9.0,
 ) -> dict:
     df = artifacts.clustered_df
     sku_df = artifacts.sku_df
